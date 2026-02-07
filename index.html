@@ -49,39 +49,7 @@
     ]
   }
   </script>
-/* 单位行：更“官网感” */
-.affil{
-  margin: 10px 0 14px;
-  font-size: 20px;                 /* 18~22 都可以 */
-  line-height: 1.35;
-  font-weight: 600;
-  letter-spacing: .04em;
-  color: rgba(255,255,255,.82);
-  text-shadow: 0 10px 35px rgba(0,0,0,.45);
-}
-
-/* 精致大圆点：像“徽章点” */
-.dotBig{
-  display:inline-block;
-  width: 10px;
-  height: 10px;                    /* 想更大：12px */
-  border-radius: 999px;
-  vertical-align: middle;
-  margin: 0 14px;                  /* 两边留白更大气 */
-  transform: translateY(-1px);     /* 微调居中 */
-  background: radial-gradient(circle at 30% 30%,
-    rgba(255,255,255,.95),
-    rgba(155,209,255,.85) 45%,
-    rgba(140,120,255,.65) 80%);
-  box-shadow: 0 0 0 3px rgba(255,255,255,.10),
-              0 12px 28px rgba(0,0,0,.35);
-}
-
-/* 移动端稍微收敛一点 */
-@media (max-width: 980px){
-  .affil{ font-size: 18px; }
-  .dotBig{ width:9px; height:9px; margin: 0 10px; }
-}
+  
   <style>
     :root{
       --bg:#070b18;
@@ -324,6 +292,43 @@ ol li, ul li{
   body{ font-size: 17px; }
   .h1{ font-size: 42px; }
   .subtitle{ font-size: 18px; }
+}
+/* ====== Official dot separator + prevent top “garbled CSS text” ====== */
+
+/* 单位行更官方、更稳重 */
+.affil{
+  margin: 10px 0 14px;
+  font-size: 20px;      /* 想更大可改 22 */
+  line-height: 1.35;
+  font-weight: 650;
+  letter-spacing: .02em;
+  color: rgba(255,255,255,.86);
+  text-shadow: 0 1px 10px rgba(0,0,0,.25);
+}
+
+/* 更大、更“高端”的圆点 */
+.dotBig{
+  display: inline-block;
+  width: 12px;          /* 圆点大小：想更大可改 14 */
+  height: 12px;
+  border-radius: 999px;
+  vertical-align: middle;
+  margin: 0 14px;       /* 两侧留白更大气：想更松可改 18 */
+  transform: translateY(-1px);
+  background: radial-gradient(circle at 30% 30%,
+    rgba(255,255,255,.95),
+    rgba(155,209,255,.85) 45%,
+    rgba(140,120,255,.70) 80%
+  );
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,.10),
+    0 12px 28px rgba(0,0,0,.35);
+}
+
+/* 手机端稍微缩小，避免拥挤 */
+@media (max-width: 520px){
+  .affil{ font-size: 18px; }
+  .dotBig{ width: 10px; height: 10px; margin: 0 10px; }
 }
 
   </style>
