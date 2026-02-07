@@ -330,6 +330,32 @@ ol li, ul li{
   .affil{ font-size: 18px; }
   .dotBig{ width: 10px; height: 10px; margin: 0 10px; }
 }
+/* 让简历和亮点内容两边对齐，增强美观 */
+.wrap {
+  max-width: 1200px;    /* 控制网页最大宽度 */
+  margin: 0 auto;       /* 居中显示 */
+  padding: 20px;        /* 内边距，确保文字不贴边 */
+}
+
+.content {
+  text-align: justify;  /* 让文本两边对齐 */
+  line-height: 1.8;     /* 增加行间距，提升可读性 */
+}
+
+.content p {
+  margin-bottom: 15px;  /* 段落之间的间隔 */
+}
+
+/* 保证不超出容器的文字宽度 */
+.affil, .subtitle {
+  width: 100%;
+  text-align: center;   /* 居中显示标题内容 */
+}
+
+/* 保证页面内容对齐 */
+#projects {
+  text-align: left;     /* 项目内容左对齐 */
+}
 
   </style>
 </head>
