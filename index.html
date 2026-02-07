@@ -746,6 +746,25 @@ ol li, ul li{
 .academic-part-time ul li::before {
   content: none; /* Remove bullet points */
 }
+  /* ✅让“欧洲学术兼职”卡片底色/阴影与上面卡片一致（覆盖旧样式） */
+.academic-part-time{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+  /* 关键：用卡片底色变量，而不是页面背景 */
+  background: var(--card) !important;
+
+  border: 1px solid var(--border) !important;
+  border-radius: 20px !important;
+
+  /* 统一阴影质感 */
+  box-shadow: 0 18px 50px rgba(0,0,0,.35) !important;
+
+  /* 如果上面卡片有“玻璃感”，这里也加上 */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 </style>
   
 
