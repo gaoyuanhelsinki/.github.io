@@ -793,157 +793,182 @@ body{
 }
   
 /* =========================
-   手机端排版（不影响电脑端）
-   把你原来的移动端 @media 整段删掉，换成这一段
+   手机端（官方阅读习惯）：导航一行、左右统一铺屏、排版一致
+   用法：删除旧的 @media(max-width:768px) 整段，替换为本段
    ========================= */
 @media screen and (max-width: 768px) {
 
-  /* 1) 全局阅读尺度：字号/行距/页边距统一 */
+  /* 0) 基础：统一盒模型，避免各种宽度+padding导致“参差不齐” */
+  *, *::before, *::after { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
-  body{
+  body {
+    overflow-x: hidden;
     font-size: 16px;
     line-height: 1.75;
-    overflow-x: hidden;
-  }
-  .wrap{
-    max-width: 100%;
-    padding: 14px 14px 44px;   /* 手机页边距：左右 14px */
   }
 
-  /* 2) 顶部导航：横向排列，可横向滑动，不换行挤乱 */
+  /* 1) 页面左右边距：尽量铺屏，但留最小安全边距（官方手机阅读习惯） */
+  .wrap{
+    max-width: 100% !important;
+    padding: 10px 10px 44px !important;   /* 左右各 10px：统一且尽量铺屏 */
+    margin: 0 auto !important;
+  }
+
+  /* 2) 顶部导航：强制一行（不换行）；超出则横向滚动 */
   .nav{
     position: sticky;
     top: 0;
-    z-index: 50;
+    z-index: 99;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-  /* 兼容：无论你的导航是 ul/li 结构还是直接一排 a，都尽量兜住 */
+
+  /* 兼容你的导航可能是 ul/li 或直接 a 列表：都兜住 */
   .nav ul{
-    display: flex;
-    flex-wrap: nowrap;
+    display: flex !important;
+    flex-wrap: nowrap !important;          /* 核心：不换行 */
     align-items: center;
-    gap: 10px;
-    overflow-x: auto;
+    justify-content: flex-start;
+    gap: 8px;
+    padding: 10px 10px !important;
+    margin: 0 !important;
+    list-style: none !important;
+
+    overflow-x: auto;                      /* 超出可滑动 */
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
-    padding: 10px 10px;
-    margin: 0;
-    list-style: none;
     scrollbar-width: none;
   }
   .nav ul::-webkit-scrollbar{ display:none; }
 
   .nav a{
+    flex: 0 0 auto;                        /* 不挤压，保持一行 */
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 12px;
+
+    padding: 9px 12px;
     border-radius: 999px;
     border: 1px solid var(--border);
     background: rgba(255,255,255,.04);
     text-decoration: none;
-    white-space: nowrap;
+
     font-size: 14px;
-    line-height: 1;           /* 导航内行距固定，视觉更干净 */
+    line-height: 1;                        /* 导航内部行距固定，视觉干净 */
+    white-space: nowrap;
   }
 
-  /* 3) 顶部“海报区”：改为单列；头像加大（像海报） */
+  /* 3) 顶部“海报/头像”：更大、更铺屏 */
   .heroInner{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-    align-items: start;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+    align-items: start !important;
   }
-
-  /* 头像容器铺屏但保留一点页边距 */
   .poster{
-    width: 100%;
-    max-width: 520px;         /* 防止极大屏手机过宽 */
-    margin: 0 auto;
-    height: auto;
-    aspect-ratio: 3 / 4;      /* 海报比例：你可改成 4/5 更“长” */
-    border-radius: 22px;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 3 / 4;                   /* 海报比例，可改 4/5 更长 */
+    border-radius: 22px !important;
     overflow: hidden;
+    margin: 0 !important;
   }
   .poster img{
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
     object-position: 50% 10%;
-    transform: none;          /* 手机端别再强行缩放，避免裁切怪 */
+    transform: none !important;
   }
 
-  /* 标题区（姓名/单位/方向）排版更像手机阅读 */
-  .hero h1, .hero h2, .hero h3{
-    text-align: center;
-    margin: 0;
-  }
+  /* 4) 标题区：更像手机排版 */
   .hero h1{
     font-size: 40px;
-    line-height: 1.1;
+    line-height: 1.08;
+    margin: 8px 0 0 !important;
+    text-align: center;
     letter-spacing: 2px;
-    margin-top: 6px;
+  }
+  .hero h2, .hero h3{
+    margin: 8px 0 0 !important;
+    text-align: center;
+    line-height: 1.35;
   }
   .hero .subtitle{
-    font-size: 15px;
-    line-height: 1.5;
-    opacity: .92;
-    margin-top: 10px;
+    margin: 10px 0 0 !important;
     text-align: center;
+    font-size: 15px;
+    line-height: 1.55;
+    opacity: .92;
   }
 
-  /* 4) 各部分内容：尽量铺屏 + 统一间距/行距/段落节奏 */
+  /* 5) 核心：所有卡片/区块左右边距完全统一、最大化铺屏
+        —— 强力覆盖你 PC 端写的 margin-left/right:15% 之类 */
+  section,
+  .card,
+  .panel,
+  .block,
+  .glass,
+  .academic-part-time,
+  .contact,
+  .hero,
+  .heroInner{
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* 区块间距统一 */
   section{
-    width: 100%;
-    max-width: 100%;
-    margin: 14px 0;
-    padding: 18px 16px;
+    margin: 12px 0 !important;
+    padding: 16px 14px !important;         /* 让文字更铺屏：内边距别太大 */
     border-radius: 22px;
   }
 
-  /* 标题统一 */
+  /* 6) 正文排版：统一字号/行距/段落节奏（官方阅读习惯） */
   section h2{
     font-size: 22px;
     line-height: 1.25;
-    margin: 0 0 12px;
+    margin: 0 0 12px !important;
   }
 
-  /* 正文统一：始终一致的行距/字间距，不要每块都不一样 */
-  p, li{
+  p, li, div, span{
     font-size: 16px;
     line-height: 1.75;
-    letter-spacing: .2px;
-    text-align: justify;
-    margin: 0 0 12px;
+    letter-spacing: 0.2px;
     word-break: break-word;
     overflow-wrap: anywhere;
   }
+  p{ margin: 0 0 12px !important; text-align: justify; }
+  ul{ margin: 0 !important; padding-left: 18px !important; }
+  li{ margin: 0 0 10px !important; }
 
-  ul{
-    padding-left: 18px;
-    margin: 0;
+  /* 7) 解决你截图里“某些英文/词被拉开”的怪间距：避免 any flex/justify 把字撑开 */
+  .contact li,
+  .contact p,
+  .contact .row,
+  .contact .item{
+    justify-content: flex-start !important;
+    text-align: left !important;
+    letter-spacing: 0.2px !important;
+    word-spacing: normal !important;
   }
-  li{ margin-bottom: 10px; }
 
-  /* 5) 按钮/链接区：一列铺满更符合手机 */
+  /* 8) 按钮区：手机一列铺满更自然 */
   .actions, .btnGroup, .ctaGroup{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    margin-top: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+    margin-top: 12px !important;
   }
   .actions a, .btnGroup a, .ctaGroup a, .btn{
-    width: 100%;
-    justify-content: center;
+    width: 100% !important;
+    justify-content: center !important;
   }
 
-  /* 6) 关键：不要再对 “所有 div/a/img/section” 做 100%/block 的粗暴重置！
-        这里仅做必要的安全项，避免横向溢出 */
-  img, video, iframe{
-    max-width: 100%;
-    height: auto;
-  }
+  /* 9) 图片/媒体不溢出 */
+  img, video, iframe{ max-width: 100%; height: auto; }
 }
 
 </style>
