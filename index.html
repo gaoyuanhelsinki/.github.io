@@ -2,9 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="canonical" href="https://gaoyuanhelsinki.cn/" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0", minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
 
   <!-- ✅ 搜索结果标题（强匹配：高源 + 上海交通大学 + 北欧 + 欧洲文化高等研究院 + 人文学院 + 芬兰赫尔辛基大学 + 冰上丝绸之路 + 区域国别学 + 北极命运共同体） -->
@@ -887,8 +885,8 @@ body{
 
     /* 2. 修正行间距与字体大小 */
     p, span, div, li {
-        font-size: 18px !important;   /* 手机端稍微加大字号方便阅读 */
-        line-height: 1.8 !important;  /* 增加行高，防止文字挤在一起 */
+        font-size: 16px !important;   /* 手机端稍微加大字号方便阅读 */
+        line-height: 1.5 !important;  /* 增加行高，防止文字挤在一起 */
         letter-spacing: 0.5px !important; /* 修正字间距 */
         word-wrap: break-word !important;
         overflow-wrap: break-word !important;
@@ -913,46 +911,47 @@ body{
         max-width: 80% !important;
     }
 } 
-  /* 针对手机端的最终修复方案 */
+/* 彻底解决手机端重叠与代码外泄 - 覆盖替换版 */
 @media screen and (max-width: 768px) {
-    /* 1. 强制重置所有容器，防止内容（和代码）超出边框 */
-    html, body {
-        width: 100% !important;
-        overflow-x: hidden !important; /* 禁止左右滑动，防止代码飞出去 */
-        margin: 0 !important;
-        padding: 0 !important;
-    }
-
-    /* 2. 彻底取消导致重叠和竖排的坐标 */
-    div, p, span, a, img, section, footer {
-        position: static !important; /* 核心：让所有内容按顺序从上往下排 */
-        width: auto !important;
-        max-width: 92% !important;
-        margin: 15px auto !important; /* 自动居中并留出间距 */
-        display: block !important;    /* 强制横向展开，解决文字竖排 */
+    /* 1. 强制所有元素回归屏幕内，解决变形 */
+    * {
+        position: static !important; 
+        max-width: 100% !important;
+        box-sizing: border-box !important;
         left: auto !important;
         top: auto !important;
-        height: auto !important;
-        word-wrap: break-word !important; /* 强制长代码/长文字换行 */
-        overflow: hidden !important;      /* 隐藏超出容器的杂乱内容 */
+        transform: none !important;
     }
 
-    /* 3. 字体大小与行间距 */
-    p, div, span {
+    body {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 5px !important;
+        overflow-x: hidden !important; /* 切断横向溢出的代码杂质 */
+        display: block !important;
+    }
+
+    /* 2. 解决文字竖排和行间距 */
+    div, p, span, a, section {
+        display: block !important; 
+        width: 94% !important;
+        margin: 12px auto !important; /* 左右居中，上下留空 */
         font-size: 18px !important;
         line-height: 1.8 !important;
-        text-align: justify !important; /* 文字对齐更美观 */
+        word-wrap: break-word !important;
+        white-space: normal !important;
+        height: auto !important;
     }
 
-    /* 4. 强制修复底端“露出代码”的问题 */
-    footer, .footer, div:last-child {
+    /* 3. 彻底隐藏由于标签未闭合导致的底部代码碎片 */
+    #footer, footer, .footer, body > :not(div):not(p):not(span) {
         position: relative !important;
-        clear: both !important;
-        margin-top: 50px !important;
+        margin-top: 40px !important;
         padding: 20px 0 !important;
-        border-top: 1px solid #eee; /* 加一条细线区分底部 */
+        clear: both !important;
     }
 }
+/* 必须紧接着写下面这行闭合标签 */
 </style>
   
 
@@ -971,5 +970,6 @@ body{
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
   </script>
+</div>
 </body>
 </html>
