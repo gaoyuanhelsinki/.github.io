@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <link rel="canonical" href="https://gaoyuanhelsinki.cn/" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0", minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
 
   <!-- ✅ 搜索结果标题（强匹配：高源 + 上海交通大学 + 北欧 + 欧洲文化高等研究院 + 人文学院 + 芬兰赫尔辛基大学 + 冰上丝绸之路 + 区域国别学 + 北极命运共同体） -->
@@ -912,6 +913,46 @@ body{
         max-width: 80% !important;
     }
 } 
+  /* 针对手机端的最终修复方案 */
+@media screen and (max-width: 768px) {
+    /* 1. 强制重置所有容器，防止内容（和代码）超出边框 */
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important; /* 禁止左右滑动，防止代码飞出去 */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* 2. 彻底取消导致重叠和竖排的坐标 */
+    div, p, span, a, img, section, footer {
+        position: static !important; /* 核心：让所有内容按顺序从上往下排 */
+        width: auto !important;
+        max-width: 92% !important;
+        margin: 15px auto !important; /* 自动居中并留出间距 */
+        display: block !important;    /* 强制横向展开，解决文字竖排 */
+        left: auto !important;
+        top: auto !important;
+        height: auto !important;
+        word-wrap: break-word !important; /* 强制长代码/长文字换行 */
+        overflow: hidden !important;      /* 隐藏超出容器的杂乱内容 */
+    }
+
+    /* 3. 字体大小与行间距 */
+    p, div, span {
+        font-size: 18px !important;
+        line-height: 1.8 !important;
+        text-align: justify !important; /* 文字对齐更美观 */
+    }
+
+    /* 4. 强制修复底端“露出代码”的问题 */
+    footer, .footer, div:last-child {
+        position: relative !important;
+        clear: both !important;
+        margin-top: 50px !important;
+        padding: 20px 0 !important;
+        border-top: 1px solid #eee; /* 加一条细线区分底部 */
+    }
+}
 </style>
   
 
