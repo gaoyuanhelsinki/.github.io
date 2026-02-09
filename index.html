@@ -462,41 +462,46 @@ main{
     width: auto;
   }
 }
-  /* ======================
-   Desktop gutter fix (>=1024px)
-   目标：桌面端所有主要内容左右留白统一为 15vw
-   ====================== */
-
+  /* ============ 桌面端：外侧留白 15%，卡片内部文字铺满 ============ */
 @media screen and (min-width: 1024px){
-  :root{ --desktop-gutter: 15vw; }
 
-  html, body{ overflow-x: hidden; }
+  :root{
+    --desktop-gutter: 15vw;  /* 两侧各 15% */
+  }
 
-  /* 主容器：用 padding 做两侧留白（最稳定） */
+  /* 1) 只控制“页面内容区域”的外侧留白：让 wrap 变成居中容器 */
   .wrap{
     box-sizing: border-box !important;
-    width: 100% !important;
-    max-width: none !important;
+    width: calc(100vw - (2 * var(--desktop-gutter))) !important;   /* 70vw */
+    max-width: calc(100vw - (2 * var(--desktop-gutter))) !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    padding-left: var(--desktop-gutter) !important;
-    padding-right: var(--desktop-gutter) !important;
+
+    /* 关键：不要用 padding 做左右留白，否则会挤压卡片内部内容 */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 
-  /* 防止某些块被写死 100vw / 贴边 */
+  /* 2) 防止某些块被写成 100vw 造成“顶满屏幕” */
   section, .card, .panel, .glass, .block,
-  .intro, .highlights, .projects, .papers, .resume, .contact,
-  #about, #intro, #highlights, #projects, #papers, #resume, #contact,
-  #jianjie, #liangdian, #zhuchixiangmu, #lunwen{
+  .intro, .highlights, .projects, .papers, .academic-part-time{
     box-sizing: border-box !important;
-    max-width: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
-  /* 如果某些 section 不在 .wrap 里，也强制给左右留白兜底 */
-  #about, #intro, #highlights, #projects, #papers, #resume, #contact,
-  #jianjie, #liangdian, #zhuchixiangmu, #lunwen{
-    padding-left: var(--desktop-gutter) !important;
-    padding-right: var(--desktop-gutter) !important;
+  /* 3) 重点：不要再给这些区块左右 padding（否则文字会被挤窄） */
+  #intro, #highlights, #projects, #papers, #resume, #contact,
+  #jianjie, #liangdian, #zhuchixiangmu{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* 4) 如果曾经出现横向溢出（100vw/阴影等），桌面端兜底 */
+  html, body{
+    overflow-x: hidden;
   }
 }
 </style>
