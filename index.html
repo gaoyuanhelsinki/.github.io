@@ -810,6 +810,19 @@ main{
 .academic-part-time ul li::before {
   content: none; /* Remove bullet points */
 }
+  
+  /* “courses”这张卡：去掉 ul 默认圆点 */
+#courses ul.courses-list{
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* 保险：即使某些浏览器给 li 单独加 marker，也清掉 */
+#courses ul.courses-list > li{
+  list-style: none !important;
+}
+
   /* ✅让“欧洲学术兼职”卡片底色/阴影与上面卡片一致（覆盖旧样式） */
 .academic-part-time{
   /* 关键：用卡片底色变量，而不是页面背景 */
@@ -1412,8 +1425,23 @@ max-width: calc(100vw - 25vw) !important;  /* = 75vw */
     max-width: calc(100% - 24px) !important;
     margin-left: 12px !important;
     margin-right: 12px !important;
+    
+/* 手机端：欧洲学术兼职——正文两端对齐 */
+@media (max-width: 1023px){
+  .academic-part-time,
+  .academic-part-time *{
+    text-align: justify !important;
+    text-justify: inter-word !important;
+  }
+
+  /* 标题别 justify（你已有就保留） */
+  .academic-part-time h1,
+  .academic-part-time h2,
+  .academic-part-time h3{
+    text-align: left !important;
   }
 }
+    
 </style>
   
 
