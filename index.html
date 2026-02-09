@@ -1274,6 +1274,47 @@ main{
   }
 }
 html, body { overflow-x: hidden; }
+  /* =========================
+   MOBILE: STOP TEXT/CODE OVERFLOW
+   Only mobile (<1024px)
+   Paste at the END of <style> (before </style>)
+   ========================= */
+@media (max-width: 1023px){
+
+  /* 1) 防止页面出现横向滚动条/底部溢出 */
+  html, body{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /* 2) 所有内容区块别撑破屏幕 */
+  .hero, .card, section, main, article, div{
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) 长链接/长英文/长数字/长代码强制换行（核心） */
+  p, li, a, span, div, section, pre, code{
+    overflow-wrap: anywhere !important;
+    word-break: break-word !important;
+  }
+
+  /* 4) 如果真有 <pre><code> 代码块，允许横向滚动而不是撑破页面 */
+  pre{
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  code{
+    max-width: 100% !important;
+  }
+
+  /* 5) 图片/视频别撑破 */
+  img, video, iframe{
+    max-width: 100% !important;
+    height: auto !important;
+  }
+}
 </style>
   
 
