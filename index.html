@@ -1291,17 +1291,59 @@ code{
     height: auto !important;
   }
 }
+/* =========================
+   FIX: 全端禁止横向溢出 + 桌面“联系与链接”卡片全宽贴边
+   粘贴位置：<style> 最末尾、</style> 之前
+   ========================= */
 
-/* ---- 手机端：不改卡片宽度，只加强“别横向溢出” ---- */
-@media (max-width: 1023px){
-  /* 你手机端底部出现横向溢出时，通常就是长链接/长串导致的 */
-  #contact, .card, section.card, .hero, #projects{
-    max-width: 100% !important;
-    box-sizing: border-box !important;
+/* 1) 全端：彻底禁止横向溢出（根治“底部出现横向滚动/溢出”） */
+html, body{
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
+/* 所有常见内容都允许断行，避免长链接/长英文顶破布局 */
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+p, li, a, span, div, section, article{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 如果你页面里有 code/pre（或某些块被当作代码），也不允许顶破 */
+pre, code{
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+/* 图片/视频/iframe 不许撑破 */
+img, video, iframe{
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 2) 桌面端：让最后“联系与链接”卡片两端贴齐屏幕 */
+@media (min-width: 1024px){
+
+  /* 让 #contact 这张卡铺满屏幕宽（full-bleed），卡片边缘对齐屏幕边缘 */
+  section#contact.card,
+  #contact.card{
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    border-radius: 0 !important;          /* 贴边全宽时建议去圆角，避免两侧被切 */
   }
-  img, video, iframe{
-    max-width: 100% !important;
-    height: auto !important;
+
+  /* 但卡片内部内容仍保持阅读页边距：左右各 12.5%（跟你“75%容器”逻辑一致） */
+  section#contact.card,
+  #contact.card{
+    padding-left: 12.5vw !important;
+    padding-right: 12.5vw !important;
   }
 }
 </style>
