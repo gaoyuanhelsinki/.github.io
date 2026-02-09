@@ -426,79 +426,101 @@ main{
 
   </style>
 <style id="desktop-margin-fix">
-/* ===============================
-   桌面端统一“版心”：
-   - 卡片外：左右留白 15%（通过 max-width + auto 实现）
-   - 卡片内：舒适阅读内边距（参考“论文/著作”）
-   放置位置：<head> 内，</head> 前
-================================ */
+/* =========================================================
+   桌面端：统一“卡片外侧留白 15% + 卡片内侧舒适内边距”
+   适用对象：顶部大卡片（hero）+ 简介/亮点/项目/论文等所有 card
+   ========================================================= */
 
 @media screen and (min-width: 1024px){
 
-  /* 1) 桌面端版心宽度 = 70vw（两侧自然各 15vw 留白） */
+  /* 1) 统一桌面端内容安全宽度：左右各 15% 留白 => 内容区 70vw */
   :root{
-    --desktop-content-max: 70vw;   /* 100 - 15 - 15 */
-    --card-pad-x: 34px;
-    --card-pad-y: 30px;
+    --desk-gutter: 15vw;
+    --desk-content: calc(100vw - (var(--desk-gutter) * 2)); /* = 70vw */
+    --card-pad: 36px; /* 卡片内部舒适内边距（可微调 32~44） */
   }
 
-  html, body{
-    overflow-x: hidden;
-  }
-
-  /* 2) 关键：给“网格容器”做版心（你的简介/亮点就在 .grid 里） */
+  /* 2) 关键：把“内容容器”收进 70vw，并居中（而不是给 wrap 加 padding） */
+  .wrap,
   .grid{
-    width: 100% !important;
-    max-width: var(--desktop-content-max) !important;
+    width: var(--desk-content) !important;
+    max-width: var(--desk-content) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    /* 防止旧代码用 padding 做留白导致版式怪 */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) 防止某些块被写成 100vw 把留白顶穿：全部拉回容器宽度 */
+  section,
+  .card,
+  .panel,
+  .glass,
+  .block{
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 4) 卡片“外侧”留白：让卡片在 grid 容器里不要再贴边 */
+  /*    注意：外侧留白靠容器 70vw 实现；这里再加一个小间距更像“论文/著作” */
+  .grid{
+    gap: 24px !important;
+  }
+
+  /* 5) 卡片“内侧”留白：让简介/亮点/项目等卡片内部文字不要挤边框 */
+  .card{
+    padding: var(--card-pad) !important;
+  }
+
+  /* 6) 你页面里这几块通常是 <section id="about" class="card"> 这种结构：
+        为避免其它 card 被你自定义过 padding，这里再点名加固（有则命中，无则不影响） */
+  #about.card,
+  #highlights.card,
+  #projects.card,
+  #papers.card,
+  #resume.card,
+  #contact.card{
+    padding: var(--card-pad) !important;
+  }
+
+  /* 7) 兼容你之前用的中文 id（如果你有用到） */
+  #jianjie.card,
+  #liangdian.card,
+  #zhuchixiangmu.card{
+    padding: var(--card-pad) !important;
+  }
+
+  /* 8) 顶部大卡片（hero）不要“文字顶满页边距”：
+        - 让 hero 跟随内容容器宽度
+        - 图片按“海报式”更舒服：固定最大宽度 + cover + 圆角 */
+  section.hero,
+  .hero{
+    width: var(--desk-content) !important;
+    max-width: var(--desk-content) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     box-sizing: border-box !important;
   }
 
-  /* 3) 网格里的卡片不要再自己搞外边距（让 grid 控制外侧留白） */
-  .grid > .card,
-  .grid > section.card{
-    max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    box-sizing: border-box !important;
+  /* 若 hero 里面也是 .card，就让它更像海报：padding 稍大一点 */
+  section.hero .card,
+  .hero .card{
+    padding: 44px !important;
   }
 
-  /* 4) 非网格中的“大卡片”（例如：主持项目、论文/著作等）也统一版心 */
-  section.card,
-  .card,
-  .panel,
-  .glass,
-  .block{
-    max-width: var(--desktop-content-max) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
+  /* 海报式头像：不拉伸，裁切美观 */
+  section.hero img,
+  .hero img{
+    width: min(360px, 28vw) !important;
+    height: auto !important;
+    object-fit: cover !important;
+    border-radius: 22px !important;
+    display: block !important;
   }
 
-  /* 5) 卡片内部的舒适内边距（你说“简介/亮点/主持项目”太挤就是这里） */
-  section.card,
-  .card,
-  .panel,
-  .glass,
-  .block{
-    padding: var(--card-pad-y) var(--card-pad-x) !important;
-  }
-
-  /* 6) 但：如果某些卡片里面还有一层 .card（嵌套），避免双重 padding */
-  .card .card,
-  .panel .panel,
-  .glass .glass{
-    padding: 0 !important;
-    max-width: none !important;
-    margin: 0 !important;
-  }
-
-  /* 7) 导航仍全宽贴边（不受版心影响） */
-  .nav{
-    left: 0 !important;
-    right: 0 !important;
-  }
 }
 </style>
  
