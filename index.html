@@ -1215,59 +1215,57 @@ main{
   }
 }
   
- /* =========================
-   Desktop ONLY: 全站卡片统一对齐（75% 宽度）
-   仅影响桌面端（>=1024px），不改手机端
+/* =========================
+   Desktop FINAL ALIGN (75% container + same inner padding)
+   只影响桌面端（>=1024px）
    ========================= */
 @media (min-width: 1024px){
-
   :root{
-    --desk-wrap: 75%;
-    --desk-max: 1200px;   /* 超宽屏时不至于太散，可改 1280/1360 */
-    --desk-pad: 32px;     /* 卡片左右内边距统一 */
+    --desk-container: 75vw;   /* 外框总宽度 = 75% */
+    --desk-side-pad: 32px;    /* 卡片内部左右留白（你想更宽可改 28/24 等） */
   }
 
-  /* 1) 桌面端强制每张卡独占一行（避免 .grid 把两张卡并排） */
+  /* 1) 先把“承载卡片的容器”也统一：避免 .grid 自己撑满屏导致视觉错位 */
   .grid{
-    display: block !important;
-  }
-  .grid > *{
     width: 100% !important;
-    max-width: none !important;
+    max-width: var(--desk-container) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+    display: block !important; /* 防止桌面端两张卡并排挤在一行 */
   }
 
-  /* 2) 全站主要“卡片/hero/项目/联系”统一宽度 + 居中 + 两端对齐 */
+  /* 2) 所有卡片外框统一同宽居中 */
   .hero,
   section.card,
   .card,
   #projects,
-  #contact{
-    width: var(--desk-wrap) !important;
-    max-width: var(--desk-max) !important;
+  #contact,
+  .grid > *{
+    width: 100% !important;
+    max-width: var(--desk-container) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     box-sizing: border-box !important;
-
-    /* 统一卡片左右内边距，让视觉两端严格对齐 */
-    padding-left: var(--desk-pad) !important;
-    padding-right: var(--desk-pad) !important;
   }
 
-  /* 3) 如果某些卡片写了内联 style="..."，这里强制覆盖（很关键） */
-  .hero[style],
-  section.card[style],
-  .card[style],
-  #projects[style],
-  #contact[style]{
-    width: var(--desk-wrap) !important;
-    max-width: var(--desk-max) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* 4) 防止“主持项目”里长英文/长编号把卡片视觉撑宽 */
+  /* 3) 关键：统一所有卡片“内部左右 padding”，否则看起来还是不齐 */
+  .hero,
+  section.card,
+  .card,
   #projects,
-  #projects *{
+  #contact,
+  .grid > *{
+    padding-left: var(--desk-side-pad) !important;
+    padding-right: var(--desk-side-pad) !important;
+  }
+
+  /* 4) 防止长英文/长链接把某些卡片视觉撑宽 */
+  .hero *,
+  section.card *,
+  .card *,
+  #projects *,
+  #contact *{
     max-width: 100% !important;
     min-width: 0 !important;
     overflow-wrap: anywhere !important;
@@ -1275,81 +1273,7 @@ main{
     box-sizing: border-box !important;
   }
 }
-/* =========================
-   DESKTOP: FORCE ALL CARDS SAME EDGES (75%)
-   Only desktop (>=1024px). Mobile untouched.
-   Paste at the END of <style> (right before </style>)
-   ========================= */
-@media (min-width: 1024px){
-
-  :root{
-    --desk-container: 75%;     /* 左右各留 12.5% */
-    --desk-side-pad: 32px;     /* 卡片内部左右 padding（可改 24/28/36） */
-  }
-
-  html, body{ overflow-x: hidden; }
-
-  /* 1) 兜底：把“所有主要内容块”统一外边界：宽度=75% + 居中 */
-  body > section,
-  body > main > section,
-  body > main > div,
-  body > main > article,
-  body > div > section,
-  body > div > div.card,
-  body > .hero,
-  body > .card,
-  main .hero,
-  main .card,
-  main section,
-  main article,
-  main div.card,
-  section[id],
-  section[class],
-  .academic-part-time,
-  #projects, #contact, #papers, #pubs, #publications, #writing, #cv, #resume, #service, #teaching{
-    width: var(--desk-container) !important;
-    max-width: var(--desk-container) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2) 处理“被写了内联 style 的卡片”（最容易导致不齐） */
-  section[style],
-  .card[style],
-  .hero[style]{
-    width: var(--desk-container) !important;
-    max-width: var(--desk-container) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3) 统一卡片内部左右 padding，让“内容边界”也一致 */
-  body > section,
-  body > main > section,
-  body > .hero,
-  body > .card,
-  main .hero,
-  main .card,
-  section.card,
-  .card,
-  #projects, #contact, #papers, #pubs, #publications, #writing, #cv, #resume, #service, #teaching,
-  .academic-part-time{
-    padding-left: var(--desk-side-pad) !important;
-    padding-right: var(--desk-side-pad) !important;
-  }
-
-  /* 4) 防止 grid/flex 让“两张卡并排/挤成一行” */
-  .grid{
-    display: block !important;
-  }
-  .grid > *{
-    width: 100% !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  }
-}
+html, body { overflow-x: hidden; }
 </style>
   
 
