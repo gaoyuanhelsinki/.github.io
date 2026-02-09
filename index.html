@@ -1214,45 +1214,7 @@ main{
     margin-top: 10px !important;
   }
 }
-  /* ✅ Desktop FINAL PATCH (只影响桌面端 >=1024px；不要把它贴到 </style> 后面) */
-@media (min-width: 1024px) {
-
-  :root { --desk-card-w: 92%; } /* 你要更宽就改这里，比如 94% */
-
-  /* 1) 全站主要卡片容器：统一宽度+居中+盒模型 */
-  .hero,
-  section.card,
-  .card,
-  .academic-part-time,
-  .grid,
-  #projects {
-    width: var(--desk-card-w) !important;
-    max-width: var(--desk-card-w) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 2) 兜底：如果某些卡片写了内联 style（style="width:..."），桌面端强制覆盖 */
-  section.card[style],
-  .card[style],
-  #projects[style] {
-    width: var(--desk-card-w) !important;
-    max-width: var(--desk-card-w) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 3) “主持项目（部分）”常见超宽根因：长串/子元素 min-width 撑破 */
-  #projects,
-  #projects * {
-    min-width: 0 !important;
-    max-width: 100% !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
-  }
-}
+  
 </style>
   
 
