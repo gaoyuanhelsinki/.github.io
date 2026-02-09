@@ -505,6 +505,60 @@ main{
     max-width: 75% !important;
   }
 }
+/* =========================
+   ✅ Desktop layout override
+   不影响手机端（仅 >=1024px）
+   目标：全站卡片统一为“论文/著作”卡片的居中留白与间距，
+        且每张卡片独占一行
+   ========================= */
+@media (min-width: 1024px){
+
+  /* 1) 全站内容区：左右留白 15%  => 内容宽 70% */
+  .wrap{
+    width: 70vw !important;        /* 70% 视口宽度 */
+    max-width: 70vw !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 2) 所有卡片：统一宽度=内容区100%，并且独占一行 */
+  section.card,
+  .card{
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+
+    /* 卡片外边距：与“论文/著作”观感一致（可微调） */
+    margin-top: 18px !important;
+    margin-bottom: 18px !important;
+
+    /* 卡片内边距：统一（你之前也用过 28px 32px） */
+    padding: 28px 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) 强制把“简介 + 亮点”那块从两列改成单列 */
+  .grid{
+    display: block !important;     /* 不要 grid 两列 */
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    gap: 0 !important;
+  }
+
+  /* 4) 防止你之前写的 width:100 / 75% 等选择器继续干扰 */
+  section.card[style*="width"],
+  .card[style*="width"],
+  section.card[style*="max-width"],
+  .card[style*="max-width"]{
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
 </style>
 
 
