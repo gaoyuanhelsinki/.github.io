@@ -426,85 +426,6 @@ main{
 
   </style>
 <style id="desktop-margin-fix">
-/* ========= 统一桌面端页边距：左右 15% ========= */
-@media (min-width: 1024px){
-  :root{ --page-pad: 15vw; } /* 15% 视口宽度 */
-
-  /* 整个页面内容都以 wrap 作为“正文容器” */
-  .wrap{
-    width: 100% !important;
-    max-width: none !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding-left: var(--page-pad) !important;
-    padding-right: var(--page-pad) !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 防止某些区块偷偷跑成全宽 */
-  section.card,
-  .card,
-  #projects,
-  #pubs,
-  #courses,
-  .academic-part-time,
-  .footer{
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* grid 区域也统一在同一套容器里排版 */
-  .grid{
-    width: 100% !important;
-    max-width: none !important;
-    box-sizing: border-box !important;
-  }
-
-  /* 避免出现横向溢出导致“看起来贴边/错位” */
-  body{ overflow-x: hidden; }
-}
-  /* =========================
-   仅桌面端：统一页边距 + 简介/亮点改为单列
-   手机端不受影响
-   ========================= */
-@media (min-width: 1024px){
-
-  /* 1) 全站桌面端：卡片统一左右留白约15%（宽70%居中） */
-  section.card,
-  .card{
-    width: 75% !important;
-    max-width: 75% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-  }
-
-  /* 2) 卡片内部：统一舒适内边距（对齐“论文/著作”阅读习惯） */
-  section.card,
-  .card{
-    padding: 28px 32px !important;  /* 你想更紧凑可改成 24px 28px */
-    box-sizing: border-box !important;
-  }
-
-  /* 3) “简介 + 亮点”原本并排的容器：改为单列，并且容器也按70%居中 */
-  .grid{
-    width: 75% !important;
-    max-width: 75% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-
-    display: grid !important;
-    grid-template-columns: 1fr !important;  /* 关键：一列 */
-    gap: 18px !important;                  /* 两张卡片上下间距 */
-  }
-
-  /* 4) 防止某些块被写死 100% 顶满（兜底） */
-  section.card[style*="width:100"],
-  .card[style*="width:100"]{
-    width: 75% !important;
-    max-width: 75% !important;
-  }
-}
 /* ================================
    桌面端：全站统一为“论文/著作”卡片的版心与单列
    不影响手机端（<1024px）
@@ -554,6 +475,45 @@ main{
   .card[style]{
     width: 100% !important;
     max-width: 100% !important;
+  }
+}
+  /* ===== 桌面端统一排版：左右留白≈15%，所有卡片单列；手机端不受影响 ===== */
+@media (min-width: 1024px){
+
+  /* 1) 全站内容容器：宽度70%（左右各≈15%留白） */
+  .wrap{
+    width: 70% !important;
+    max-width: 70% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* 2) 所有卡片：在容器内占满（=70%区域内铺满），且统一外边距 */
+  section.card,
+  .card{
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 18px !important;
+    margin-bottom: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  /* 3) 卡片内部留白：统一成“论文/著作”那种阅读感（你可按喜好微调） */
+  section.card,
+  .card{
+    padding: 28px 32px !important;
+  }
+
+  /* 4) “简介 + 亮点”所在 .grid：强制改为单列（不并排） */
+  .grid{
+    width: 100% !important;
+    max-width: none !important;
+    display: block !important;     /* 关键：别再用两列grid */
+  }
+  .grid > section.card{
+    margin-top: 18px !important;   /* 两张卡片上下间距 */
   }
 }
 </style>
@@ -1353,23 +1313,22 @@ main{
 </style>
   
 
+<!-- 联系 -->
+<section id="contact" class="card" style="margin-top:18px;">
+  <h2>联系与链接</h2>
+  <ul class="list">
+    <li class="item"><span class="k">邮箱：</span><a href="mailto:gaoshanyuanquan@hotmail.com">gaoshanyuanquan@hotmail.com</a></li>
+    <li class="item"><span class="k">GitHub：</span><a href="https://github.com/gaoyuanhelsinki" target="_blank" rel="noreferrer">github.com/gaoyuanhelsinki</a></li>
+  </ul>
+  <div class="footer">© <span id="y"></span> 高源 • 芬兰赫尔辛基大学</div>
+</section>
 
-    <!-- 联系 -->
-    <section id="contact" class="card" style="margin-top:18px;">
-      <h2>联系与链接</h2>
-      <ul class="list">
-        <li class="item"><span class="k">邮箱：</span><a href="mailto:gaoshanyuanquan@hotmail.com">gaoshanyuanquan@hotmail.com</a></li>
-        <li class="item"><span class="k">GitHub：</span><a href="https://github.com/gaoyuanhelsinki" target="_blank" rel="noreferrer">github.com/gaoyuanhelsinki</a></li>
-      </ul>
-      <div class="footer">© 2025 高源 • 芬兰赫尔辛基大学</div>
-    </section>
-  </div>
-  </section>
-
-</div><!-- end .wrap -->
-  
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
+
+</div><!-- end .wrap -->
 </body>
 </html>
+
+   
