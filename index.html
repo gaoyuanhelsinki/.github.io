@@ -427,72 +427,53 @@ main{
   </style>
 <style id="desktop-margin-fix">
 /* ============================
-   DESKTOP FIX (>=1024px)
-   目标：
-   1) 卡片外：左右留白 15%（与“论文/著作”一致的桌面阅读习惯）
-   2) 卡片内：统一更舒适的内边距（避免文字贴边）
-   3) 纠正某些区块被写成 100vw / left:50% / transform 导致顶满
+   桌面端：统一“外边距 15% + 卡片内边距更舒适”
+   用 max-width 做左右留白（不挤压卡片内部排版）
    ============================ */
 
 @media screen and (min-width: 1024px){
 
-  /* 0) 防横向溢出（某些块 100vw 会把页面撑出滚动条） */
+  :root{
+    --desktop-gutter: 15vw;     /* 两侧留白（15% 视口宽度） */
+    --desktop-card-pad: 28px;   /* 卡片内部文字留白（接近“论文/著作”观感） */
+  }
+
+  /* 0) 防横向溢出（保险） */
   html, body{ overflow-x: hidden; }
 
-  /* 1) 外留白：把主内容容器收成“左右各15%” */
+  /* 1) 外部留白：让“整个内容区”居中并左右留 15% */
   .wrap{
     box-sizing: border-box !important;
-    width: 70vw !important;              /* 100 - 15*2 = 70 */
-    max-width: 70vw !important;
+    width: 100% !important;
+    max-width: calc(100vw - (var(--desktop-gutter) * 2)) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  /* 2) 把“顶满全屏”的区块拉回容器（常见：width:100vw + 位移） */
-  section, .block, .panel, .glass, .card,
-  .intro, .highlights, .projects, .papers, .resume, .contact{
+  /* 2) 防止某些块被写成 100vw 顶满屏（把它们拉回内容区宽度） */
+  section, .card, .panel, .glass, .block,
+  .intro, .highlights, .projects, .papers, .academic-part-time{
     box-sizing: border-box !important;
     width: 100% !important;
     max-width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
   }
 
-  /* 3) 如果你这些区块用的是 id（很常见），再强力兜底一次 */
-  #intro, #highlights, #projects, #papers, #resume, #contact,
-  #jianjie, #liangdian, #zhuchixiangmu{
-    box-sizing: border-box !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    left: auto !important;
-    right: auto !important;
-    transform: none !important;
+  /* 3) 卡片内部留白：让“简介/亮点/主持项目”等文字别贴边框 */
+  /*   覆盖常见“阴影卡片容器”写法：card / panel / glass */
+  section .card,
+  section .panel,
+  section .glass,
+  .card, .panel, .glass{
+    padding: var(--desktop-card-pad) !important;
   }
 
-  /* 4) 卡片外的纵向节奏：与“论文/著作”相近 */
-  section{ margin-top: 22px !important; }
-
-  /* 5) 卡片内边距：让“简介/亮点/主持项目”等不要贴边（参考论文/著作） */
-  .glass, .panel, .card{
-    padding: 30px 34px !important;   /* 你觉得仍贴边：把 30/34 再加大即可 */
-  }
-
-  /* 6) 标题/正文的舒适间距（避免标题紧贴边框） */
-  .glass h2, .panel h2, .card h2,
-  section h2{
+  /* 4) 标题别顶到卡片上沿（更像官方阅读排版） */
+  h2, h3{
     margin-top: 0 !important;
-    margin-bottom: 14px !important;
-  }
-  .glass p, .panel p, .card p,
-  .glass li, .panel li, .card li{
-    line-height: 1.85 !important;
   }
 }
 </style>
