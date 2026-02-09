@@ -1275,6 +1275,29 @@ main{
     box-sizing: border-box !important;
   }
 }
+  /* =========================
+   Desktop margin override (75% container)
+   只影响桌面端（>=1024px）
+   目标：卡片容器宽度=75%，左右页边距各 12.5%，全部卡片两端对齐
+   ========================= */
+@media (min-width: 1024px){
+  :root{
+    --desk-container: 75vw; /* 75% 屏幕宽度 */
+  }
+
+  /* 所有主卡片统一同宽、居中、两端对齐 */
+  .hero,
+  section.card,
+  .card,
+  #projects,
+  #contact{
+    width: 100% !important;
+    max-width: var(--desk-container) !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    box-sizing: border-box !important;
+  }
+}
 html, body { overflow-x: hidden; }
 </style>
   
