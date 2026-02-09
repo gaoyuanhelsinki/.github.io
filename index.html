@@ -426,103 +426,46 @@ main{
 
   </style>
 <style id="desktop-margin-fix">
-/* =========================================================
-   桌面端：统一“卡片外侧留白 15% + 卡片内侧舒适内边距”
-   适用对象：顶部大卡片（hero）+ 简介/亮点/项目/论文等所有 card
-   ========================================================= */
+/* ========= 统一桌面端页边距：左右 15% ========= */
+@media (min-width: 1024px){
+  :root{ --page-pad: 15vw; } /* 15% 视口宽度 */
 
-@media screen and (min-width: 1024px){
-
-  /* 1) 统一桌面端内容安全宽度：左右各 15% 留白 => 内容区 70vw */
-  :root{
-    --desk-gutter: 15vw;
-    --desk-content: calc(100vw - (var(--desk-gutter) * 2)); /* = 70vw */
-    --card-pad: 36px; /* 卡片内部舒适内边距（可微调 32~44） */
-  }
-
-  /* 2) 关键：把“内容容器”收进 70vw，并居中（而不是给 wrap 加 padding） */
-  .wrap,
-  .grid{
-    width: var(--desk-content) !important;
-    max-width: var(--desk-content) !important;
+  /* 整个页面内容都以 wrap 作为“正文容器” */
+  .wrap{
+    width: 100% !important;
+    max-width: none !important;
     margin-left: auto !important;
     margin-right: auto !important;
-
-    /* 防止旧代码用 padding 做留白导致版式怪 */
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+    padding-left: var(--page-pad) !important;
+    padding-right: var(--page-pad) !important;
     box-sizing: border-box !important;
   }
 
-  /* 3) 防止某些块被写成 100vw 把留白顶穿：全部拉回容器宽度 */
-  section,
+  /* 防止某些区块偷偷跑成全宽 */
+  section.card,
   .card,
-  .panel,
-  .glass,
-  .block{
-    max-width: 100% !important;
+  #projects,
+  #pubs,
+  #courses,
+  .academic-part-time,
+  .footer{
+    width: 100% !important;
+    max-width: none !important;
     box-sizing: border-box !important;
   }
 
-  /* 4) 卡片“外侧”留白：让卡片在 grid 容器里不要再贴边 */
-  /*    注意：外侧留白靠容器 70vw 实现；这里再加一个小间距更像“论文/著作” */
+  /* grid 区域也统一在同一套容器里排版 */
   .grid{
-    gap: 24px !important;
-  }
-
-  /* 5) 卡片“内侧”留白：让简介/亮点/项目等卡片内部文字不要挤边框 */
-  .card{
-    padding: var(--card-pad) !important;
-  }
-
-  /* 6) 你页面里这几块通常是 <section id="about" class="card"> 这种结构：
-        为避免其它 card 被你自定义过 padding，这里再点名加固（有则命中，无则不影响） */
-  #about.card,
-  #highlights.card,
-  #projects.card,
-  #papers.card,
-  #resume.card,
-  #contact.card{
-    padding: var(--card-pad) !important;
-  }
-
-  /* 7) 兼容你之前用的中文 id（如果你有用到） */
-  #jianjie.card,
-  #liangdian.card,
-  #zhuchixiangmu.card{
-    padding: var(--card-pad) !important;
-  }
-
-  /* 8) 顶部大卡片（hero）不要“文字顶满页边距”：
-        - 让 hero 跟随内容容器宽度
-        - 图片按“海报式”更舒服：固定最大宽度 + cover + 圆角 */
-  section.hero,
-  .hero{
-    width: var(--desk-content) !important;
-    max-width: var(--desk-content) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    width: 100% !important;
+    max-width: none !important;
     box-sizing: border-box !important;
   }
 
-  /* 若 hero 里面也是 .card，就让它更像海报：padding 稍大一点 */
-  section.hero .card,
-  .hero .card{
-    padding: 44px !important;
-  }
-
-  /* 海报式头像：不拉伸，裁切美观 */
-  section.hero img,
-  .hero img{
-    width: min(360px, 28vw) !important;
-    height: auto !important;
-    object-fit: cover !important;
-    border-radius: 22px !important;
-    display: block !important;
-  }
-
+  /* 避免出现横向溢出导致“看起来贴边/错位” */
+  body{ overflow-x: hidden; }
 }
 </style>
+
 
   <style>
 /* 课程卡片：去掉“• 1.”这种双重序号，并统一行距 */
@@ -1339,6 +1282,5 @@ main{
 <script>
   document.getElementById('y').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
