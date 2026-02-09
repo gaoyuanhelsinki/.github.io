@@ -1214,110 +1214,95 @@ main{
     margin-top: 10px !important;
   }
 }
-  
-/* =========================
-   Desktop FINAL ALIGN (75% container + same inner padding)
-   只影响桌面端（>=1024px）
+  /* =========================
+   FINAL PATCH (SAFE)
+   1) 修复“代码显示在页面上”的后续横向溢出风险
+   2) 桌面端：所有卡片/hero/#projects 统一宽度=75%，左右各 12.5%
+   3) 桌面端：每张卡独占一行（grid 强制纵向）
+   4) 手机端：只做“禁止横向溢出/长串换行”，不改布局宽度
    ========================= */
+
+/* ---- 全端：禁止横向溢出（只负责“不要溢出屏幕”）---- */
+html, body{
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* 长链接/长英文/长数字串：允许断行，避免把卡片撑变形 */
+a, p, li, span, div, section{
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* 如果页面里真的有 <pre><code>，允许横向滚动但不撑破页面 */
+pre{
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+code{
+  max-width: 100%;
+}
+
+/* ---- 桌面端：统一容器宽度 & 卡片两端强制对齐 ---- */
 @media (min-width: 1024px){
+
   :root{
-    --desk-container: 75vw;   /* 外框总宽度 = 75% */
-    --desk-side-pad: 32px;    /* 卡片内部左右留白（你想更宽可改 28/24 等） */
+    --desk-container: 75vw;    /* 75% 视口宽度 */
+    --desk-side-pad: 32px;     /* 卡片内部左右 padding，可按需改 24/28/32 */
   }
 
-  /* 1) 先把“承载卡片的容器”也统一：避免 .grid 自己撑满屏导致视觉错位 */
-  .grid{
-    width: 100% !important;
-    max-width: var(--desk-container) !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-sizing: border-box !important;
-    display: block !important; /* 防止桌面端两张卡并排挤在一行 */
-  }
-
-  /* 2) 所有卡片外框统一同宽居中 */
+  /* 让“卡片容器”统一为 75vw，且居中 => 左右各 12.5% 留白 */
   .hero,
   section.card,
   .card,
   #projects,
-  #contact,
-  .grid > *{
-    width: 100% !important;
+  #contact{
+    width: var(--desk-container) !important;
     max-width: var(--desk-container) !important;
     margin-left: auto !important;
     margin-right: auto !important;
     box-sizing: border-box !important;
   }
 
-  /* 3) 关键：统一所有卡片“内部左右 padding”，否则看起来还是不齐 */
+  /* 统一卡片内部左右边距，避免有的卡 padding 不一致看起来“参差不齐” */
   .hero,
   section.card,
   .card,
   #projects,
-  #contact,
-  .grid > *{
+  #contact{
     padding-left: var(--desk-side-pad) !important;
     padding-right: var(--desk-side-pad) !important;
   }
 
-  /* 4) 防止长英文/长链接把某些卡片视觉撑宽 */
-  .hero *,
-  section.card *,
-  .card *,
-  #projects *,
-  #contact *{
+  /* 每张卡独占一行：如果你的布局用 .grid 做两列，这里强制改为单列 */
+  .grid{
+    display: block !important;
+  }
+  .grid > *{
+    width: 100% !important;
     max-width: 100% !important;
-    min-width: 0 !important;
-    overflow-wrap: anywhere !important;
-    word-break: break-word !important;
     box-sizing: border-box !important;
   }
-}
- /* =========================
-   GLOBAL NO-OVERFLOW PATCH
-   (1) Prevent horizontal overflow on ALL devices
-   (2) Force long strings to wrap
-   (3) Hide accidental raw CSS/HTML text if it leaked into the page
-   Paste at END of <style> (before </style>)
-   ========================= */
 
-/* 1) 页面永不出现横向滚动/底部溢出 */
-html, body{
-  max-width: 100% !important;
-  overflow-x: hidden !important;
+  /* 防止某些子元素（图片/iframe）把卡片撑出 */
+  img, video, iframe{
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
 
-/* 2) 所有内容盒子别撑破屏幕 */
-*, *::before, *::after{
-  box-sizing: border-box;
-}
-
-/* 3) 长链接/长英文/长数字 强制换行（核心） */
-p, li, a, span, div, section, article, main, pre, code{
-  overflow-wrap: anywhere !important;
-  word-break: break-word !important;
-}
-
-/* 4) 代码块如果存在：允许自身滚动，不撑破页面 */
-pre{
-  max-width: 100% !important;
-  overflow-x: auto !important;
-  -webkit-overflow-scrolling: touch;
-}
-code{
-  max-width: 100% !important;
-}
-
-/* 5) 媒体元素别撑破 */
-img, video, iframe, table{
-  max-width: 100% !important;
-}
-
-/* 6) 兜底：如果你把 CSS/HTML 误粘到正文里，常见表现是页面出现一大段以 @media 或 /* 开头的“文字”。
-      下面把这种“泄漏出来的样式文本块”隐藏掉（不影响真正生效的CSS）。 */
-body :is(p, div, section, article, main){
-  /* 不会改布局，只是避免极端情况下某些容器撑开 */
-  max-width: 100%;
+/* ---- 手机端：不改卡片宽度，只加强“别横向溢出” ---- */
+@media (max-width: 1023px){
+  /* 你手机端底部出现横向溢出时，通常就是长链接/长串导致的 */
+  #contact, .card, section.card, .hero, #projects{
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+  }
+  img, video, iframe{
+    max-width: 100% !important;
+    height: auto !important;
+  }
 }
 </style>
   
