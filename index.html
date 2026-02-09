@@ -523,7 +523,19 @@ main{
 
 }
 </style>
- 
+
+  <style>
+/* 课程卡片：去掉“• 1.”这种双重序号，并统一行距 */
+.course-list{
+  margin: 14px 0 0 22px;
+  padding: 0;
+}
+.course-list li{
+  margin: 10px 0;
+  line-height: 2.0;
+}
+</style>
+
 </head>
 
 <body>
@@ -663,7 +675,7 @@ main{
 
   </div>
 </section>
-
+</div><!-- 结束 .grid: 只包住“简介 + 亮点”两张卡 -->
 
     <!-- 项目 / 研究 -->
    <section id="projects" class="card" style="margin-top:18px;">
@@ -824,7 +836,7 @@ main{
 <section id="courses" class="card">
   <h2>国内外语境开设的通识核心课程与研究生课程</h2>
 
-  <ul class="list" style="margin-top:10px;">
+  <ol class="list" style="margin-top:10px;">
     <li class="item"><span class="k">1.</span>《欧洲情感心理哲学专题》（Philosophical Psychology of Emotions in Europe, 通识核心课程）；</li>
     <li class="item"><span class="k">2.</span>《西方情感哲学传统》（Philosophy of Passions in Western Tradition, 通识核心课程）；</li>
     <li class="item"><span class="k">3.</span>《西方美学与艺术研究》（Study of Western Aesthetics and Arts, 研究生课程）；</li>
@@ -833,7 +845,7 @@ main{
     <li class="item"><span class="k">6.</span>《西方古代哲学史》（History of Ancient Philosophy, 国际课程）；</li>
     <li class="item"><span class="k">7.</span>《哲学前沿问题》（Front-line Issues in Philosophy, 国际课程）；</li>
     <li class="item"><span class="k">8.</span>《中国书法哲学》（Chinese Philosophy of Calligraphy, 芬兰赫尔辛基大学孔子学院国际课程）。</li>
-  </ul>
+  </ol>
 </section>
 
 <!-- 更新“欧洲学术兼职”部分样式 -->
