@@ -1297,7 +1297,7 @@ code{
    1) 桌面端：内容区宽度 75%，左右各留 12.5%（所有卡片两端强制对齐）
    2) 手机端：卡片左右留 12px~16px 安全边距
    3) 任意长链接/长英文/代码块：不再撑破页面（不再出现底部“代码溢出”）
-   4) “联系与链接”做全宽贴边，但内容按 8% 内边距对齐
+   4) “联系与链接”做全宽贴边，但内容按 12.5% 内边距对齐
    ========================= */
 
 /* 0) 全局：别让任何元素把页面撑出横向滚动 */
@@ -1377,19 +1377,19 @@ section.card,
   }
 }
 
-/* 6) 可选：让“联系与链接”卡片在桌面端真正贴满屏幕两侧（full-bleed）
+/* 6) 让“联系与链接”卡片在桌面端真正贴满屏幕两侧（full-bleed）
       但内容仍按 12.5% 内边距对齐（视觉上=全宽卡片 + 内容与其它卡片对齐）
       如果你不想它全宽，把这段整块注释/删除即可。 */
 @media (min-width: 1024px){
   section#contact.card,
   #contact.card{
-    width: 100% !important;
+    width: 100vw !important;
     max-width: none !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-left: calc(50% - 50vw)!important;
+    margin-right: calc(50% - 50vw)!important;
     border-radius: 0 !important;          /* 全宽贴边建议去圆角，避免两侧被切 */
-    padding-left: var(--d-side) !important;  /* 内容仍与 75% 容器对齐 */
-    padding-right: var(--d-side) !important;
+    padding-left: 24px !important;  /* 内容仍与 75% 容器对齐 */
+    padding-right: 24px !important;
   }
 }
 
