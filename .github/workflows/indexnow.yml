@@ -1,0 +1,80 @@
+name: IndexNow Auto Submit
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-indexnow:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Submit URLs to IndexNow
+        shell: bash
+        run: |
+
+          KEY="1bceb95f407d452b8163d392f759aad1"
+
+          HOST="gaoyuanhelsinki.cn"
+
+          KEY_LOCATION="https://gaoyuanhelsinki.cn/1bceb95f407d452b8163d392f759aad1.txt"
+
+          URLS=(
+
+            "https://gaoyuanhelsinki.cn/"
+
+            "https://gaoyuanhelsinki.cn/research/"
+
+            "https://gaoyuanhelsinki.cn/research/laozi-norway/"
+
+            "https://gaoyuanhelsinki.cn/research/laozi-iceland/"
+
+            "https://gaoyuanhelsinki.cn/research/confucianism-finland/"
+
+            "https://gaoyuanhelsinki.cn/research/plato-emotions/"
+
+            "https://gaoyuanhelsinki.cn/research/aristotle-emotions/"
+
+            "https://gaoyuanhelsinki.cn/research/luther-taoism/"
+
+            "https://gaoyuanhelsinki.cn/research/deification-sanctification/"
+
+          )
+
+          JSON_URLS=$(printf '"%s",' "${URLS[@]}")
+          JSON_URLS="[${JSON_URLS%,}]"
+
+          echo "Submitting URLs to IndexNow..."
+
+          HTTP_STATUS=$(curl \
+            -s \
+            -o indexnow-response.txt \
+            -w "%{http_code}" \
+            -X POST \
+            "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data "{
+              \"host\": \"$HOST\",
+              \"key\": \"$KEY\",
+              \"keyLocation\": \"$KEY_LOCATION\",
+              \"urlList\": $JSON_URLS
+            }")
+
+          echo "IndexNow HTTP status: $HTTP_STATUS"
+
+          cat indexnow-response.txt || true
+
+          if [ "$HTTP_STATUS" = "200" ] || [ "$HTTP_STATUS" = "202" ]; then
+            echo "IndexNow submission successful."
+          else
+            echo "IndexNow submission failed."
+            exit 1
+          fi
