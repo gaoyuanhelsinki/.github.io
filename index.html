@@ -8,10 +8,10 @@
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 
-<title>高源 Gao Yuan｜北欧区域国别研究 · 欧洲思想史 · 中欧文明互鉴</title>
+<title>高源 芬兰赫尔辛基大学｜Gao Yuan Academic Profile</title>
 
 <meta name="description"
-      content="高源（Gao Yuan）个人学术主页。芬兰赫尔辛基大学欧洲哲学博士、博士后。研究领域包括欧洲区域国别学、北欧思想流派、欧洲思想史、欧洲情感哲学、中欧文明互鉴、冰上丝绸之路及中华文明精神国际传播。">
+      content="高源（Gao Yuan）个人学术主页。芬兰赫尔辛基大学欧洲哲学博士、博士后。主要从事欧洲区域国别学、欧洲思想史、欧洲情感哲学传统、北欧思想流派、中欧文明互鉴、冰上丝绸之路以及中华文明精神国际传播研究。">
 
 <meta name="author"
       content="高源 Gao Yuan">
@@ -23,7 +23,7 @@
 <style>
 
 /* =========================================================
-   01. 全站基础
+   01 全站基础
    ========================================================= */
 
 * {
@@ -32,35 +32,34 @@
 
 :root {
 
-  --navy: #18324a;
-  --navy-deep: #12283a;
-  --navy-soft: #31566e;
+  --navy-deep:#092943;
+  --navy:#103b5b;
+  --navy-soft:#315a73;
 
-  --blue-pale: #eef3f6;
+  --gold:#d7b45d;
+  --gold-soft:#ead294;
 
-  --paper: #fbfaf7;
-  --panel: #ffffff;
+  --ink:#183047;
+  --text:#374653;
+  --muted:#687481;
 
-  --ink: #1f2937;
-  --text: #3f4853;
-  --muted: #6b7280;
+  --paper:#ffffff;
+  --soft:#f6f8fa;
+  --line:#e5e9ed;
 
-  --line: #e4e8ec;
-
-  --gold: #b59a68;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 body {
 
-  margin: 0;
+  margin:0;
 
-  background: var(--paper);
+  background:#fff;
 
-  color: var(--ink);
+  color:var(--text);
 
   font-family:
     "Noto Serif SC",
@@ -69,912 +68,1157 @@ body {
     "Microsoft YaHei",
     serif;
 
-  line-height: 1.9;
+  line-height:1.85;
 
 }
 
 a {
-  color: var(--navy-soft);
+  color:inherit;
 }
 
 
 /* =========================================================
-   02. 顶部导航
+   02 顶部导航
    ========================================================= */
 
 .topbar {
 
-  position: sticky;
+  position:sticky;
+  top:0;
+  z-index:1000;
 
-  top: 0;
+  background:rgba(255,255,255,.98);
 
-  z-index: 1000;
+  border-bottom:1px solid #edf0f2;
 
-  background: rgba(255,255,255,.96);
-
-  backdrop-filter: blur(10px);
-
-  border-bottom: 1px solid var(--line);
+  backdrop-filter:blur(10px);
 
 }
 
 .nav {
 
-  max-width: 1240px;
+  max-width:1320px;
 
-  margin: 0 auto;
+  margin:0 auto;
 
-  padding: 14px 24px;
+  padding:16px 28px;
 
-  display: flex;
+  display:flex;
 
-  align-items: center;
+  align-items:center;
 
-  justify-content: space-between;
+  justify-content:space-between;
 
-  gap: 22px;
+  gap:28px;
 
 }
 
 .brand {
 
-  text-decoration: none;
+  text-decoration:none;
 
-  color: var(--navy);
+  color:#15324c;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-weight: 750;
+  font-size:20px;
 
-  font-size: 17px;
+  font-weight:800;
 
-  letter-spacing: .02em;
+  letter-spacing:.02em;
 
-  white-space: nowrap;
+  white-space:nowrap;
 
 }
 
 .navlinks {
 
-  display: flex;
+  display:flex;
 
-  flex-wrap: wrap;
+  align-items:center;
 
-  gap: 20px;
+  justify-content:flex-end;
 
-  align-items: center;
+  flex-wrap:wrap;
+
+  gap:27px;
 
 }
 
 .navlinks a {
 
-  color: #263238;
+  position:relative;
 
-  text-decoration: none;
+  padding:8px 0;
+
+  text-decoration:none;
+
+  color:#111;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 13.5px;
+  font-size:14px;
 
-  font-weight: 600;
+  font-weight:600;
 
 }
 
 .navlinks a:hover {
 
-  color: var(--navy-soft);
+  color:var(--navy);
+
+}
+
+.navlinks a:first-child::after {
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  right:0;
+  bottom:0;
+
+  width:27px;
+
+  height:2px;
+
+  margin:auto;
+
+  background:var(--gold);
 
 }
 
 
 /* =========================================================
-   03. HERO 首屏
+   03 HERO
    ========================================================= */
 
 .hero {
 
-  color: white;
+  position:relative;
 
-  padding: 82px 24px 74px;
+  overflow:hidden;
+
+  min-height:570px;
+
+  color:#fff;
 
   background:
 
     radial-gradient(
-      circle at 82% 17%,
-      rgba(255,255,255,.12),
-      transparent 31%
-    ),
-
-    radial-gradient(
-      circle at 8% 100%,
-      rgba(255,255,255,.06),
-      transparent 32%
+      circle at 80% 15%,
+      rgba(255,255,255,.08),
+      transparent 30%
     ),
 
     linear-gradient(
-      135deg,
-      #11283b 0%,
-      #1d4059 55%,
-      #315d75 100%
+      115deg,
+      #082844 0%,
+      #0d3859 50%,
+      #244d68 100%
+    );
+
+}
+
+.hero::before {
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  opacity:.18;
+
+  pointer-events:none;
+
+  background:
+
+    repeating-linear-gradient(
+      -14deg,
+      transparent,
+      transparent 10px,
+      rgba(255,255,255,.018) 11px,
+      transparent 12px
     );
 
 }
 
 .hero-inner {
 
-  max-width: 1180px;
+  position:relative;
 
-  margin: 0 auto;
+  z-index:2;
 
-  display: grid;
+  max-width:1260px;
+
+  min-height:570px;
+
+  margin:0 auto;
+
+  padding:58px 35px 0;
+
+  display:grid;
 
   grid-template-columns:
-    minmax(0,1fr)
-    300px;
+    minmax(0,1.15fr)
+    minmax(360px,.85fr);
 
-  gap: 70px;
+  gap:35px;
 
-  align-items: center;
+  align-items:center;
 
 }
 
-.eyebrow {
 
-  margin-bottom: 16px;
+/* HERO 左 */
+
+.hero-copy {
+
+  padding-bottom:48px;
+
+}
+
+.hero-title {
+
+  margin:0;
+
+  color:var(--gold-soft);
+
+  font-size:clamp(42px,5vw,68px);
+
+  line-height:1.25;
+
+  font-weight:700;
+
+  letter-spacing:.025em;
+
+  text-shadow:
+    0 2px 15px rgba(0,0,0,.15);
+
+}
+
+.hero-fields {
+
+  margin-top:21px;
+
+  color:#fff;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 12.5px;
+  font-size:18px;
 
-  letter-spacing: .13em;
-
-  text-transform: uppercase;
-
-  opacity: .77;
+  line-height:1.8;
 
 }
 
-.hero h1 {
+.hero-bio {
 
-  margin: 0;
+  max-width:740px;
 
-  font-size: 54px;
+  margin-top:21px;
 
-  line-height: 1.16;
-
-  letter-spacing: .08em;
-
-}
-
-.name-en {
-
-  margin-top: 7px;
-
-  font-family: Arial, sans-serif;
-
-  font-size: 18px;
-
-  letter-spacing: .12em;
-
-  opacity: .86;
-
-}
-
-.hero-school {
-
-  margin-top: 20px;
-
-  font-size: 17px;
-
-  line-height: 1.7;
-
-  opacity: .96;
-
-}
-
-.hero-research {
-
-  margin-top: 19px;
-
-  max-width: 790px;
+  color:rgba(255,255,255,.88);
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  line-height: 1.85;
+  font-size:14px;
 
-  font-size: 15px;
-
-  opacity: .90;
+  line-height:2;
 
 }
 
-.hero-tags {
+.hero-actions {
 
-  display: flex;
+  display:flex;
 
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 
-  gap: 9px;
+  gap:14px;
 
-  margin-top: 25px;
+  margin-top:27px;
 
 }
 
-.hero-tag {
+.hero-button {
 
-  display: inline-block;
+  display:inline-block;
 
-  padding: 7px 12px;
+  min-width:130px;
 
-  border: 1px solid rgba(255,255,255,.26);
+  padding:11px 21px;
 
-  border-radius: 999px;
+  border-radius:5px;
 
-  background: rgba(255,255,255,.07);
+  text-align:center;
+
+  text-decoration:none;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 12.5px;
+  font-size:14px;
+
+  font-weight:700;
+
+  transition:.2s ease;
 
 }
 
-.hero-buttons {
+.hero-button:hover {
 
-  margin-top: 30px;
-
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 11px;
+  transform:translateY(-2px);
 
 }
 
-.button {
+.primary {
 
-  display: inline-block;
+  color:#fff;
 
-  padding: 11px 17px;
-
-  border-radius: 8px;
-
-  text-decoration: none;
-
-  font-family:
-    Arial,
-    "Microsoft YaHei",
-    sans-serif;
-
-  font-size: 14px;
-
-  font-weight: 650;
-
-}
-
-.button-primary {
-
-  background: white;
-
-  color: var(--navy);
-
-}
-
-.button-secondary {
-
-  color: white;
-
-  border: 1px solid rgba(255,255,255,.35);
-
-  background: rgba(255,255,255,.06);
-
-}
-
-.avatar-wrap {
-
-  text-align: center;
-
-}
-
-.avatar {
-
-  width: 245px;
-
-  height: 245px;
-
-  object-fit: cover;
-
-  border-radius: 50%;
-
-  border: 5px solid rgba(255,255,255,.82);
-
-  box-shadow:
-    0 20px 45px rgba(0,0,0,.28);
-
-}
-
-.avatar-caption {
-
-  margin-top: 14px;
-
-  font-family:
-    Arial,
-    "Microsoft YaHei",
-    sans-serif;
-
-  font-size: 12.5px;
-
-  opacity: .77;
-
-}
-
-
-/* =========================================================
-   04. 公共区域
-   ========================================================= */
-
-.container {
-
-  max-width: 1180px;
-
-  margin: 0 auto;
-
-  padding: 0 24px;
-
-}
-
-.content-section {
-
-  padding: 64px 0;
-
-}
-
-.content-section + .content-section {
-
-  border-top: 1px solid var(--line);
-
-}
-
-.section-kicker {
-
-  margin-bottom: 6px;
-
-  color: var(--navy-soft);
-
-  font-family:
-    Arial,
-    "Microsoft YaHei",
-    sans-serif;
-
-  font-size: 12px;
-
-  letter-spacing: .11em;
-
-  text-transform: uppercase;
-
-}
-
-.section-title {
-
-  margin: 0 0 12px;
-
-  color: var(--navy);
-
-  font-size: 31px;
-
-  line-height: 1.4;
-
-}
-
-.section-intro {
-
-  max-width: 860px;
-
-  margin: 0 0 30px;
-
-  color: var(--muted);
-
-}
-
-
-/* =========================================================
-   05. 简介
-   ========================================================= */
-
-.bio-layout {
-
-  display: grid;
-
-  grid-template-columns:
-    minmax(0, 1.55fr)
-    minmax(270px, .45fr);
-
-  gap: 28px;
-
-}
-
-.panel {
-
-  background: white;
-
-  border: 1px solid var(--line);
-
-  border-radius: 16px;
-
-  padding: 32px;
-
-  box-shadow:
-    0 5px 22px rgba(0,0,0,.04);
-
-}
-
-.bio-panel p {
-
-  margin: 0 0 17px;
-
-  text-align: justify;
-
-}
-
-.official-box {
-
-  margin-top: 25px;
-
-  padding: 19px 21px;
-
-  border-radius: 10px;
-
-  border-left: 4px solid var(--navy-soft);
-
-  background: var(--blue-pale);
-
-  font-family:
-    Arial,
-    "Microsoft YaHei",
-    sans-serif;
-
-}
-
-.official-box a {
-
-  text-decoration: none;
-
-  font-weight: 700;
-
-  color: var(--navy);
-
-}
-
-.official-box a:hover {
-
-  text-decoration: underline;
-
-}
-
-
-/* =========================================================
-   06. 一体三位 / 研究框架
-   ========================================================= */
-
-.framework {
-
-  display: grid;
-
-  gap: 15px;
-
-}
-
-.framework-main {
-
-  padding: 22px 24px;
-
-  border-radius: 13px;
+  border:1px solid #d0aa4c;
 
   background:
     linear-gradient(
       135deg,
-      var(--navy),
-      var(--navy-soft)
+      #d9b456,
+      #bc963c
     );
 
-  color: white;
-
 }
 
-.framework-main strong {
+.secondary {
 
-  font-size: 18px;
+  color:#fff;
 
-}
+  border:1px solid rgba(255,255,255,.65);
 
-.framework-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(3,minmax(0,1fr));
-
-  gap: 15px;
-
-}
-
-.framework-card {
-
-  background: white;
-
-  border: 1px solid var(--line);
-
-  border-radius: 14px;
-
-  padding: 22px;
-
-}
-
-.framework-number {
-
-  margin-bottom: 8px;
-
-  color: var(--gold);
-
-  font-family: Arial, sans-serif;
-
-  font-size: 13px;
-
-}
-
-.framework-card strong {
-
-  color: var(--navy);
+  background:rgba(0,0,0,.05);
 
 }
 
 
-/* =========================================================
-   07. 特色研究
-   ========================================================= */
+/* HERO links */
 
-.topic-cloud {
+.hero-links {
 
-  display: flex;
+  display:flex;
 
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 
-  gap: 10px;
+  gap:26px;
+
+  margin-top:35px;
+
+  padding-top:18px;
+
+  border-top:1px solid rgba(255,255,255,.11);
 
 }
 
-.topic {
+.hero-links a {
 
-  padding: 8px 13px;
+  color:#fff;
 
-  border-radius: 999px;
-
-  background: white;
-
-  border: 1px solid var(--line);
-
-  color: #435567;
+  text-decoration:none;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 13px;
+  font-size:13px;
+
+}
+
+
+/* HERO 人物 */
+
+.portrait-wrap {
+
+  position:relative;
+
+  min-height:512px;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:flex-end;
+
+}
+
+.portrait-wrap::before {
+
+  content:"";
+
+  position:absolute;
+
+  width:390px;
+  height:390px;
+
+  top:45px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,.09),
+      rgba(255,255,255,0) 68%
+    );
+
+}
+
+.portrait {
+
+  position:relative;
+
+  z-index:2;
+
+  display:block;
+
+  width:auto;
+
+  max-width:445px;
+
+  height:510px;
+
+  max-height:510px;
+
+  object-fit:contain;
+
+  object-position:center bottom;
+
+  border:0;
+
+  border-radius:0;
+
+  background:transparent;
+
+  box-shadow:none;
+
+  filter:
+    drop-shadow(
+      0 22px 27px
+      rgba(0,0,0,.25)
+    );
 
 }
 
 
 /* =========================================================
-   08. 亮点
+   04 四个研究领域
    ========================================================= */
 
-.highlight-box {
+.focus-strip {
 
-  background: white;
+  background:#fff;
 
-  border: 1px solid var(--line);
+  border-bottom:1px solid var(--line);
 
-  border-radius: 16px;
+}
 
-  padding: 34px;
+.focus-grid {
+
+  max-width:1250px;
+
+  margin:0 auto;
+
+  padding:28px 30px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+}
+
+.focus {
+
+  min-height:66px;
+
+  padding:0 29px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  border-right:1px solid var(--line);
+
+}
+
+.focus:last-child {
+
+  border-right:0;
+
+}
+
+.focus-icon {
+
+  width:42px;
+
+  color:var(--navy);
+
+  text-align:center;
+
+  font-family:Georgia,serif;
+
+  font-size:27px;
+
+  font-weight:bold;
+
+}
+
+.focus-title {
+
+  color:var(--ink);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:16px;
+
+  font-weight:750;
+
+}
+
+.focus-sub {
+
+  margin-top:2px;
+
+  color:var(--muted);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   05 数据带
+   ========================================================= */
+
+.stats {
+
+  background:
+    linear-gradient(
+      90deg,
+      #092943,
+      #123e5c
+    );
+
+  color:#fff;
+
+}
+
+.stats-grid {
+
+  max-width:1120px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+}
+
+.stat {
+
+  position:relative;
+
+  padding:28px 20px 26px;
+
+  text-align:center;
+
+}
+
+.stat:not(:last-child)::after {
+
+  content:"";
+
+  position:absolute;
+
+  top:25%;
+  right:0;
+
+  width:1px;
+
+  height:50%;
+
+  background:rgba(255,255,255,.17);
+
+}
+
+.stat-number {
+
+  color:var(--gold);
+
+  font-family:Georgia,serif;
+
+  font-size:38px;
+
+  line-height:1.1;
+
+}
+
+.stat-label {
+
+  margin-top:7px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   06 首页快速摘要
+   ========================================================= */
+
+.quick {
+
+  background:#fff;
+
+}
+
+.quick-grid {
+
+  max-width:1260px;
+
+  margin:0 auto;
+
+  padding:37px 35px 43px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr 1fr 1.15fr .7fr;
+
+  gap:0;
+
+}
+
+.quick-block {
+
+  min-height:205px;
+
+  padding:0 30px;
+
+  border-right:1px solid var(--line);
+
+}
+
+.quick-block:first-child {
+
+  padding-left:0;
+
+}
+
+.quick-block:last-child {
+
+  padding-right:0;
+
+  border-right:0;
+
+}
+
+.quick-block h2 {
+
+  position:relative;
+
+  margin:0 0 20px;
+
+  color:#15324c;
+
+  font-size:19px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+.quick-block h2::after {
+
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  bottom:-9px;
+
+  width:27px;
+  height:2px;
+
+  background:var(--gold);
+
+}
+
+.quick-block p {
+
+  color:#4d5964;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:13px;
+
+  line-height:1.9;
+
+}
+
+.quick-block ul {
+
+  margin:0;
+
+  padding-left:17px;
+
+  color:#4b5863;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:13px;
+
+  line-height:1.85;
+
+}
+
+.quick-block li::marker {
+
+  color:#c09a42;
+
+}
+
+.more {
+
+  display:inline-block;
+
+  margin-top:12px;
+
+  text-decoration:none;
+
+  color:var(--navy);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+}
+
+
+/* =========================================================
+   07 通用正文区域
+   ========================================================= */
+
+.page {
+
+  max-width:1180px;
+
+  margin:0 auto;
+
+  padding:0 24px;
+
+}
+
+.section {
+
+  padding:62px 0;
+
+  border-top:1px solid var(--line);
+
+}
+
+.section:first-child {
+
+  border-top:0;
+
+}
+
+.kicker {
+
+  margin-bottom:5px;
+
+  color:var(--navy-soft);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.13em;
+
+  text-transform:uppercase;
+
+}
+
+.section h2 {
+
+  margin:0 0 25px;
+
+  color:var(--ink);
+
+  font-size:28px;
+
+}
+
+.section p {
+
+  text-align:justify;
+
+}
+
+
+/* =========================================================
+   08 学术简介
+   ========================================================= */
+
+.content-card {
+
+  padding:30px;
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:10px;
 
   box-shadow:
-    0 5px 22px rgba(0,0,0,.035);
+    0 3px 16px rgba(0,0,0,.035);
 
 }
 
-.highlight-box p {
+.official {
 
-  margin: 0 0 18px;
+  margin-top:24px;
 
-  text-align: justify;
+  padding:17px 20px;
+
+  background:#eef3f6;
+
+  border-left:4px solid var(--navy);
+
+  border-radius:6px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
 
 }
 
-.highlight-box p:last-child {
+.official a {
 
-  margin-bottom: 0;
+  color:var(--navy);
+
+  text-decoration:none;
+
+  font-weight:bold;
 
 }
 
 
 /* =========================================================
-   09. 项目
+   09 研究方向
    ========================================================= */
 
-.project-intro {
+.research-framework {
 
-  margin-bottom: 25px;
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:19px;
+
+}
+
+.research-card {
+
+  padding:26px;
+
+  border:1px solid var(--line);
+
+  border-radius:9px;
+
+  background:#fff;
 
 }
 
-.project-list {
+.research-card .number {
 
-  display: grid;
+  color:var(--gold);
 
-  gap: 13px;
+  font-family:Georgia,serif;
 
 }
+
+.research-card h3 {
+
+  color:var(--navy);
+
+}
+
+.tags {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+
+  margin-top:27px;
+
+}
+
+.tag {
+
+  padding:6px 11px;
+
+  border:1px solid #dfe5e9;
+
+  border-radius:999px;
+
+  background:#f8fafb;
+
+  color:#435563;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   10 项目
+   ========================================================= */
 
 .project {
 
-  background: white;
+  margin-bottom:13px;
 
-  border: 1px solid var(--line);
+  padding:19px 22px;
 
-  border-radius: 13px;
+  border:1px solid var(--line);
 
-  padding: 20px 23px;
+  border-radius:8px;
 
-}
-
-.project-number {
-
-  display: inline-block;
-
-  min-width: 28px;
-
-  color: var(--gold);
-
-  font-family: Arial, sans-serif;
-
-  font-weight: 700;
+  background:#fff;
 
 }
 
 .project strong {
 
-  color: var(--navy);
+  color:var(--navy);
 
 }
 
 
 /* =========================================================
-   10. 论文
+   11 论文
    ========================================================= */
 
-.publication-feature {
+.pub-grid {
 
-  display: grid;
+  display:grid;
 
   grid-template-columns:
-    repeat(2,minmax(0,1fr));
+    repeat(2,1fr);
 
-  gap: 20px;
+  gap:18px;
 
-  margin-bottom: 28px;
-
-}
-
-.pub-card {
-
-  padding: 25px;
-
-  background: white;
-
-  border: 1px solid var(--line);
-
-  border-radius: 15px;
-
-  box-shadow:
-    0 4px 18px rgba(0,0,0,.035);
+  margin-bottom:25px;
 
 }
 
-.pub-tag {
+.pub {
 
-  display: inline-block;
+  padding:23px;
 
-  margin-bottom: 11px;
+  border:1px solid var(--line);
 
-  padding: 5px 9px;
+  border-radius:9px;
 
-  border-radius: 999px;
+  background:#fff;
 
-  background: var(--blue-pale);
+}
 
-  color: var(--navy-soft);
+.pub-label {
+
+  display:inline-block;
+
+  margin-bottom:10px;
+
+  padding:4px 8px;
+
+  background:#eef3f6;
+
+  border-radius:99px;
+
+  color:#3f5970;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 11.5px;
+  font-size:11px;
 
 }
 
-.pub-card h3 {
+.pub h3 {
 
-  margin: 0 0 10px;
+  margin:0;
 
-  color: var(--navy);
+  color:var(--navy);
 
-  font-size: 18px;
-
-  line-height: 1.55;
+  font-size:17px;
 
 }
 
-.pub-card h3 a {
+.pub a {
 
-  color: inherit;
-
-  text-decoration: none;
-
-}
-
-.pub-card h3 a:hover {
-
-  text-decoration: underline;
+  text-decoration:none;
 
 }
 
 
 /* =========================================================
-   11. 折叠面板
+   12 折叠内容
    ========================================================= */
 
 details {
 
-  margin-bottom: 13px;
+  margin-top:13px;
 
-  overflow: hidden;
+  overflow:hidden;
 
-  border: 1px solid var(--line);
+  border:1px solid var(--line);
 
-  border-radius: 12px;
+  border-radius:8px;
 
-  background: white;
+  background:#fff;
 
 }
 
 summary {
 
-  cursor: pointer;
+  cursor:pointer;
 
-  padding: 17px 21px;
+  padding:15px 19px;
 
-  color: var(--navy);
+  color:var(--navy);
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-weight: 700;
+  font-weight:700;
 
 }
 
 details[open] summary {
 
-  border-bottom: 1px solid var(--line);
+  background:#f0f4f6;
 
-  background: var(--blue-pale);
+  border-bottom:1px solid var(--line);
 
 }
 
 .details-body {
 
-  padding: 22px 25px;
-
-}
-
-.details-body ol,
-.details-body ul {
-
-  padding-left: 23px;
+  padding:20px 24px;
 
 }
 
 .details-body li {
 
-  margin-bottom: 11px;
+  margin-bottom:10px;
 
 }
 
 
 /* =========================================================
-   12. 联系
+   13 页脚
    ========================================================= */
 
-.contact-panel {
+.footer {
 
-  display: flex;
+  margin-top:35px;
 
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 28px;
-
-  flex-wrap: wrap;
-
-  padding: 36px;
-
-  border-radius: 17px;
-
-  color: white;
+  color:#fff;
 
   background:
     linear-gradient(
-      135deg,
-      var(--navy),
-      var(--navy-soft)
+      100deg,
+      #082844,
+      #143d59
     );
 
 }
 
-.contact-panel h2 {
+.footer-inner {
 
-  margin: 0 0 9px;
+  max-width:1250px;
 
-}
+  margin:0 auto;
 
-.contact-panel p {
-
-  margin: 0;
-
-  opacity: .84;
+  padding:25px 35px;
 
 }
 
-.contact-links {
+.footer h3 {
 
-  display: flex;
-
-  flex-wrap: wrap;
-
-  gap: 9px;
-
-}
-
-.contact-links a {
-
-  padding: 9px 13px;
-
-  border-radius: 8px;
-
-  border: 1px solid rgba(255,255,255,.3);
-
-  color: white;
-
-  text-decoration: none;
+  margin:0 0 12px;
 
   font-family:
     Arial,
@@ -983,169 +1227,322 @@ details[open] summary {
 
 }
 
+.footer-links {
 
-/* =========================================================
-   13. Footer
-   ========================================================= */
+  display:flex;
 
-footer {
+  flex-wrap:wrap;
 
-  padding: 30px 20px;
+  gap:28px;
 
-  text-align: center;
+}
 
-  color: var(--muted);
+.footer-links a {
 
-  background: white;
+  color:#fff;
 
-  border-top: 1px solid var(--line);
+  text-decoration:none;
 
   font-family:
     Arial,
     "Microsoft YaHei",
     sans-serif;
 
-  font-size: 13px;
+  font-size:13px;
+
+}
+
+.copyright {
+
+  margin-top:22px;
+
+  padding-top:13px;
+
+  text-align:center;
+
+  border-top:1px solid rgba(255,255,255,.12);
+
+  color:rgba(255,255,255,.76);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:12px;
 
 }
 
 
 /* =========================================================
-   14. 手机 / 平板
+   14 手机和平板
    ========================================================= */
 
-@media (max-width: 940px) {
-
-  .hero-inner {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .avatar-wrap {
-
-    order: -1;
-
-  }
-
-  .avatar {
-
-    width: 190px;
-
-    height: 190px;
-
-  }
-
-  .hero h1 {
-
-    font-size: 42px;
-
-  }
-
-  .bio-layout {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .framework-grid {
-
-    grid-template-columns: 1fr;
-
-  }
-
-  .publication-feature {
-
-    grid-template-columns: 1fr;
-
-  }
-
-}
-
-
-@media (max-width: 700px) {
+@media(max-width:980px) {
 
   .nav {
 
-    display: block;
+    display:block;
 
   }
 
   .brand {
 
-    display: block;
+    display:block;
 
-    margin-bottom: 10px;
+    margin-bottom:10px;
 
   }
 
   .navlinks {
 
-    gap: 13px;
+    justify-content:flex-start;
+
+    gap:15px;
+
+  }
+
+  .hero-inner {
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding-top:40px;
+
+  }
+
+  .hero-copy {
+
+    padding-bottom:0;
+
+  }
+
+  .hero-title {
+
+    text-align:center;
+
+  }
+
+  .hero-fields {
+
+    text-align:center;
+
+  }
+
+  .hero-actions,
+  .hero-links {
+
+    justify-content:center;
+
+  }
+
+  .portrait-wrap {
+
+    min-height:425px;
+
+  }
+
+  .portrait {
+
+    height:420px;
+
+    max-width:95%;
+
+  }
+
+  .focus-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .focus {
+
+    border-bottom:1px solid var(--line);
+
+  }
+
+  .quick-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .quick-block {
+
+    border-bottom:1px solid var(--line);
+
+  }
+
+  .research-framework {
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+@media(max-width:620px) {
+
+  .nav {
+
+    padding:
+      15px 18px;
+
+  }
+
+  .brand {
+
+    font-size:18px;
+
+  }
+
+  .navlinks {
+
+    gap:
+      8px
+      14px;
+
+  }
+
+  .navlinks a {
+
+    font-size:12px;
 
   }
 
   .hero {
 
+    min-height:auto;
+
+  }
+
+  .hero-inner {
+
     padding:
-      50px 18px
-      55px;
+      36px 18px
+      0;
 
   }
 
-  .hero h1 {
+  .hero-title {
 
-    font-size: 36px;
-
-  }
-
-  .container {
-
-    padding: 0 15px;
+    font-size:35px;
 
   }
 
-  .content-section {
+  .hero-fields {
 
-    padding: 48px 0;
+    font-size:15px;
+
+  }
+
+  .hero-bio {
+
+    font-size:13px;
 
   }
 
-  .panel,
-  .highlight-box {
+  .portrait-wrap {
 
-    padding: 24px;
+    min-height:360px;
 
   }
+
+  .portrait {
+
+    height:355px;
+
+  }
+
+  .focus-grid {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .focus {
+
+    border-right:0;
+
+  }
+
+  .stats-grid {
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+  .quick-grid {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .quick-block {
+
+    padding:
+      24px 0;
+
+    border-right:0;
+
+  }
+
+  .pub-grid {
+
+    grid-template-columns:1fr;
+
+  }
+
+}
+
+
+/* =========================================================
+   防止长英文溢出
+   ========================================================= */
+
+body,
+p,
+li,
+h1,
+h2,
+h3,
+a {
+
+  overflow-wrap:anywhere;
+
+  word-break:break-word;
 
 }
 
 </style>
 
 
-
-<!-- ======================================================
-     人物结构化数据：Bing / AI 搜索实体识别
-     ====================================================== -->
+<!-- =========================================================
+     Person Schema
+     ========================================================= -->
 
 <script type="application/ld+json">
 
 {
-  "@context": "https://schema.org",
+  "@context":"https://schema.org",
 
-  "@type": "Person",
+  "@type":"Person",
 
-  "name": "高源",
+  "name":"高源",
 
-  "alternateName": "Gao Yuan",
+  "alternateName":"Gao Yuan",
 
-  "url":
-  "https://gaoyuanhelsinki.cn/",
+  "url":"https://gaoyuanhelsinki.cn/",
 
-  "image":
-  "https://gaoyuanhelsinki.cn/avatar.png",
+  "image":"https://gaoyuanhelsinki.cn/avatar.png",
 
-  "sameAs": [
+  "sameAs":[
 
     "https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&info_id=660&flag=3",
 
@@ -1155,21 +1552,19 @@ footer {
 
   ],
 
-  "knowsAbout": [
-
-    "European Area Studies",
+  "knowsAbout":[
 
     "Nordic Studies",
 
-    "European Intellectual History",
+    "European Area Studies",
 
-    "Philosophy of Emotions",
+    "European Intellectual History",
 
     "Sino-European Intellectual Exchange",
 
-    "Polar Silk Road",
+    "Chinese Philosophy",
 
-    "Chinese Philosophy"
+    "Polar Silk Road"
 
   ]
 
@@ -1184,9 +1579,9 @@ footer {
 <body>
 
 
-<!-- ======================================================
+<!-- =========================================================
      顶部导航
-     ====================================================== -->
+     ========================================================= -->
 
 <header class="topbar">
 
@@ -1194,7 +1589,9 @@ footer {
 
 <a class="brand"
    href="/">
-高源 · Gao Yuan
+
+高源，芬兰赫尔辛基大学
+
 </a>
 
 
@@ -1208,7 +1605,7 @@ footer {
 学术简介
 </a>
 
-<a href="#research-area">
+<a href="#research">
 研究方向
 </a>
 
@@ -1244,118 +1641,200 @@ footer {
 
 
 
-<!-- ======================================================
+<!-- =========================================================
      HERO
-     ====================================================== -->
+     ========================================================= -->
 
 <section class="hero">
 
 <div class="hero-inner">
 
 
-<div>
-
-<div class="eyebrow">
-Academic Profile · Nordic & European Studies
-</div>
+<div class="hero-copy">
 
 
-<h1>
-高 源
+<h1 class="hero-title">
+
+高源，芬兰赫尔辛基大学
+
 </h1>
 
 
-<div class="name-en">
-GAO YUAN
-</div>
+<div class="hero-fields">
 
-
-<div class="hero-school">
-
-芬兰赫尔辛基大学 · 北欧芬兰学派
-
-</div>
-
-
-<div class="hero-research">
-
-研究方向：
 欧洲区域国别学｜
 欧洲思想史｜
-欧洲情感哲学传统｜
-一带一路研究｜
-冰上数字丝路｜
 中欧文明互鉴｜
-北欧思想流派｜
-中华文明精神（儒佛道）国际诠释与价值传播
+冰上丝路战略
 
 </div>
 
 
-<div class="hero-tags">
+<div class="hero-bio">
 
-<span class="hero-tag">
-欧洲思想史
-</span>
-
-<span class="hero-tag">
-文明互鉴
-</span>
-
-<span class="hero-tag">
-北欧区域国别研究
-</span>
-
-<span class="hero-tag">
-区域国别研究方法
-</span>
-
-<span class="hero-tag">
-中欧思想传统比较
-</span>
+芬兰赫尔辛基大学欧洲哲学博士、博士后，芬兰加冕博士荣誉。
+最近五年来，任职上海交通大学人文学院副教授、上海交通大学欧洲文化高等研究院研究员。
+主要从事欧洲特色区域国别学、欧洲思想史、欧洲情感哲学传统、北欧思想流派、丝路战略与大国互动、
+欧洲研究与文明互鉴、儒佛道国际诠释与传播等领域研究。
 
 </div>
 
 
-<div class="hero-buttons">
+<div class="hero-actions">
 
-<a class="button button-primary"
+<a class="hero-button primary"
    href="/research/">
 
-查看代表性研究成果
+查看研究成果
 
 </a>
 
 
-<a class="button button-secondary"
+<a class="hero-button secondary"
    href="mailto:gaoshanyuanquan@hotmail.com">
 
 邮箱联系
 
 </a>
 
+</div>
 
-<a class="button button-secondary"
-   href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
 
-上海交通大学官方主页
+<div class="hero-links">
+
+<a href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+
+▣ 上海交通大学主页
+
+</a>
+
+
+<a href="https://github.com/gaoyuanhelsinki">
+
+● GitHub
+
+</a>
+
+
+<a href="https://www.linkedin.com/in/源-高-58516a23b/">
+
+▣ LinkedIn
 
 </a>
 
 </div>
 
+
 </div>
 
 
 
-<div class="avatar-wrap">
+<div class="portrait-wrap">
 
-<img class="avatar"
+<img class="portrait"
      src="/avatar.png"
      alt="高源 Gao Yuan">
 
-<div class="avatar-caption">
-Gao Yuan · Academic Profile
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     四大研究方向
+     ========================================================= -->
+
+<section class="focus-strip">
+
+<div class="focus-grid">
+
+
+<div class="focus">
+
+<div class="focus-icon">
+▤
+</div>
+
+<div>
+
+<div class="focus-title">
+欧洲区域国别学
+</div>
+
+<div class="focus-sub">
+思想根基研究
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="focus">
+
+<div class="focus-icon">
+◎
+</div>
+
+<div>
+
+<div class="focus-title">
+中欧文明互鉴
+</div>
+
+<div class="focus-sub">
+现实维度研究
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="focus">
+
+<div class="focus-icon">
+▲
+</div>
+
+<div>
+
+<div class="focus-title">
+冰上丝路战略
+</div>
+
+<div class="focus-sub">
+战略延展研究
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="focus">
+
+<div class="focus-icon">
+▥
+</div>
+
+<div>
+
+<div class="focus-title">
+中华文明传播
+</div>
+
+<div class="focus-sub">
+国际诠释与价值传播
+</div>
+
 </div>
 
 </div>
@@ -1367,33 +1846,232 @@ Gao Yuan · Academic Profile
 
 
 
+<!-- =========================================================
+     数据
+     ========================================================= -->
 
-<div class="container">
+<section class="stats">
 
-
-
-<!-- ======================================================
-     简介
-     ====================================================== -->
-
-<section class="content-section"
-         id="about">
+<div class="stats-grid">
 
 
-<div class="section-kicker">
-About
+<div class="stat">
+
+<div class="stat-number">
+13
+</div>
+
+<div class="stat-label">
+主持科研项目
+</div>
+
 </div>
 
 
-<h2 class="section-title">
+<div class="stat">
+
+<div class="stat-number">
+20
+</div>
+
+<div class="stat-label">
+代表论文成果
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+10
+</div>
+
+<div class="stat-label">
+通识核心课程
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-number">
+10
+</div>
+
+<div class="stat-label">
+欧洲学术兼职
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     首页摘要
+     ========================================================= -->
+
+<section class="quick">
+
+<div class="quick-grid">
+
+
+<div class="quick-block">
+
+<h2>
+学术简介
+</h2>
+
+<p>
+
+师承“芬兰学派”重要奠基人 Simo Knuuttila 院士与 Miikka Ruokanen 教授，
+中国首位国家公派北欧芬兰获得欧洲思想史与文明互鉴领域博士学位者。
+
+</p>
+
+<a class="more"
+   href="#about">
+
+了解更多 →
+
+</a>
+
+</div>
+
+
+
+<div class="quick-block">
+
+<h2>
+研究方向
+</h2>
+
+<p>
+
+形成“区域国别—思想根基—国家战略”三位一体的研究路径，
+涵盖欧洲思想传统、中欧文明互鉴、海上/冰上丝路与国家安全等特色领域。
+
+</p>
+
+<a class="more"
+   href="#research">
+
+查看研究框架 →
+
+</a>
+
+</div>
+
+
+
+<div class="quick-block">
+
+<h2>
+代表成果
+</h2>
+
+<ul>
+
+<li>
+叩问东方之道：挪威探华进程中老学的最早译介与研究
+</li>
+
+<li>
+道入北极：现存最早的冰岛文《老子》珍稀译本研究
+</li>
+
+<li>
+儒学在冰上丝路：芬兰儒学的百年发展路径与当代传播
+</li>
+
+<li>
+Luther and Taoism: The Early Lutheran Interpretation...
+</li>
+
+</ul>
+
+<a class="more"
+   href="/research/">
+
+进入研究成果页面 →
+
+</a>
+
+</div>
+
+
+
+<div class="quick-block">
+
+<h2>
+快速导航
+</h2>
+
+<ul>
+
+<li>
+<a href="#projects">
+科研项目
+</a>
+</li>
+
+<li>
+<a href="#courses">
+课程
+</a>
+</li>
+
+<li>
+<a href="#appointments">
+学术兼职
+</a>
+</li>
+
+<li>
+<a href="#contact">
+联系方式
+</a>
+</li>
+
+</ul>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<div class="page">
+
+
+
+<!-- =========================================================
+     学术简介
+     ========================================================= -->
+
+<section class="section"
+         id="about">
+
+
+<div class="kicker">
+About
+</div>
+
+<h2>
 学术简介
 </h2>
 
 
-<div class="bio-layout">
-
-
-<div class="panel bio-panel">
+<div class="content-card">
 
 
 <p>
@@ -1417,53 +2095,17 @@ About
 </p>
 
 
-<div class="official-box">
+<div class="official">
 
 <strong>
-官方机构学术主页
+官方机构学术主页：
 </strong>
-
-<br>
 
 <a href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
 
-高源 - 上海交通大学欧洲文化高等研究院 →
+高源 - 上海交通大学欧洲文化高等研究院
 
 </a>
-
-</div>
-
-
-</div>
-
-
-
-<div class="panel">
-
-<div class="section-kicker">
-Academic Focus
-</div>
-
-<h3 style="color:#18324a;margin-top:4px;">
-核心定位
-</h3>
-
-<p>
-欧洲区域国别视野下的欧洲思想传统、文明互鉴与北极国家战略研究
-</p>
-
-<hr style="border:0;border-top:1px solid #e4e8ec;margin:22px 0;">
-
-<p style="color:#6b7280;font-family:Arial,'Microsoft YaHei',sans-serif;font-size:14px;">
-
-欧洲区域国别学<br>
-欧洲思想史<br>
-北欧思想流派<br>
-中欧文明互鉴<br>
-海上 / 冰上丝路战略<br>
-中华文明国际传播
-
-</p>
 
 </div>
 
@@ -1474,58 +2116,35 @@ Academic Focus
 
 
 
-
-<!-- ======================================================
+<!-- =========================================================
      研究方向
-     ====================================================== -->
+     ========================================================= -->
 
-<section class="content-section"
-         id="research-area">
+<section class="section"
+         id="research">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Research Framework
 </div>
 
-
-<h2 class="section-title">
-
+<h2>
 研究方向
-<br>
-
-<span style="font-size:20px;font-weight:500;color:#55636f;">
-“区域国别—思想根基—国家战略”三位一体
-</span>
-
 </h2>
 
 
-<div class="framework">
+<div class="research-framework">
 
 
-<div class="framework-main">
+<div class="research-card">
 
-<strong>
-一体：
-</strong>
-
-区域国别视野下的欧洲思想传统、文明互鉴与北极国家战略研究
-
-</div>
-
-
-<div class="framework-grid">
-
-
-<div class="framework-card">
-
-<div class="framework-number">
+<div class="number">
 01
 </div>
 
-<strong>
+<h3>
 区域国别与欧洲思想传统
-</strong>
+</h3>
 
 <p>
 思想根基
@@ -1535,15 +2154,15 @@ Research Framework
 
 
 
-<div class="framework-card">
+<div class="research-card">
 
-<div class="framework-number">
+<div class="number">
 02
 </div>
 
-<strong>
+<h3>
 中欧文明互鉴与国家战略
-</strong>
+</h3>
 
 <p>
 现实维度
@@ -1553,15 +2172,15 @@ Research Framework
 
 
 
-<div class="framework-card">
+<div class="research-card">
 
-<div class="framework-number">
+<div class="number">
 03
 </div>
 
-<strong>
+<h3>
 海上/冰上丝路与国家安全
-</strong>
+</h3>
 
 <p>
 战略延展
@@ -1572,42 +2191,54 @@ Research Framework
 
 </div>
 
-</div>
 
+<div class="tags">
 
+<span class="tag">
+欧洲特色区域国别学
+</span>
 
-<h3 style="margin-top:38px;color:#18324a;">
-特色研究
-</h3>
+<span class="tag">
+一带一路研究
+</span>
 
+<span class="tag">
+冰上数字丝路
+</span>
 
-<div class="topic-cloud">
+<span class="tag">
+中欧文明互鉴
+</span>
 
-<span class="topic">欧洲特色区域国别学</span>
+<span class="tag">
+欧洲情感心理哲学
+</span>
 
-<span class="topic">一带一路研究</span>
+<span class="tag">
+海上/冰上丝路战略
+</span>
 
-<span class="topic">冰上数字丝路</span>
+<span class="tag">
+北极命运共同体研究
+</span>
 
-<span class="topic">中欧文明互鉴</span>
+<span class="tag">
+北极地缘与国际关系
+</span>
 
-<span class="topic">欧洲情感心理哲学</span>
+<span class="tag">
+北欧政治思想流派研究
+</span>
 
-<span class="topic">海上/冰上丝路战略</span>
+<span class="tag">
+北欧国家冷门绝学
+</span>
 
-<span class="topic">北极命运共同体研究</span>
-
-<span class="topic">北极地缘与国际关系</span>
-
-<span class="topic">北欧政治思想流派研究</span>
-
-<span class="topic">北欧国家冷门绝学</span>
-
-<span class="topic">
+<span class="tag">
 中华文明精神（儒佛道）国际诠释与价值传播
 </span>
 
-<span class="topic">
+<span class="tag">
 人工智能与国家宗教安全
 </span>
 
@@ -1618,26 +2249,24 @@ Research Framework
 
 
 
-
-<!-- ======================================================
+<!-- =========================================================
      亮点与贡献
-     ====================================================== -->
+     ========================================================= -->
 
-<section class="content-section"
+<section class="section"
          id="highlights">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Highlights
 </div>
 
-
-<h2 class="section-title">
+<h2>
 亮点与贡献
 </h2>
 
 
-<div class="highlight-box">
+<div class="content-card">
 
 
 <p>
@@ -1681,43 +2310,34 @@ Highlights
 
 
 
-
-<!-- ======================================================
+<!-- =========================================================
      科研项目
-     ====================================================== -->
+     ========================================================= -->
 
-<section class="content-section"
+<section class="section"
          id="projects">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Research Projects
 </div>
 
-
-<h2 class="section-title">
+<h2>
 主持项目（部分）
 </h2>
 
 
-<p class="project-intro">
+<p>
 
 作为项目首席专家或团队总负责人（PI），高源主持多项国家科技部、教育部、国家社科基金等国家级基金项目。已主持或完成的海内外国家级或团队高层次项目包括（部分）：
 
 </p>
 
 
-<div class="project-list">
-
-
 <div class="project">
 
-<span class="project-number">
-01
-</span>
-
 <strong>
-国家级项目：
+1. 国家级项目：
 </strong>
 
 国家科技部国家外国专家团队项目“冰上丝绸之路”（批准号：DL2022134001L；联合芬兰科学院、芬兰赫尔辛基大学、瑞典哥德堡大学共同开展；已结项。团队总负责人：高源）。
@@ -1725,15 +2345,10 @@ Research Projects
 </div>
 
 
-
 <div class="project">
 
-<span class="project-number">
-02
-</span>
-
 <strong>
-国家级/国际级项目：
+2. 国家级/国际级项目：
 </strong>
 
 芬兰科学院国家重大项目 “The Impact of Religious Value on Chinese Social Life” 团队核心负责人之一（同时作为芬兰科学院团队项目联合主编将于欧洲与中国境内同时出版成果；该国家项目科研基金约 60 万欧元〔约人民币 500 万〕，批准号：FIN–314707；佛教团队负责人：高源）。
@@ -1741,15 +2356,10 @@ Research Projects
 </div>
 
 
-
 <div class="project">
 
-<span class="project-number">
-03
-</span>
-
 <strong>
-国家级项目：
+3. 国家级项目：
 </strong>
 
 国家社科基金项目“冰上丝绸之路视域下儒佛道哲学典籍的芬兰文译本研究”（批准号：21CZX044；已结项；结项等级：良好。团队总负责人：高源）。
@@ -1757,15 +2367,10 @@ Research Projects
 </div>
 
 
-
 <div class="project">
 
-<span class="project-number">
-04
-</span>
-
 <strong>
-国家级项目：
+4. 国家级项目：
 </strong>
 
 国家社科基金后期资助项目“走出古典哲学”（批准号：19FZXB030；已结项；项目负责人：高源）。
@@ -1773,15 +2378,10 @@ Research Projects
 </div>
 
 
-
 <div class="project">
 
-<span class="project-number">
-05
-</span>
-
 <strong>
-国家级项目：
+5. 国家级项目：
 </strong>
 
 教育部社科基金项目“海上丝绸之路：儒家经典首次西传中的拉丁文译本研究”（批准号：19YJC720012；已结项；项目团队负责人：高源）。
@@ -1789,21 +2389,15 @@ Research Projects
 </div>
 
 
-
 <div class="project">
 
-<span class="project-number">
-06
-</span>
-
 <strong>
-特色团队项目：
+6. 特色团队项目：
 </strong>
 
 上海交通大学文科创新团队项目“北欧哲学与文化传播”（团队批准号：WKCX029；团队总负责人：高源）。
 
 </div>
-
 
 
 <details>
@@ -1852,43 +2446,33 @@ Research Projects
 </details>
 
 
-</div>
-
 </section>
 
 
 
+<!-- =========================================================
+     论文著作
+     ========================================================= -->
 
-<!-- ======================================================
-     论文 / 著作
-     ====================================================== -->
-
-<section class="content-section"
+<section class="section"
          id="publications">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Publications
 </div>
 
-
-<h2 class="section-title">
+<h2>
 论文 / 著作
 </h2>
 
 
-<h3 style="color:#18324a;">
-代表作与部分成果
-</h3>
+<div class="pub-grid">
 
 
+<div class="pub">
 
-<div class="publication-feature">
-
-
-<div class="pub-card">
-
-<span class="pub-tag">
+<span class="pub-label">
 CSSCI · 2025
 </span>
 
@@ -1910,9 +2494,9 @@ CSSCI · 2025
 
 
 
-<div class="pub-card">
+<div class="pub">
 
-<span class="pub-tag">
+<span class="pub-label">
 CSSCI · 2024
 </span>
 
@@ -1928,9 +2512,9 @@ CSSCI · 2024
 
 
 
-<div class="pub-card">
+<div class="pub">
 
-<span class="pub-tag">
+<span class="pub-label">
 CSSCI · 2024
 </span>
 
@@ -1946,9 +2530,9 @@ CSSCI · 2024
 
 
 
-<div class="pub-card">
+<div class="pub">
 
-<span class="pub-tag">
+<span class="pub-label">
 A&amp;HCI · 2024
 </span>
 
@@ -1957,7 +2541,7 @@ Gao Yuan (高源), “Luther and Taoism: The Early Lutheran Interpretation of th
 </h3>
 
 <p>
-DIALOG, 2024, Vol. 63, No. 2.
+DIALOG, 2024, Vol.63, No.2.
 </p>
 
 </div>
@@ -1991,7 +2575,7 @@ DIALOG, 2024, Vol. 63, No. 2.
 </li>
 
 <li>
-Gao Yuan (高源), “Luther and Taoism: The Early Lutheran Interpretation of the Taoist Conception of Love in the Sino-Nordic Religious Encounter”, DIALOG, 2024, Vol. 63, No. 2.〖A&amp;HCI〗
+Gao Yuan (高源), “Luther and Taoism: The Early Lutheran Interpretation of the Taoist Conception of Love in the Sino-Nordic Religious Encounter”, DIALOG, 2024, Vol.63, No.2.〖A&amp;HCI〗
 </li>
 
 <li>
@@ -2015,7 +2599,7 @@ Gao Yuan (高源), “The relational love in the dialogue between Lutheran theol
 </li>
 
 <li>
-Gao Yuan (高源), “Political passions in modern Christian-Confucian dialogue on war”, DIALOG, 2023, Vol. 62, No. 1.〖A&amp;HCI〗
+Gao Yuan (高源), “Political passions in modern Christian-Confucian dialogue on war”, DIALOG, 2023, Vol.62, No.1.〖A&amp;HCI〗
 </li>
 
 <li>
@@ -2039,11 +2623,11 @@ Gao Yuan (高源), “Political passions in modern Christian-Confucian dialogue 
 </li>
 
 <li>
-高源, “Deification and Sanctification in the Dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School”, DIALOG, 2022, No. 1.〖A&amp;HCI〗
+高源, “Deification and Sanctification in the Dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School”, DIALOG, 2022, No.1.〖A&amp;HCI〗
 </li>
 
 <li>
-Risto Saarinen and Gao Yuan (高源), “A Theology of Hope”, DIALOG, 2022, No. 1.〖A&amp;HCI〗
+Risto Saarinen and Gao Yuan (高源), “A Theology of Hope”, DIALOG, 2022, No.1.〖A&amp;HCI〗
 </li>
 
 <li>
@@ -2069,7 +2653,7 @@ Risto Saarinen and Gao Yuan (高源), “A Theology of Hope”, DIALOG, 2022, No
 <details>
 
 <summary>
-反映芬兰学派与汉语语境对话动态的论文
+芬兰学派与汉语语境相关论文
 </summary>
 
 <div class="details-body">
@@ -2089,24 +2673,23 @@ Gao Yuan, “Introduction to the Fourth Nordic Forum of Sino-Western Studies on 
 <details>
 
 <summary>
-芬兰科学院重大团队项目成果（与 Miikka Ruokanen 教授联合，待出版或发表）
+芬兰科学院重大团队项目相关成果
 </summary>
-
 
 <div class="details-body">
 
 <ol>
 
 <li>
-高源：《论中国社会近现代转型中人间佛教价值理想的三种影响之维》，载《芬兰科学院国家重大项目成果》（属芬兰科学院国家重大团队项目成果，拟于中国与欧洲不同语种同时出版）。
+高源：《论中国社会近现代转型中人间佛教价值理想的三种影响之维》，载《芬兰科学院国家重大项目成果》。
 </li>
 
 <li>
-Miikka Ruokanen and Gao Yuan (高源), “Uskontopohjaisten arvojen merkitys Kiinan nyky-yhteiskunnassa / The Role of Faith-Based Values in the Modern Chinese Society”, Teologinen Aikakauskirja - Teologisk Tidskrift, Helsinki, 10/2023.〖芬兰文；拟发表于赫尔辛基〗
+Miikka Ruokanen and Gao Yuan (高源), “Uskontopohjaisten arvojen merkitys Kiinan nyky-yhteiskunnassa / The Role of Faith-Based Values in the Modern Chinese Society”, Teologinen Aikakauskirja - Teologisk Tidskrift, Helsinki, 10/2023.
 </li>
 
 <li>
-Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Modern Interpretations of Traditional Chinese Core Values for Europe”（芬兰科学院重大项目的翻译书稿），约 108 万欧洲语种词。〖英文；拟出版于欧洲〗
+Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Modern Interpretations of Traditional Chinese Core Values for Europe”.
 </li>
 
 </ol>
@@ -2120,14 +2703,14 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 <details>
 
 <summary>
-中国书法哲学评鉴文章（芬兰）
+中国书法哲学评鉴文章
 </summary>
 
 <div class="details-body">
 
 <p>
 
-高源，《中国书法哲学：法古与开新》(Philosophy of Chinese Calligraphy: Inheritance and Innovation)，载 Moi Finland (Helsinki: University of Helsinki Scholars Society), 2014(3): 104–106.
+高源，《中国书法哲学：法古与开新》(Philosophy of Chinese Calligraphy: Inheritance and Innovation)，载 Moi Finland (Helsinki: University of Helsinki Scholars Society), 2014(3):104–106.
 
 </p>
 
@@ -2136,47 +2719,23 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 </details>
 
 
-
-<div style="margin-top:27px;">
-
-<a href="/research/"
-   style="
-   display:inline-block;
-   padding:10px 16px;
-   border:1px solid #31566e;
-   border-radius:8px;
-   text-decoration:none;
-   color:#18324a;
-   font-family:Arial,'Microsoft YaHei',sans-serif;
-   font-weight:650;
-   ">
-
-进入独立研究成果页面 →
-
-</a>
-
-</div>
-
-
 </section>
 
 
 
-
-<!-- ======================================================
+<!-- =========================================================
      课程
-     ====================================================== -->
+     ========================================================= -->
 
-<section class="content-section"
+<section class="section"
          id="courses">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Teaching
 </div>
 
-
-<h2 class="section-title">
+<h2>
 国内外语境开设的通识核心课程与研究生课程
 </h2>
 
@@ -2186,7 +2745,6 @@ Teaching
 <summary>
 课程列表
 </summary>
-
 
 <div class="details-body">
 
@@ -2243,28 +2801,21 @@ Teaching
 
 
 
+<!-- =========================================================
+     学术兼职
+     ========================================================= -->
 
-<!-- ======================================================
-     欧洲学术兼职
-     ====================================================== -->
-
-<section class="content-section"
+<section class="section"
          id="appointments">
 
 
-<div class="section-kicker">
+<div class="kicker">
 Academic Appointments
 </div>
 
-
-<h2 class="section-title">
+<h2>
 欧洲学术兼职
 </h2>
-
-
-<p class="section-intro">
-欧洲学术兼职（部分）：
-</p>
 
 
 <details open>
@@ -2272,7 +2823,6 @@ Academic Appointments
 <summary>
 查看欧洲及国际学术兼职
 </summary>
-
 
 <div class="details-body">
 
@@ -2328,75 +2878,57 @@ Academic Appointments
 </section>
 
 
-
-
-<!-- ======================================================
-     联系
-     ====================================================== -->
-
-<section class="content-section"
-         id="contact">
-
-
-<div class="contact-panel">
-
-
-<div>
-
-<h2>
-联系与链接
-</h2>
-
-<p>
-Academic Contact & Institutional Profiles
-</p>
-
 </div>
 
 
-<div class="contact-links">
 
+<!-- =========================================================
+     Footer
+     ========================================================= -->
+
+<footer class="footer"
+        id="contact">
+
+
+<div class="footer-inner">
+
+
+<h3>
+联系与链接
+</h3>
+
+
+<div class="footer-links">
 
 <a href="mailto:gaoshanyuanquan@hotmail.com">
-邮箱
+✉ gaoshanyuanquan@hotmail.com
 </a>
-
 
 <a href="https://github.com/gaoyuanhelsinki">
-GitHub
+● GitHub
 </a>
-
 
 <a href="https://www.linkedin.com/in/源-高-58516a23b/">
-LinkedIn
+▣ LinkedIn
 </a>
-
 
 <a href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
-上海交通大学官方机构主页
+▥ 上海交通大学官方主页
 </a>
 
-
 </div>
 
 
-</div>
+<div class="copyright">
 
-
-</section>
-
-
-
-</div>
-
-
-
-<footer>
-
-© 高源 · 芬兰赫尔辛基大学
-<br>
-
+© 高源 | 芬兰赫尔辛基大学
+&nbsp;&nbsp; | &nbsp;&nbsp;
 gaoyuanhelsinki.cn
+
+</div>
+
+
+</div>
 
 </footer>
 
