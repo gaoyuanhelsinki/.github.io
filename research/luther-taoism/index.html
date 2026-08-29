@@ -1,0 +1,2322 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Gao Yuan 高源｜北欧芬兰学派｜Luther and Taoism｜路德与道家思想对话</title>
+
+<meta name="description"
+      content="高源（Gao Yuan）发表于 Dialog: A Journal of Theology 的研究成果 Luther and Taoism: The Early Lutheran Interpretation of the Taoist Conception of Love in the Sino-Nordic Religious Encounter。研究北欧道家经典传播、早期路德宗传教士对道家之爱的理解、芬兰学派两种爱理论，以及路德宗与道家关于爱、道、德与精神生命的比较研究。">
+
+<meta name="author"
+      content="高源 Gao Yuan">
+
+<meta name="keywords"
+      content="Gao Yuan, 高源, Luther and Taoism, Taoism, Daoism, Martin Luther, Finnish Lutheran School, Sino-Nordic Religious Encounter, Tao-Te-King, love, 北欧道家, 路德宗, 芬兰学派, 北欧研究, 中欧文明互鉴">
+
+<link rel="canonical"
+      href="https://gaoyuanhelsinki.cn/research/luther-taoism/">
+
+
+<style>
+
+/* =========================================================
+   全站基础
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  --ink: #1f2937;
+
+  --navy: #18324a;
+  --navy-deep: #102b43;
+  --navy-soft: #2f4f68;
+
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+
+  --line: #e5e9ed;
+
+  --muted: #697681;
+
+  --accent-bg: #eef3f6;
+
+  --gold: #c5a45b;
+  --gold-soft: #e8d097;
+
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+
+  margin: 0;
+
+  background: var(--paper);
+
+  color: var(--ink);
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    "Microsoft YaHei",
+    serif;
+
+  line-height: 1.9;
+
+}
+
+
+a {
+  color: var(--navy-soft);
+}
+
+
+body,
+p,
+li,
+h1,
+h2,
+h3,
+a {
+
+  overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   顶部导航
+   ========================================================= */
+
+.topbar {
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  background: rgba(255,255,255,.97);
+
+  border-bottom: 1px solid var(--line);
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.nav {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 16px 24px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 25px;
+
+  flex-wrap: wrap;
+
+}
+
+
+.brand {
+
+  margin-right: auto;
+
+  color: var(--navy);
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 750;
+
+}
+
+
+.nav a {
+
+  text-decoration: none;
+
+  color: #263238;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 600;
+
+}
+
+
+.nav a:hover {
+
+  color: var(--navy-soft);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+  position: relative;
+
+  overflow: hidden;
+
+  color: white;
+
+  padding: 72px 24px 65px;
+
+  background:
+
+    radial-gradient(
+      circle at 81% 18%,
+      rgba(255,255,255,.10),
+      transparent 29%
+    ),
+
+    linear-gradient(
+      135deg,
+      #102b43 0%,
+      #1b405d 58%,
+      #315b73 100%
+    );
+
+}
+
+
+.hero::after {
+
+  content: "";
+
+  position: absolute;
+
+  left: -10%;
+
+  right: -10%;
+
+  bottom: -190px;
+
+  height: 300px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,.035);
+
+}
+
+
+.hero-inner {
+
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1.5fr)
+    minmax(245px,.5fr);
+
+  gap: 54px;
+
+  align-items: center;
+
+}
+
+
+.eyebrow {
+
+  margin-bottom: 17px;
+
+  color: rgba(255,255,255,.73);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 12.5px;
+
+  letter-spacing: .12em;
+
+  text-transform: uppercase;
+
+}
+
+
+.hero h1 {
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    serif;
+
+  font-size: 37px;
+
+  line-height: 1.43;
+
+  font-weight: 700;
+
+}
+
+
+.hero-cn {
+
+  margin-top: 17px;
+
+  color: var(--gold-soft);
+
+  font-size: 20px;
+
+  line-height: 1.65;
+
+}
+
+
+.hero-meta {
+
+  margin-top: 24px;
+
+  color: rgba(255,255,255,.91);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.95;
+
+}
+
+
+/* =========================================================
+   DIALOG视觉模块
+   ========================================================= */
+
+.dialog-cover {
+
+  position: relative;
+
+  min-height: 365px;
+
+  padding: 37px 24px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  border: 1px solid rgba(255,255,255,.28);
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(255,255,255,.22),
+      rgba(255,255,255,.07) 53%,
+      rgba(255,255,255,.04)
+    );
+
+  box-shadow:
+    0 20px 40px rgba(0,0,0,.22);
+
+}
+
+
+.dialog-cover::before {
+
+  content: "✦";
+
+  position: absolute;
+
+  top: 74px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  color: rgba(255,255,255,.10);
+
+  font-size: 175px;
+
+  line-height: 1;
+
+}
+
+
+.dialog-title {
+
+  position: relative;
+
+  z-index: 2;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 43px;
+
+  letter-spacing: .16em;
+
+  color: #fff;
+
+}
+
+
+.dialog-sub {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 5px;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+
+  letter-spacing: .12em;
+
+  opacity: .78;
+
+}
+
+
+.dialog-line {
+
+  position: relative;
+
+  z-index: 2;
+
+  width: 50px;
+
+  height: 2px;
+
+  margin: 25px auto;
+
+  background: var(--gold);
+
+}
+
+
+.dialog-info {
+
+  position: relative;
+
+  z-index: 2;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+
+  opacity: .88;
+
+}
+
+
+.wiley {
+
+  position: relative;
+
+  z-index: 2;
+
+  margin-top: 28px;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  letter-spacing: .10em;
+
+}
+
+
+/* =========================================================
+   面包屑
+   ========================================================= */
+
+.breadcrumb {
+
+  max-width: 1180px;
+
+  margin: 22px auto 0;
+
+  padding: 0 24px;
+
+  color: #7a8188;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+.breadcrumb a {
+
+  color: #5a6874;
+
+  text-decoration: none;
+
+}
+
+
+/* =========================================================
+   正文框架
+   ========================================================= */
+
+.page {
+
+  max-width: 1180px;
+
+  margin: 40px auto 70px;
+
+  padding: 0 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    320px;
+
+  gap: 34px;
+
+}
+
+
+.main-card {
+
+  padding: 44px 46px;
+
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 5px 22px rgba(0,0,0,.045);
+
+}
+
+
+.main-card h2 {
+
+  margin-top: 43px;
+
+  margin-bottom: 15px;
+
+  padding-bottom: 10px;
+
+  color: var(--navy);
+
+  border-bottom: 1px solid var(--line);
+
+  font-size: 24px;
+
+}
+
+
+.main-card h2:first-child {
+
+  margin-top: 0;
+
+}
+
+
+.main-card p {
+
+  margin: 14px 0;
+
+  text-align: justify;
+
+}
+
+
+/* =========================================================
+   重点框
+   ========================================================= */
+
+.highlight {
+
+  margin: 23px 0;
+
+  padding: 21px 24px;
+
+  background: var(--accent-bg);
+
+  border-left: 4px solid var(--navy-soft);
+
+  border-radius: 8px;
+
+}
+
+
+.discovery {
+
+  margin: 20px 0;
+
+  padding: 21px 23px;
+
+  background: #fcfcfb;
+
+  border: 1px solid #e3e6e8;
+
+  border-radius: 9px;
+
+}
+
+
+.discovery strong {
+
+  color: var(--navy);
+
+}
+
+
+/* =========================================================
+   五部分研究结构
+   ========================================================= */
+
+.structure {
+
+  display: grid;
+
+  gap: 14px;
+
+  margin: 23px 0;
+
+}
+
+
+.structure-item {
+
+  display: grid;
+
+  grid-template-columns:
+    52px 1fr;
+
+  gap: 16px;
+
+  padding: 20px 22px;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+}
+
+
+.number {
+
+  color: var(--gold);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 26px;
+
+  line-height: 1.2;
+
+}
+
+
+.structure-item strong {
+
+  color: var(--navy);
+
+}
+
+
+/* =========================================================
+   两种爱比较
+   ========================================================= */
+
+.compare-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap: 16px;
+
+  margin: 23px 0;
+
+}
+
+
+.compare-card {
+
+  padding: 23px;
+
+  background: #fff;
+
+  border: 1px solid var(--line);
+
+  border-radius: 10px;
+
+}
+
+
+.compare-card h3 {
+
+  margin-top: 0;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+}
+
+
+.term {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style: italic;
+
+}
+
+
+/* =========================================================
+   右侧栏
+   ========================================================= */
+
+.sidebar {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+
+.side-card {
+
+  padding: 22px;
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.035);
+
+}
+
+
+.side-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 14px;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+}
+
+
+.side-card p {
+
+  margin: 8px 0;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+}
+
+
+.tag-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+}
+
+
+.tag {
+
+  padding: 6px 10px;
+
+  border: 1px solid #dde5ea;
+
+  border-radius: 999px;
+
+  background: var(--accent-bg);
+
+  color: #41515f;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 13px;
+
+}
+
+
+.official-link {
+
+  display: block;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  line-height: 1.75;
+
+}
+
+
+.doi {
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 13px;
+
+}
+
+
+/* =========================================================
+   返回导航
+   ========================================================= */
+
+.back-links {
+
+  margin-top: 37px;
+
+  padding-top: 21px;
+
+  border-top: 1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  line-height: 2;
+
+}
+
+
+/* =========================================================
+   页脚
+   ========================================================= */
+
+footer {
+
+  padding: 28px 20px;
+
+  text-align: center;
+
+  color: #7b8085;
+
+  background: white;
+
+  border-top: 1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   手机适配
+   ========================================================= */
+
+@media(max-width:900px) {
+
+  .hero-inner {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .page {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .compare-grid {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero h1 {
+
+    font-size: 30px;
+
+  }
+
+  .main-card {
+
+    padding: 30px 24px;
+
+  }
+
+  .dialog-cover {
+
+    min-height: 260px;
+
+  }
+
+}
+
+
+@media(max-width:600px) {
+
+  .hero {
+
+    padding: 48px 18px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 25px;
+
+  }
+
+  .hero-cn {
+
+    font-size: 17px;
+
+  }
+
+  .nav {
+
+    gap: 14px;
+
+  }
+
+  .page {
+
+    padding: 0 14px;
+
+  }
+
+  .structure-item {
+
+    grid-template-columns:
+      42px 1fr;
+
+  }
+
+}
+
+</style>
+
+
+
+<!-- =========================================================
+     ScholarlyArticle SEO
+     ========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context":"https://schema.org",
+
+  "@type":"ScholarlyArticle",
+
+  "headline":"Luther and Taoism: The early Lutheran interpretation of the Taoist conception of love in the Sino-Nordic religious encounter",
+
+  "author":{
+    "@type":"Person",
+    "name":"Gao Yuan",
+    "alternateName":"高源",
+    "url":"https://gaoyuanhelsinki.cn/"
+  },
+
+  "datePublished":"2024",
+
+  "isPartOf":{
+    "@type":"Periodical",
+    "name":"Dialog: A Journal of Theology"
+  },
+
+  "volumeNumber":"63",
+
+  "issueNumber":"3",
+
+  "pagination":"100-107",
+
+  "identifier":"10.1111/dial.12857",
+
+  "keywords":[
+    "love",
+    "Luther",
+    "Sino-Nordic religious encounter",
+    "Taoism",
+    "Tao-Te-King",
+    "Finnish Lutheran School"
+  ],
+
+  "url":"https://gaoyuanhelsinki.cn/research/luther-taoism/",
+
+  "inLanguage":"en"
+
+}
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     导航
+     ========================================================= -->
+
+<header class="topbar">
+
+<nav class="nav">
+
+<a class="brand"
+   href="/">
+高源 · Gao Yuan
+</a>
+
+<a href="/">
+首页
+</a>
+
+<a href="/research/">
+研究成果
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+
+<div>
+
+
+<div class="eyebrow">
+
+Research Highlight · Dialog · Sino-Nordic Religious Encounter
+
+</div>
+
+
+<h1>
+
+Luther and Taoism:<br>
+
+The Early Lutheran Interpretation of the Taoist Conception of Love in the Sino-Nordic Religious Encounter
+
+</h1>
+
+
+<div class="hero-cn">
+
+路德与道家：中国—北欧宗教相遇中早期路德宗对道家“爱”观念的诠释
+
+</div>
+
+
+<div class="hero-meta">
+
+<strong>
+Yuan GAO · 高源
+</strong>
+
+<br>
+
+Dialog: A Journal of Theology
+
+<br>
+
+Volume 63 · Number 3 · Fall 2024 · September
+
+<br>
+
+Pages 100–107
+
+<br>
+
+DOI: 10.1111/dial.12857
+
+</div>
+
+
+</div>
+
+
+
+<div class="dialog-cover">
+
+
+<div class="dialog-title">
+DIALOG
+</div>
+
+
+<div class="dialog-sub">
+A JOURNAL OF THEOLOGY
+</div>
+
+
+<div class="dialog-line">
+</div>
+
+
+<div class="dialog-info">
+
+VOLUME 63 · NUMBER 3
+
+<br>
+
+FALL 2024 · SEPTEMBER
+
+<br><br>
+
+THEME ARTICLE
+
+</div>
+
+
+<div class="wiley">
+WILEY
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     面包屑
+     ========================================================= -->
+
+<div class="breadcrumb">
+
+<a href="/">
+首页
+</a>
+
+&nbsp;›&nbsp;
+
+<a href="/research/">
+研究成果
+</a>
+
+&nbsp;›&nbsp;
+
+Luther and Taoism
+
+</div>
+
+
+
+<!-- =========================================================
+     正文
+     ========================================================= -->
+
+<div class="page">
+
+
+<main class="main-card">
+
+
+
+<h2>
+研究简介
+</h2>
+
+
+<p>
+
+本文以中国道家思想进入北欧路德宗语境后的跨宗教相遇为中心，系统考察早期北欧路德宗学者和来华传教士如何理解、翻译和评价道家关于“爱”的思想。文章指出，中国道家进入北欧并不仅是一段翻译史和汉学史，同时也是东西方两种核心宗教价值体系发生冲突、会通与重新对话的思想史过程。
+
+</p>
+
+
+<p>
+
+高源教授的论文首先重建《道德经》等道家经典进入斯堪的纳维亚和北欧社会的主要传播线路，继而以芬兰传教士、汉学家王为义（Juho Toivo Koskikallio）等人为代表，考察早期路德宗传教士对“道”“德”与道家之爱的理解。文章随后引入芬兰路德研究学派，特别是 Tuomo Mannermaa、Veli-Matti Kärkkäinen、Risto Saarinen 与 Miikka Ruokanen 等学者关于路德神学中爱、信仰、恩典、基督临在及神化问题的研究，并据此重新评价道家之爱及其理想精神生命。
+
+</p>
+
+
+
+<h2>
+论文研究结构
+</h2>
+
+
+<div class="structure">
+
+
+<div class="structure-item">
+
+<div class="number">
+01
+</div>
+
+<div>
+
+<strong>
+道家经典在北欧的早期路德宗译介
+</strong>
+
+<p>
+
+重建芬兰、瑞典、丹麦、冰岛与挪威等北欧国家早期《道德经》译本的传播谱系，说明北欧道学的形成与路德宗神学传统之间存在密切历史联系。
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="structure-item">
+
+<div class="number">
+02
+</div>
+
+<div>
+
+<strong>
+早期路德宗对道家“爱”的理解与批评
+</strong>
+
+<p>
+
+以王为义等北欧来华传教士为案例，高源教授考察其如何从 Logos、基督之爱与救赎神学出发解释 Tao，并进一步批评道家之爱、道家神圣人物以及宗教实践。
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="structure-item">
+
+<div class="number">
+03
+</div>
+
+<div>
+
+<strong>
+芬兰学派中的路德“两种爱”
+</strong>
+
+<p>
+
+通过芬兰学派重新分析路德神学中的人之爱与上帝之爱，以及
+<span class="term">
+in ipsa fide Christus adest
+</span>
+——“基督临在于信仰本身之中”——的神学结构。
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="structure-item">
+
+<div class="number">
+04
+</div>
+
+<div>
+
+<strong>
+重新评价道家之爱与理想精神生命
+</strong>
+
+<p>
+
+返回《老子》《庄子》以及道教经典，从本体论之爱、人类情感和道家圣人趋向理想精神生命三个层面重建道家的“爱”理论。
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="structure-item">
+
+<div class="number">
+05
+</div>
+
+<div>
+
+<strong>
+现代路德宗—道家“爱的更新”对话
+</strong>
+
+<p>
+
+在承认双方本体论前提并不相同的基础上，从神圣之爱、人格内在临在以及精神更新等维度寻找现代路德宗与道家哲学新的理论连接点。
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<h2>
+北欧《道德经》传播谱系
+</h2>
+
+
+<p>
+
+文章首先指出，道家经典进入北欧相对较晚，并且与北欧路德宗背景密切关联。1907年，佩卡·厄瓦斯特（Pekka E. Ervast）在芬兰神智学刊物中连载《道德经》部分章节；同年，瑞典传教士 Erik Folke 出版瑞典文《道德经》。此后，丹麦文译本于1909年出现，冰岛文译本于1921年出版，而挪威文《老子》则在1948年形成更加完整的版本。
+
+</p>
+
+
+<div class="highlight">
+
+<strong>
+论文的重要历史判断之一：
+</strong>
+
+北欧最早一批《道德经》译本大多具有明显的路德宗或基督教解释背景。因此，中国道家经典在北欧的接受并非纯粹的语言翻译，而从一开始就包含着“道”与 Logos、“德”与神圣生命、中国宗教与路德宗神学之间的比较。
+
+</div>
+
+
+
+<h2>
+早期路德宗为何批评道家？
+</h2>
+
+
+<div class="discovery">
+
+<strong>
+王为义的 Logos—Tao 比较
+</strong>
+
+<p>
+
+高源教授的文章重点分析芬兰来华传教士王为义的相关研究。王为义认为 Logos 与 Tao 虽然都具有超越性和无始性，但二者存在根本差异。在他的解释中，Logos 是有位格、主动、创造、道成肉身并充满和平与爱的；Tao 则被解释为无位格、被动、空虚而缺乏生命力量。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+“道是死的概念”与“假神”判断
+</strong>
+
+<p>
+
+沿着这种路德宗神学立场，王为义进一步把 Tao 理解为一种不能向人输送真正生命力量的“死的概念”，并把部分道家宗教实践视为对“假神”的崇拜。
+
+</p>
+
+<p>
+
+本文并没有简单接受这种早期传教士判断，而是把它作为一个需要重新审视的跨文化解释问题：这种评价是否真正进入了《老子》《庄子》及道教传统自身关于“道”“德”、圣人和精神生命的哲学结构？
+
+</p>
+
+</div>
+
+
+
+<h2>
+芬兰学派：路德神学中的“两种爱”
+</h2>
+
+
+<p>
+
+为了重新评价这一问题，高源教授的论文转向芬兰路德研究学派。Tuomo Mannermaa 根据路德文本区分“人之爱”与“上帝之爱”，并提出两个具有代表性的命题：
+
+</p>
+
+
+<div class="compare-grid">
+
+
+<div class="compare-card">
+
+<h3>
+Christ Present in Faith
+</h3>
+
+<p class="term">
+
+in ipsa fide Christus adest
+
+</p>
+
+<p>
+
+“基督临在于信仰本身之中”。信仰并不仅仅是一种外部判断，而意味着基督真实地临在于信仰者的生命之中。
+
+</p>
+
+</div>
+
+
+
+<div class="compare-card">
+
+<h3>
+Faith and Divinity
+</h3>
+
+<p class="term">
+
+fides est creatrix divinitatis
+
+</p>
+
+<p>
+
+信仰、神圣之爱与神化具有内在关联。芬兰学派由此把路德的称义、爱和人与神圣生命的联合重新联系起来。
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<p>
+
+高源教授的论文进一步讨论 Kärkkäinen、Saarinen 与 Ruokanen 对这一理论的发展。尤其值得注意的是，Miikka Ruokanen 把成圣理解为一种不断增长的爱的能力，而这种更新来自圣灵在人心中的内住。由此，爱不仅是一种伦理行为，也成为参与神圣生命、实现人格精神更新的力量。
+
+</p>
+
+
+
+<h2>
+重新发现道家之爱
+</h2>
+
+
+<p>
+
+在建立路德宗神学参照之后，文章重新返回《老子》《庄子》及道教文献本身，并把道家之爱划分为三个相互关联的层面。
+
+</p>
+
+
+
+<div class="discovery">
+
+<strong>
+① 本体论层面：道的超越仁爱
+</strong>
+
+<p>
+
+“道”不可言说、超越世俗欲望，却又生成、养育万物而不占有、不支配。由此，文章认为“道”并非一个没有生命和爱的“死的概念”。相反，道具有超越、慈爱、公正、无私与仁惠的价值属性。
+
+</p>
+
+<p>
+
+这种生成万物却“不有”“不恃”“不宰”的特征，被理解为一种植根于道自身的
+<strong>metaphysical love / metaphysical benevolence</strong>，
+即形上仁爱。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+② 认识论层面：人类情感与自爱
+</strong>
+
+<p>
+
+与“道”的形上之爱相比，人类情感容易受到欲望、感官刺激、自我中心和世俗诱惑支配。因此，《老子》关于五色、五音、欲望及“失道而后仁义”等讨论揭示了人之爱与道之爱之间的张力。
+
+</p>
+
+<p>
+
+但人类情感的偏离并不意味着“爱”本身应该被消灭；它反而可以成为一个指标，使人意识到自身精神状态，并重新趋向道的本体性仁爱。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+③ 上升之爱：圣人与理想精神生命
+</strong>
+
+<p>
+
+文章进一步研究《庄子》以及道教内丹、外丹文献中的神人、真人、圣人与神圣生命。道家圣人并不是与“道”等同的最高实体，而是在修习和精神提升过程中不断趋向理想生命的人格典范。
+
+</p>
+
+<p>
+
+由普通人而圣人、由圣人而趋向更加神圣的精神状态，形成一种
+<strong>ascending love</strong>
+——“上升之爱”的结构。因此，对圣贤人格的敬仰未必应被简单理解为“崇拜假神”，而可以被理解为一种通过精神典范引导普通人趋向理想生命的秩序性之爱。
+
+</p>
+
+</div>
+
+
+
+<h2>
+核心发现
+</h2>
+
+
+<div class="highlight">
+
+<strong>
+论文核心论点：
+</strong>
+
+道家的“道”具有形上仁爱，道又通过“德”真实地进入人的精神生命。这样的
+<strong>“道—德—人格生命”</strong>
+结构，与芬兰学派所强调的
+<strong>“基督临在于信仰本身”</strong>
+虽然具有不同的本体论前提，但在“终极实在—内在临在—精神更新”这一结构层面存在值得深入比较的理论空间。
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+第一：形上之爱的比较
+</strong>
+
+<p>
+
+芬兰学派认为上帝之爱具有优先性，神圣之爱能够作为“礼物”进入人的生命；道家则把“道”理解为万物之源，并通过“德”表现其生成、养育和仁惠力量。
+
+</p>
+
+<p>
+
+二者并不等同，但都试图解释：终极实在如何超越人的经验世界，同时又与人的内在精神生命发生真实关联。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+第二：人类情感可以成为通向神圣生命的指标
+</strong>
+
+<p>
+
+路德宗从原罪和救赎角度理解人的自我中心之爱；道家虽然没有相同的原罪理论，却同样看到人类欲望、自爱与“道”之间的距离。
+
+</p>
+
+<p>
+
+因此，两种传统都把现实中的人之爱理解为一种尚未完成的状态，并由此指向更高层次的精神更新。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+第三：重新解释道家圣人与“神”
+</strong>
+
+<p>
+
+论文认为，早期传教士把道家圣贤、神圣人物直接视为“false idols”的解释并不充分。道家圣人和神圣人物所呈现的，是不同层次的道德实践和精神提升，而并非与最高终极实在完全同一的实体。
+
+</p>
+
+<p>
+
+这种人格典范因而可以被理解为一种“有秩序的上升之爱”，为现代路德宗—道家对话提供新的解释入口。
+
+</p>
+
+</div>
+
+
+
+<h2>
+新的路德宗—道家对话模型
+</h2>
+
+
+<div class="compare-grid">
+
+
+<div class="compare-card">
+
+<h3>
+芬兰学派 / 路德宗
+</h3>
+
+<p>
+
+<strong>
+终极根源：</strong>
+God / Triune God
+
+</p>
+
+<p>
+
+<strong>
+神圣之爱：</strong>
+Agape
+
+</p>
+
+<p>
+
+<strong>
+内在临在：</strong>
+Christ present in faith
+
+</p>
+
+<p>
+
+<strong>
+爱的更新：</strong>
+圣灵内住与生命更新
+
+</p>
+
+<p>
+
+<strong>
+终极方向：</strong>
+Deification / Divinization
+
+</p>
+
+</div>
+
+
+
+<div class="compare-card">
+
+<h3>
+道家
+</h3>
+
+<p>
+
+<strong>
+终极根源：</strong>
+Tao / 道
+
+</p>
+
+<p>
+
+<strong>
+形上仁爱：</strong>
+Metaphysical Benevolence
+
+</p>
+
+<p>
+
+<strong>
+内在临在：</strong>
+Tao in one's soul through Te / 德
+
+</p>
+
+<p>
+
+<strong>
+爱的更新：</strong>
+克服自爱与世俗欲望
+
+</p>
+
+<p>
+
+<strong>
+终极方向：</strong>
+理想精神生命与上升之爱
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<h2>
+学术意义
+</h2>
+
+
+<p>
+
+本文首先把北欧道学研究与芬兰路德研究学派结合起来。它表明，《道德经》在芬兰、瑞典、丹麦、冰岛和挪威的早期传播并不是孤立的翻译事件，而深嵌于北欧路德宗文化背景之中。由此，北欧中国学史同时也是一段跨宗教哲学相遇史。
+
+</p>
+
+
+<p>
+
+其次，论文从中国原典出发重新评估早期传教士的道家解释。通过《老子》《庄子》以及道教修炼文献，可以发现“道”并非完全没有仁爱和生命力量的抽象概念；生成而不占有、养育而不支配本身即展示了一种超越性的形上仁爱。
+
+</p>
+
+
+<p>
+
+再次，文章没有把路德宗与道家简单等同，而是在承认两种传统本体论和认识论前提不同的基础上寻找结构性比较空间。特别是“道通过德真实临在于人格生命”与芬兰学派“基督临在于信仰”之间的比较，使“爱—临在—生命更新”成为现代中—北欧宗教哲学对话的新路径。
+
+</p>
+
+
+<p>
+
+最终，高源教授的论文提出，道家圣人与神圣人物可以被重新理解为一种指向理想精神生命的“上升之爱”模式。这一解释纠正了把道家宗教实践简单归类为“假神崇拜”的历史性偏见，并为现代路德宗—道家关于爱、人格完善和神化问题的进一步对话开辟新的理论空间。
+
+</p>
+
+
+
+<h2>
+研究脉络
+</h2>
+
+
+<p>
+
+本文属于高源教授持续推进的“北欧道学”“芬兰学派”“中国—北欧宗教哲学互动”及“冰上丝绸之路”系列研究。其特点是把中国哲学经典在北欧的文本译介史，与北欧本土路德宗神学传统放在同一知识史框架中研究。
+
+</p>
+
+
+<p>
+
+这一成果与高源教授关于芬兰文《道德经》、冰岛文《老子》、挪威《老子》以及芬兰儒学传播的研究共同构成中国哲学进入北欧世界的研究谱系，并进一步从“经典如何被翻译”推进到“不同文明的核心价值观念如何发生理解、误读、比较与再诠释”。
+
+</p>
+
+
+
+<div class="back-links">
+
+←
+<a href="/research/">
+返回全部研究成果
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/research/laozi-norway/">
+挪威《老子》研究
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/research/laozi-iceland/">
+冰岛《老子》研究
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/">
+返回高源学术主页
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     右侧栏
+     ========================================================= -->
+
+<aside class="sidebar">
+
+
+
+<div class="side-card">
+
+<h3>
+Publication
+</h3>
+
+
+<p>
+
+<strong>
+Title
+</strong>
+
+<br>
+
+Luther and Taoism:
+The Early Lutheran Interpretation of the Taoist Conception of Love in the Sino-Nordic Religious Encounter
+
+</p>
+
+
+<p>
+
+<strong>
+Author
+</strong>
+
+<br>
+
+Yuan GAO · 高源
+
+</p>
+
+
+<p>
+
+<strong>
+Journal
+</strong>
+
+<br>
+
+Dialog: A Journal of Theology
+
+</p>
+
+
+<p>
+
+<strong>
+Volume / Issue
+</strong>
+
+<br>
+
+Volume 63 · Number 3
+
+</p>
+
+
+<p>
+
+<strong>
+Season
+</strong>
+
+<br>
+
+Fall 2024 · September
+
+</p>
+
+
+<p>
+
+<strong>
+Pages
+</strong>
+
+<br>
+
+100–107
+
+</p>
+
+
+<p>
+
+<strong>
+DOI
+</strong>
+
+<br>
+
+<span class="doi">
+10.1111/dial.12857
+</span>
+
+</p>
+
+
+<a class="official-link"
+   href="https://doi.org/10.1111/dial.12857">
+
+Wiley / DOI official article →
+
+</a>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+Article Keywords
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+love
+</span>
+
+<span class="tag">
+Luther
+</span>
+
+<span class="tag">
+Sino-Nordic religious encounter
+</span>
+
+<span class="tag">
+Taoism
+</span>
+
+<span class="tag">
+Tao-Te-King
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+核心研究对象
+</h3>
+
+
+<p>
+
+<strong>
+北欧道学
+</strong>
+
+<br>
+
+芬兰 · 瑞典 · 丹麦 · 冰岛 · 挪威
+
+</p>
+
+
+<p>
+
+<strong>
+芬兰学派
+</strong>
+
+<br>
+
+Tuomo Mannermaa<br>
+Veli-Matti Kärkkäinen<br>
+Risto Saarinen<br>
+Miikka Ruokanen
+
+</p>
+
+
+<p>
+
+<strong>
+道家文本
+</strong>
+
+<br>
+
+《老子》<br>
+《庄子》<br>
+道教相关经典
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+核心概念
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+Tao
+</span>
+
+<span class="tag">
+Te
+</span>
+
+<span class="tag">
+Metaphysical Benevolence
+</span>
+
+<span class="tag">
+Ascending Love
+</span>
+
+<span class="tag">
+Human Love
+</span>
+
+<span class="tag">
+God's Love
+</span>
+
+<span class="tag">
+Christ Present in Faith
+</span>
+
+<span class="tag">
+Deification
+</span>
+
+<span class="tag">
+道
+</span>
+
+<span class="tag">
+德
+</span>
+
+<span class="tag">
+形上仁爱
+</span>
+
+<span class="tag">
+上升之爱
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+Funding
+</h3>
+
+
+<p>
+
+<strong>
+China's Ministry of Science and Technology
+</strong>
+
+<br>
+
+“The Polar Silk Road”
+
+<br>
+
+DL2022134001L
+
+</p>
+
+
+<p>
+
+<strong>
+Shanghai Jiao Tong University
+</strong>
+
+<br>
+
+“Nordic Philosophy and Cultural Communications”
+
+<br>
+
+WKCX029
+
+</p>
+
+
+<p>
+
+<strong>
+Academy of Finland
+</strong>
+
+<br>
+
+“The Impact of Religious Values on Chinese Social Life”
+
+<br>
+
+1314707
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+期刊信息
+</h3>
+
+
+<p>
+
+<strong>
+DIALOG:
+A Journal of Theology
+</strong>
+
+</p>
+
+<p>
+
+Wiley Periodicals LLC
+
+</p>
+
+<p>
+
+Arts &amp; Humanities Citation Index
+
+</p>
+
+<p>
+
+SCOPUS
+
+</p>
+
+<p>
+
+ATLA Religion Database
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+作者
+</h3>
+
+
+<p>
+
+高源（芬兰赫尔辛基大学），主要从事北欧区域国别研究、欧洲思想史、芬兰学派、中欧文明互鉴、中国哲学经典在欧洲的译介与传播以及中—北欧宗教哲学互动研究。
+
+</p>
+
+
+<a class="official-link"
+
+href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+
+高源 -
+上海交通大学欧洲文化高等研究院官方学术主页 →
+
+</a>
+
+
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+
+<footer>
+
+© G高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院 | gaoyuanhelsinki.cn
+
+</footer>
+
+
+</body>
+
+</html>
