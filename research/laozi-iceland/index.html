@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>高源：道入北极｜现存最早的冰岛文《老子》珍稀译本研究</title>
+
+<meta name="description"
+      content="高源关于现存最早冰岛文《老子》珍稀译本的研究成果介绍，系统考察1921年冰岛文《老子》的底本来源、丹麦文转译关系、以庄释老、以神附道、北极道学及冰上丝路视野下中国哲学诠释与传播。">
+
+<meta name="author"
+      content="高源 Gao Yuan">
+
+<meta name="keywords"
+      content="高源, Gao Yuan, 冰岛研究, 老子, 道德经, 冰岛文老学, 北极道学, 冰上丝路, 芬兰学派, 北欧研究, 中国哲学国际传播, Iceland, Laozi, Nordic Studies">
+
+<link rel="canonical"
+      href="https://gaoyuanhelsinki.cn/research/laozi-iceland/">
+
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  --ink: #1f2937;
+  --navy: #18324a;
+  --navy-soft: #2f4f68;
+
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+
+  --line: #e6e8ec;
+  --muted: #6b7280;
+
+  --accent-bg: #eef3f6;
+  --gold: #c3a45e;
+
+}
+
+
+body {
+
+  margin: 0;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    "Microsoft YaHei",
+    serif;
+
+  color: var(--ink);
+
+  background: var(--paper);
+
+  line-height: 1.9;
+
+}
+
+
+a {
+  color: var(--navy-soft);
+}
+
+
+/* =========================================================
+   顶部导航
+   ========================================================= */
+
+.topbar {
+
+  background: rgba(255,255,255,0.97);
+
+  border-bottom: 1px solid var(--line);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+}
+
+
+.nav {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 16px 24px;
+
+  display: flex;
+
+  gap: 26px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+
+.brand {
+
+  margin-right: auto;
+
+  color: var(--navy);
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 750;
+
+}
+
+
+.nav a {
+
+  color: #263238;
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 600;
+
+}
+
+
+.nav a:hover {
+
+  color: var(--navy-soft);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+  color: white;
+
+  padding: 72px 24px 64px;
+
+  background:
+
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(255,255,255,.11),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      rgba(24,50,74,.99),
+      rgba(47,79,104,.94)
+    );
+
+}
+
+
+.hero-inner {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1.4fr)
+    minmax(230px,.6fr);
+
+  gap: 54px;
+
+  align-items: center;
+
+}
+
+
+.eyebrow {
+
+  margin-bottom: 16px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  letter-spacing: .09em;
+
+  text-transform: uppercase;
+
+  font-size: 13px;
+
+  opacity: .80;
+
+}
+
+
+.hero h1 {
+
+  margin: 0;
+
+  font-size: 40px;
+
+  line-height: 1.48;
+
+  font-weight: 700;
+
+}
+
+
+.hero-meta {
+
+  margin-top: 22px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  opacity: .93;
+
+}
+
+
+/* =========================================================
+   期刊封面
+   ========================================================= */
+
+.cover-wrap {
+
+  text-align: center;
+
+}
+
+
+.journal-cover {
+
+  width: 100%;
+
+  max-width: 280px;
+
+  height: auto;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.28);
+
+}
+
+
+.cover-caption {
+
+  margin-top: 12px;
+
+  font-size: 13px;
+
+  opacity: .82;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+/* =========================================================
+   面包屑
+   ========================================================= */
+
+.breadcrumb {
+
+  max-width: 1180px;
+
+  margin: 22px auto 0;
+
+  padding: 0 24px;
+
+  color: #7a8188;
+
+  font-size: 14px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+.breadcrumb a {
+
+  color: #5a6874;
+
+  text-decoration: none;
+
+}
+
+
+/* =========================================================
+   正文双栏
+   ========================================================= */
+
+.page {
+
+  max-width: 1180px;
+
+  margin: 40px auto 70px;
+
+  padding: 0 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    320px;
+
+  gap: 34px;
+
+}
+
+
+.main-card {
+
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  padding: 44px 46px;
+
+  box-shadow:
+    0 5px 22px rgba(0,0,0,.045);
+
+}
+
+
+.main-card h2 {
+
+  margin-top: 42px;
+
+  margin-bottom: 15px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--line);
+
+  font-size: 24px;
+
+  color: var(--navy);
+
+}
+
+
+.main-card h2:first-child {
+
+  margin-top: 0;
+
+}
+
+
+.main-card p {
+
+  margin: 14px 0;
+
+  text-align: justify;
+
+}
+
+
+.highlight {
+
+  margin: 22px 0;
+
+  padding: 20px 24px;
+
+  background: var(--accent-bg);
+
+  border-left: 4px solid var(--navy-soft);
+
+  border-radius: 8px;
+
+}
+
+
+.discovery {
+
+  margin: 20px 0;
+
+  padding: 20px 22px;
+
+  border: 1px solid #e3e6e8;
+
+  border-radius: 9px;
+
+  background: #fcfcfb;
+
+}
+
+
+.discovery strong {
+
+  color: var(--navy);
+
+}
+
+
+/* =========================================================
+   右侧栏
+   ========================================================= */
+
+.sidebar {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+
+.side-card {
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.035);
+
+}
+
+
+.side-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 14px;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+}
+
+
+.side-card p {
+
+  margin: 8px 0;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+}
+
+
+.tag-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+}
+
+
+.tag {
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: var(--accent-bg);
+
+  border: 1px solid #dde5ea;
+
+  color: #41515f;
+
+  font-size: 13px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+.official-link {
+
+  display: block;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   返回链接
+   ========================================================= */
+
+.back-links {
+
+  margin-top: 36px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+footer {
+
+  border-top: 1px solid var(--line);
+
+  background: #fff;
+
+  text-align: center;
+
+  color: #7b8085;
+
+  padding: 28px 20px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================================================
+   手机
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-inner {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cover-wrap {
+
+    margin-top: 10px;
+
+  }
+
+  .page {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero h1 {
+
+    font-size: 33px;
+
+  }
+
+  .main-card {
+
+    padding: 30px 24px;
+
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+
+    padding: 48px 18px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 27px;
+
+  }
+
+  .nav {
+
+    gap: 14px;
+
+  }
+
+  .page {
+
+    padding: 0 14px;
+
+  }
+
+}
+
+</style>
+
+
+
+<!-- =========================================================
+     ScholarlyArticle 结构化数据
+     ========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+
+  "@type": "ScholarlyArticle",
+
+  "headline":
+  "道入北极：现存最早的冰岛文《老子》珍稀译本研究",
+
+  "author": {
+
+    "@type": "Person",
+
+    "name": "高源",
+
+    "alternateName": "Gao Yuan",
+
+    "url":
+    "https://gaoyuanhelsinki.cn/"
+
+  },
+
+  "datePublished": "2024",
+
+  "isPartOf": {
+
+    "@type": "Periodical",
+
+    "name":
+    "清华大学学报（哲学社会科学版）"
+
+  },
+
+  "keywords": [
+
+    "冰岛文老学",
+
+    "北极道学",
+
+    "冷门文献",
+
+    "冰上丝路",
+
+    "海外中国哲学",
+
+    "北欧研究",
+
+    "Laozi",
+
+    "Iceland"
+
+  ],
+
+  "url":
+  "https://gaoyuanhelsinki.cn/research/laozi-iceland/",
+
+  "inLanguage":
+  "zh-CN"
+
+}
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     导航
+     ========================================================= -->
+
+<header class="topbar">
+
+<nav class="nav">
+
+<a class="brand"
+   href="/">
+
+高源 · Gao Yuan
+
+</a>
+
+<a href="/">
+首页
+</a>
+
+<a href="/research/">
+研究成果
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+
+<div>
+
+
+<div class="eyebrow">
+
+Research Highlight · Iceland · Nordic Studies
+
+</div>
+
+
+<h1>
+
+道入北极：<br>
+
+现存最早的冰岛文《老子》珍稀译本研究
+
+</h1>
+
+
+<div class="hero-meta">
+
+<strong>
+作者：高源 Gao Yuan
+</strong>
+
+<br>
+
+《清华大学学报（哲学社会科学版）》2024年第3期（第39卷）
+
+<br>
+
+DOI：10.13613/j.cnki.qhdz.003342
+
+<br>
+
+研究领域：
+北欧区域国别研究 · 冰岛研究 · 北极道学 · 中国哲学国际传播 · 冰上丝路
+
+</div>
+
+
+</div>
+
+
+
+<div class="cover-wrap">
+
+<img src="/images/tsinghua-2024-3-cover.png"
+     alt="《清华大学学报（哲学社会科学版）》2024年第3期期刊封面"
+     class="journal-cover">
+
+
+<div class="cover-caption">
+
+《清华大学学报（哲学社会科学版）》2024年第3期
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     面包屑
+     ========================================================= -->
+
+<div class="breadcrumb">
+
+<a href="/">
+首页
+</a>
+
+&nbsp;›&nbsp;
+
+<a href="/research/">
+研究成果
+</a>
+
+&nbsp;›&nbsp;
+
+冰岛文《老子》研究
+
+</div>
+
+
+
+<!-- =========================================================
+     正文
+     ========================================================= -->
+
+<div class="page">
+
+
+<main class="main-card">
+
+
+
+<h2>
+研究简介
+</h2>
+
+
+<p>
+
+本文以现存最早的冰岛文《老子》珍稀译本为核心材料，从北极与“冰上丝绸之路”的区域国别视野重新审视中国道家哲学经典在欧洲的传播史。1921年，司马睿（Jakob Jóh. Smári）与约翰纳松（Yngvi Jóhannesson）在雷克雅未克出版冰岛文全译本《老子：道之书》（Lao-Tse: Bókin um veginn），这一文本构成目前所见最早的冰岛文《老子》译本。本文采用北欧“芬兰学派”典型的系统分析方法，从术语、文法、内容结构、诠释路径及文本背后的思想动机等层面，对这一冷门语种珍稀文献进行系统考察。
+
+</p>
+
+
+<p>
+
+研究并不把冰岛文《老子》视为孤立的译介事件，而是把它放置于芬兰、瑞典、丹麦等北欧国家老学传播以及法国、德国、英国等欧陆道学传统的整体历史链条中。文章由此考察“海上丝绸之路”背景下欧陆道学传播如何逐渐向斯堪的纳维亚世界北移，并进一步在冰岛这一北极走廊远端形成具有本土宗教和语言特色的中国哲学诠释模式。
+
+</p>
+
+
+
+<h2>
+核心发现
+</h2>
+
+
+<div class="highlight">
+
+<strong>
+核心文本发现：
+</strong>
+
+1921年冰岛文《老子》并非根据王弼本或其他中文《老子》底本直接翻译，而是直接建立在1909年丹麦神学家穆勒（Ernst Johannes Møller）的丹麦文《老子及其书》基础之上。
+
+</div>
+
+
+<div class="discovery">
+
+<strong>
+① 底本源流：
+冰岛文《老子》直接转译自丹麦文
+</strong>
+
+<p>
+
+通过对冰岛文与中文王弼注本进行比较，本文首先排除了冰岛译本直接源自中文底本的可能性。进一步把冰岛文与穆勒1909年丹麦文《老子》逐层比较后，可以看到二者在章节标题、数字结构、核心术语、语义表达以及具体句式方面具有高度对应关系。例如，冰岛文以“至上者／全能者”（Alvald）解释“道”，以及“始基”“深渊”“深渊之深渊”等概念，均与丹麦文相应表达形成系统照应。因此，研究确认：冰岛文首译本的直接底本是穆勒丹麦文《老子》。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+② 欧洲传播谱系：
+“欧陆—丹麦—冰岛”的北传路径
+</strong>
+
+<p>
+
+冰岛译本的底本关系并未止于丹麦。穆勒的丹麦文研究本身受到德国19世纪老学研究传统的影响，并可进一步追溯到更早的法国汉学和耶稣会索隐派道学诠释。因此，这一冰岛文文本揭示出一条由欧洲大陆向斯堪的纳维亚北部逐层传播的知识谱系，并与芬兰、瑞典早期《老子》译介共同呈现中国道家经典在北欧世界“连锁递进式”的传播图景。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+③ “以庄释老”：
+通过《庄子》进入《老子》的意义世界
+</strong>
+
+<p>
+
+冰岛译本附有约翰纳松撰写的长篇《后记》，其中形成了鲜明的“以庄释老”路径。译者认为《老子》思想古奥晦涩，而《庄子》的寓言和哲学表达能够为理解“道”提供重要桥梁。冰岛译者不仅借助《庄子》解释老子的“道”，还在具体文本选择和诠释方式上承继了穆勒丹麦本的相关方法，由此再次印证其与丹麦文底本之间的深层联系。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+④ “以神附道”：
+北欧路德新教语境中的“道—神”对话
+</strong>
+
+<p>
+
+除“以庄释老”外，冰岛译本还表现出明显的基督教神学诠释特征。译者以“至上权威者”“全能者”等神学概念解释“道”，并把“光”引入对“道生一，一生二，二生三，三生万物”等命题的阐释之中，使老子的宇宙生成论与基督教创世、圣化及终极关怀发生对话。这种“以神附道”的方法与“以庄释老”相结合，最终形成冰岛译本独特的“道神合汇”精神结构。
+
+</p>
+
+</div>
+
+
+
+<h2>
+学术意义
+</h2>
+
+
+<p>
+
+这项研究首先改变了以法国、德国、英国、意大利等欧洲主流语种为中心书写中国哲学西传史的传统视角。冰岛作为北极走廊远端的小语种国家，为观察中国哲学如何进入欧洲提供了一个不同于传统欧陆汉学的新坐标。从这一“北极视角”反观东学西渐，可以更加清晰地看到欧洲大陆汉学资源如何从南向北辐射，以及不同北欧国家如何在各自语言、宗教和文化背景中重新塑造中国思想。
+
+</p>
+
+
+<p>
+
+其次，冰岛老学文献的发现使北欧《老子》传播谱系更加完整：1907年芬兰与瑞典相继出现早期译本，1909年丹麦文《老子》形成重要中介，1921年冰岛文译本又进一步把这一思想链条延伸到北极远端。这种传播过程表明，北欧老学并非欧洲中国哲学研究的边缘附属，而拥有值得独立研究的历史脉络和文献体系。
+
+</p>
+
+
+<p>
+
+再次，冰岛译本所采取的处境化传译策略，对今天中国哲学国际传播具有方法论意义。它提示我们：经典跨文化传播不仅涉及语言转换，也涉及异域宗教心理、价值结构和概念传统之间的重新理解。与此同时，丹麦文转译所带来的意义偏移也说明，未来中国哲学在北欧冷门语种世界的传播仍需要更加系统的原典整理、直接翻译和学术研究。
+
+</p>
+
+
+
+<h2>
+研究脉络
+</h2>
+
+
+<p>
+
+本研究属于作者持续推进的“北欧道学研究”与“冰上丝绸之路”系列成果。相关研究依次涉及芬兰、瑞典、丹麦、冰岛、挪威等北欧国家《老子》及中国道家经典的译介、文本源流和思想诠释，试图从冷门语种、珍稀文献以及区域国别研究的交叉视角，重新建构中国哲学进入北欧世界的历史图谱。
+
+</p>
+
+
+<p>
+
+与《走向北欧的老子：最早的芬兰文〈道德经〉译本研究》《中国道家经典最早传入北欧的诠释路径及其当代理论镜鉴》以及《叩问东方之道：挪威探华进程中老学的最早译介与研究》等成果相互衔接，本研究进一步把中国道家经典在欧洲的传播史从传统“欧陆中心”向斯堪的纳维亚及北极地区延伸。
+
+</p>
+
+
+
+<div class="back-links">
+
+←
+<a href="/research/">
+返回全部研究成果
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/research/laozi-norway/">
+查看：挪威《老子》研究
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/">
+返回高源个人学术主页
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     右侧栏
+     ========================================================= -->
+
+<aside class="sidebar">
+
+
+
+<div class="side-card">
+
+<h3>
+正式发表信息
+</h3>
+
+
+<p>
+
+<strong>
+论文
+</strong>
+
+<br>
+
+《道入北极：现存最早的冰岛文〈老子〉珍稀译本研究》
+
+</p>
+
+
+<p>
+
+<strong>
+作者
+</strong>
+
+<br>
+
+高源
+
+</p>
+
+
+<p>
+
+<strong>
+期刊
+</strong>
+
+<br>
+
+《清华大学学报（哲学社会科学版）》
+
+</p>
+
+
+<p>
+
+<strong>
+年份 / 期次
+</strong>
+
+<br>
+
+2024年第3期（第39卷）
+
+</p>
+
+
+<p>
+
+<strong>
+DOI
+</strong>
+
+<br>
+
+10.13613/j.cnki.qhdz.003342
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+研究对象
+</h3>
+
+<p>
+
+<strong>
+文献：
+</strong>
+
+1921年冰岛文《老子：道之书》
+
+</p>
+
+
+<p>
+
+<strong>
+冰岛文题名：
+</strong>
+
+<br>
+
+Lao-Tse:
+Bókin um veginn
+
+</p>
+
+
+<p>
+
+<strong>
+译者：
+</strong>
+
+<br>
+
+Jakob Jóh. Smári
+
+<br>
+
+Yngvi Jóhannesson
+
+</p>
+
+
+<p>
+
+<strong>
+收藏：
+</strong>
+
+<br>
+
+冰岛国家与大学图书馆
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+研究关键词
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+高源
+</span>
+
+<span class="tag">
+Gao Yuan
+</span>
+
+<span class="tag">
+冰岛
+</span>
+
+<span class="tag">
+冰岛文老学
+</span>
+
+<span class="tag">
+北极道学
+</span>
+
+<span class="tag">
+老子
+</span>
+
+<span class="tag">
+道德经
+</span>
+
+<span class="tag">
+冷门文献
+</span>
+
+<span class="tag">
+冰上丝路
+</span>
+
+<span class="tag">
+北欧研究
+</span>
+
+<span class="tag">
+海外中国哲学
+</span>
+
+<span class="tag">
+Nordic Studies
+</span>
+
+<span class="tag">
+Iceland
+</span>
+
+<span class="tag">
+Laozi
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+基金项目
+</h3>
+
+
+<p>
+
+国家科技部国家外国专家团队项目
+<strong>
+“冰上丝绸之路”
+</strong>
+
+<br>
+
+DL2022134001L
+
+</p>
+
+
+<p>
+
+芬兰科学院国家重大项目
+
+<br>
+
+<strong>
+The Impact of Religious Values on Chinese Social Life
+</strong>
+
+<br>
+
+FIN-314707
+
+</p>
+
+
+<p>
+
+上海交通大学文科创新团队项目
+
+<br>
+
+<strong>
+“北欧哲学与文化传播”
+</strong>
+
+<br>
+
+WKCX029
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+作者
+</h3>
+
+
+<p>
+
+高源|芬兰赫尔辛基大学|主要从事欧洲区域国别研究、北欧思想史、中欧文明互鉴、中国哲学经典在欧洲的译介与传播，以及冰上丝绸之路相关研究。
+
+</p>
+
+
+<a class="official-link"
+
+href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+
+高源 -
+上海交通大学欧洲文化高等研究院官方学术主页 →
+
+</a>
+
+
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+
+<footer>
+
+© 高源（芬兰赫尔辛基大学）| gaoyuanhelsinki.cn
+
+</footer>
+
+
+</body>
+
+</html>
