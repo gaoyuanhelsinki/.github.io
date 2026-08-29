@@ -1,0 +1,2179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>高源｜Deification and Sanctification｜成神与成圣：北欧芬兰学派的东方对话</title>
+
+<meta name="description"
+      content="高源（Gao Yuan）发表于 Dialog 的研究成果 Deification and Sanctification in the Dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School 专题介绍。研究芬兰曼纳玛学派的神化论、中国现代新儒家的成圣论、天人合一、心性论、real-ontic presence，以及情感神化作为路德宗—儒家对话的新进路。">
+
+<meta name="author"
+      content="高源 Gao Yuan">
+
+<meta name="keywords"
+      content="Gao Yuan, 高源, Deification, Sanctification, Finnish Lutheran School, Mannermaa School, Neo-Confucianism, Lutheran-Confucian Dialogue, Tian Ren He Yi, Christ Present in Faith, deification of emotions, 芬兰学派, 新儒家, 神化, 成圣, 天人合一">
+
+<link rel="canonical"
+      href="https://gaoyuanhelsinki.cn/research/deification-sanctification/">
+
+
+<style>
+
+/* =========================================================
+   全站基础
+   ========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  --ink:#1f2937;
+
+  --navy:#18324a;
+  --navy-deep:#102b43;
+  --navy-soft:#2f4f68;
+
+  --paper:#fbfaf7;
+  --panel:#ffffff;
+
+  --line:#e5e9ed;
+  --muted:#697681;
+
+  --accent-bg:#eef3f6;
+
+  --gold:#c5a45b;
+  --gold-soft:#ead59d;
+
+}
+
+html {
+  scroll-behavior:smooth;
+}
+
+body {
+
+  margin:0;
+
+  background:var(--paper);
+
+  color:var(--ink);
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    "Microsoft YaHei",
+    serif;
+
+  line-height:1.9;
+
+}
+
+a {
+  color:var(--navy-soft);
+}
+
+body,
+p,
+li,
+h1,
+h2,
+h3,
+a {
+
+  overflow-wrap:anywhere;
+
+}
+
+
+/* =========================================================
+   顶部导航
+   ========================================================= */
+
+.topbar {
+
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(255,255,255,.97);
+
+  border-bottom:1px solid var(--line);
+
+  backdrop-filter:blur(10px);
+
+}
+
+.nav {
+
+  max-width:1180px;
+
+  margin:0 auto;
+
+  padding:16px 24px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:25px;
+
+  flex-wrap:wrap;
+
+}
+
+.brand {
+
+  margin-right:auto;
+
+  color:var(--navy);
+
+  text-decoration:none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight:750;
+
+}
+
+.nav a {
+
+  text-decoration:none;
+
+  color:#263238;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight:600;
+
+}
+
+.nav a:hover {
+
+  color:var(--navy-soft);
+
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+
+  position:relative;
+
+  overflow:hidden;
+
+  color:white;
+
+  padding:72px 24px 65px;
+
+  background:
+
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(255,255,255,.11),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      #102b43 0%,
+      #1a405c 56%,
+      #315c73 100%
+    );
+
+}
+
+.hero::after {
+
+  content:"";
+
+  position:absolute;
+
+  left:-10%;
+  right:-10%;
+  bottom:-190px;
+
+  height:300px;
+
+  border-radius:50%;
+
+  background:rgba(255,255,255,.035);
+
+}
+
+.hero-inner {
+
+  position:relative;
+  z-index:2;
+
+  max-width:1180px;
+
+  margin:0 auto;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1.48fr)
+    minmax(245px,.52fr);
+
+  gap:54px;
+
+  align-items:center;
+
+}
+
+.eyebrow {
+
+  margin-bottom:17px;
+
+  color:rgba(255,255,255,.74);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:12.5px;
+
+  letter-spacing:.11em;
+
+  text-transform:uppercase;
+
+}
+
+.hero h1 {
+
+  margin:0;
+
+  color:#fff;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    serif;
+
+  font-size:35px;
+
+  line-height:1.43;
+
+  font-weight:700;
+
+}
+
+.hero-cn {
+
+  margin-top:17px;
+
+  color:var(--gold-soft);
+
+  font-size:20px;
+
+  line-height:1.65;
+
+}
+
+.hero-meta {
+
+  margin-top:24px;
+
+  color:rgba(255,255,255,.91);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:14px;
+
+  line-height:1.95;
+
+}
+
+
+/* =========================================================
+   期刊封面
+   ========================================================= */
+
+.cover-wrap {
+
+  text-align:center;
+
+}
+
+.journal-cover {
+
+  width:100%;
+
+  max-width:285px;
+
+  height:auto;
+
+  border-radius:8px;
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.27);
+
+}
+
+.cover-caption {
+
+  margin-top:12px;
+
+  color:rgba(255,255,255,.82);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   面包屑
+   ========================================================= */
+
+.breadcrumb {
+
+  max-width:1180px;
+
+  margin:22px auto 0;
+
+  padding:0 24px;
+
+  color:#7a8188;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:14px;
+
+}
+
+.breadcrumb a {
+
+  color:#5a6874;
+
+  text-decoration:none;
+
+}
+
+
+/* =========================================================
+   正文双栏
+   ========================================================= */
+
+.page {
+
+  max-width:1180px;
+
+  margin:40px auto 70px;
+
+  padding:0 24px;
+
+  display:grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    320px;
+
+  gap:34px;
+
+}
+
+.main-card {
+
+  padding:44px 46px;
+
+  background:var(--panel);
+
+  border:1px solid var(--line);
+
+  border-radius:16px;
+
+  box-shadow:
+    0 5px 22px rgba(0,0,0,.045);
+
+}
+
+.main-card h2 {
+
+  margin-top:43px;
+
+  margin-bottom:15px;
+
+  padding-bottom:10px;
+
+  color:var(--navy);
+
+  border-bottom:1px solid var(--line);
+
+  font-size:24px;
+
+}
+
+.main-card h2:first-child {
+
+  margin-top:0;
+
+}
+
+.main-card p {
+
+  margin:14px 0;
+
+  text-align:justify;
+
+}
+
+
+/* =========================================================
+   强调模块
+   ========================================================= */
+
+.highlight {
+
+  margin:23px 0;
+
+  padding:21px 24px;
+
+  background:var(--accent-bg);
+
+  border-left:4px solid var(--navy-soft);
+
+  border-radius:8px;
+
+}
+
+.discovery {
+
+  margin:20px 0;
+
+  padding:21px 23px;
+
+  background:#fcfcfb;
+
+  border:1px solid #e3e6e8;
+
+  border-radius:9px;
+
+}
+
+.discovery strong {
+
+  color:var(--navy);
+
+}
+
+
+/* =========================================================
+   两个传统比较
+   ========================================================= */
+
+.compare-grid {
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(2,minmax(0,1fr));
+
+  gap:16px;
+
+  margin:23px 0;
+
+}
+
+.compare-card {
+
+  padding:23px;
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:10px;
+
+}
+
+.compare-card h3 {
+
+  margin-top:0;
+
+  color:var(--navy);
+
+  font-size:18px;
+
+}
+
+.term {
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-style:italic;
+
+}
+
+
+/* =========================================================
+   新儒家三代
+   ========================================================= */
+
+.timeline {
+
+  display:grid;
+
+  gap:15px;
+
+  margin:24px 0;
+
+}
+
+.timeline-item {
+
+  padding:21px 23px;
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-left:4px solid var(--gold);
+
+  border-radius:9px;
+
+}
+
+.timeline-stage {
+
+  color:var(--gold);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-weight:bold;
+
+}
+
+.timeline-item strong {
+
+  color:var(--navy);
+
+}
+
+
+/* =========================================================
+   三个会通点
+   ========================================================= */
+
+.convergence-grid {
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,minmax(0,1fr));
+
+  gap:15px;
+
+  margin:23px 0;
+
+}
+
+.convergence-card {
+
+  padding:22px;
+
+  background:#fff;
+
+  border:1px solid var(--line);
+
+  border-radius:10px;
+
+}
+
+.convergence-number {
+
+  color:var(--gold);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size:25px;
+
+}
+
+.convergence-card h3 {
+
+  color:var(--navy);
+
+  font-size:17px;
+
+}
+
+
+/* =========================================================
+   右侧栏
+   ========================================================= */
+
+.sidebar {
+
+  display:flex;
+
+  flex-direction:column;
+
+  gap:20px;
+
+}
+
+.side-card {
+
+  padding:22px;
+
+  background:white;
+
+  border:1px solid var(--line);
+
+  border-radius:14px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.035);
+
+}
+
+.side-card h3 {
+
+  margin-top:0;
+
+  margin-bottom:14px;
+
+  color:var(--navy);
+
+  font-size:18px;
+
+}
+
+.side-card p {
+
+  margin:8px 0;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:14px;
+
+  line-height:1.75;
+
+}
+
+.tag-list {
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:8px;
+
+}
+
+.tag {
+
+  padding:6px 10px;
+
+  border:1px solid #dde5ea;
+
+  border-radius:999px;
+
+  background:var(--accent-bg);
+
+  color:#41515f;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:13px;
+
+}
+
+.official-link {
+
+  display:block;
+
+  text-decoration:none;
+
+  font-weight:600;
+
+  line-height:1.75;
+
+}
+
+.doi {
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   返回导航
+   ========================================================= */
+
+.back-links {
+
+  margin-top:37px;
+
+  padding-top:21px;
+
+  border-top:1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  line-height:2;
+
+}
+
+
+/* =========================================================
+   Footer
+   ========================================================= */
+
+footer {
+
+  padding:28px 20px;
+
+  text-align:center;
+
+  color:#7b8085;
+
+  background:white;
+
+  border-top:1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   手机适配
+   ========================================================= */
+
+@media(max-width:900px) {
+
+  .hero-inner {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .page {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .compare-grid {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .convergence-grid {
+
+    grid-template-columns:1fr;
+
+  }
+
+  .hero h1 {
+
+    font-size:29px;
+
+  }
+
+  .main-card {
+
+    padding:30px 24px;
+
+  }
+
+}
+
+@media(max-width:600px) {
+
+  .hero {
+
+    padding:48px 18px;
+
+  }
+
+  .hero h1 {
+
+    font-size:24px;
+
+  }
+
+  .hero-cn {
+
+    font-size:17px;
+
+  }
+
+  .nav {
+
+    gap:14px;
+
+  }
+
+  .page {
+
+    padding:0 14px;
+
+  }
+
+}
+
+</style>
+
+
+
+<!-- =========================================================
+     ScholarlyArticle SEO
+     ========================================================= -->
+
+<script type="application/ld+json">
+
+{
+  "@context":"https://schema.org",
+
+  "@type":"ScholarlyArticle",
+
+  "headline":"Deification and sanctification in the dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School",
+
+  "author":{
+    "@type":"Person",
+    "name":"Yuan Gao",
+    "alternateName":"高源",
+    "url":"https://gaoyuanhelsinki.cn/"
+  },
+
+  "datePublished":"2022-03",
+
+  "isPartOf":{
+    "@type":"Periodical",
+    "name":"Dialog: A Journal of Theology"
+  },
+
+  "volumeNumber":"61",
+
+  "issueNumber":"1",
+
+  "pagination":"39-46",
+
+  "identifier":"10.1111/dial.12705",
+
+  "keywords":[
+    "deification",
+    "Finnish Mannermaa School",
+    "Lutheran-Confucian dialogue",
+    "Neo-Confucianism",
+    "sanctification"
+  ],
+
+  "url":"https://gaoyuanhelsinki.cn/research/deification-sanctification/",
+
+  "inLanguage":"en"
+
+}
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<!-- =========================================================
+     顶部导航
+     ========================================================= -->
+
+<header class="topbar">
+
+<nav class="nav">
+
+<a class="brand"
+   href="/">
+高源 · Gao Yuan
+</a>
+
+<a href="/">
+首页
+</a>
+
+<a href="/research/">
+研究成果
+</a>
+
+</nav>
+
+</header>
+
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+<div class="hero-inner">
+
+
+<div>
+
+
+<div class="eyebrow">
+
+Research Highlight · Dialog · Lutheran-Confucian Dialogue
+
+</div>
+
+
+<h1>
+
+Deification and Sanctification in the Dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School
+
+</h1>
+
+
+<div class="hero-cn">
+
+神化与成圣：芬兰路德宗学派与中国现代新儒家的思想对话
+
+</div>
+
+
+<div class="hero-meta">
+
+<strong>
+Yuan GAO · 高源
+</strong>
+
+<br>
+
+Dialog: A Journal of Theology
+
+<br>
+
+Volume 61 · Number 1 · Spring 2022 · March
+
+<br>
+
+Pages 39–46
+
+<br>
+
+DOI: 10.1111/dial.12705
+
+<br>
+
+Theme Article · Theologies of Hope
+
+</div>
+
+
+</div>
+
+
+
+<div class="cover-wrap">
+
+<img src="/images/dialog-2022-1-cover.png"
+     alt="DIALOG Volume 61 Number 1 Spring 2022 Theologies of Hope"
+     class="journal-cover">
+
+
+<div class="cover-caption">
+
+DIALOG · Volume 61 · Number 1 · Spring 2022
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     面包屑
+     ========================================================= -->
+
+<div class="breadcrumb">
+
+<a href="/">
+首页
+</a>
+
+&nbsp;›&nbsp;
+
+<a href="/research/">
+研究成果
+</a>
+
+&nbsp;›&nbsp;
+
+Deification and Sanctification
+
+</div>
+
+
+
+<!-- =========================================================
+     正文
+     ========================================================= -->
+
+<div class="page">
+
+
+<main class="main-card">
+
+
+
+<h2>
+研究简介
+</h2>
+
+
+<p>
+
+本文以“神化”（deification / theosis）与“成圣”（sanctification）两种关于理想人格与终极生命的思想传统为核心，比较芬兰路德研究学派与中国现代新儒家在人的精神完善、终极实在、人心与超越性之间关系上的理论结构。
+
+</p>
+
+
+<p>
+
+文章指出，“成为神圣”或趋向神圣生命的理想不仅在基督教神学传统中居于重要位置，中国儒家特别是现代新儒家同样长期思考“人成圣”“天人合一”以及人如何通过心性修养达到理想生命的问题。两种传统的终极本体论并不相同，但这种差异并不意味着它们不存在可供比较和对话的理论空间。
+
+</p>
+
+
+<div class="highlight">
+
+<strong>
+论文核心目标：
+</strong>
+
+一方面重新梳理芬兰曼纳玛学派对路德“神化”思想的解释及其贡献；另一方面研究现代新儒家的“成圣”模式，并进一步寻找
+<strong>deification 与 sanctification</strong>
+之间新的比较路径。论文最终提出：
+<strong>“情感神化”（deification of emotions）可以成为深化路德宗—儒家对话的新理论进路。</strong>
+
+</div>
+
+
+
+<h2>
+芬兰学派：Christ Present in Faith
+</h2>
+
+
+<p>
+
+论文首先回顾芬兰路德研究学派自20世纪以来的发展，并特别关注 Tuomo Mannermaa 在20世纪80年代推动的“芬兰新解释”。这一解释把路德的称义重新理解为信徒通过真实参与基督而与神发生本体性联合的过程。
+
+</p>
+
+
+<div class="discovery">
+
+<strong>
+核心命题：
+<span class="term">
+in ipsa fide Christus adest
+</span>
+</strong>
+
+<p>
+
+即“基督临在于信仰本身之中”。在曼纳玛及其同事的解释中，基督并不仅仅是信仰的外部对象，而真实地临在信徒的生命之中。
+
+</p>
+
+<p>
+
+这种“real-ontic”——真实本体性的——临在使称义、成圣和神化不再只是外部法律宣告，而涉及人的真实生命转化。
+
+</p>
+
+</div>
+
+
+<p>
+
+论文进一步指出，芬兰学派把基督在信仰中的真实临在与“参与神圣生命”联系起来。信徒通过基督既获得恩典，也获得神圣生命的“礼物”；信仰与爱共同参与人的更新，使人的灵魂逐渐趋向神化的终极完成。
+
+</p>
+
+
+
+<h2>
+现代新儒家：成圣与“天人合一”
+</h2>
+
+
+<p>
+
+与芬兰路德宗的神化论相对照，论文把现代新儒家过去一个世纪关于“成圣”的探索划分为三个阶段。不同代际的新儒家虽然在“理”“心”“仁”以及本体论问题上采取不同方法，但都试图回答一个共同问题：
+
+<strong>
+人如何通过自身心性与终极实在之间的关系，实现理想人格与“天人合一”？
+</strong>
+
+</p>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+<div class="timeline-stage">
+第一代 · 1921—1949
+</div>
+
+<strong>
+“理”与主体生命
+</strong>
+
+<p>
+
+以梁漱溟、熊十力、冯友兰、贺麟等人为代表。这一时期特别强调“理”以及最高原则在人性中的内在基础，并围绕理性主体、道德主体及“理”在人心中的呈现探讨成圣问题。
+
+</p>
+
+<p>
+
+冯友兰的新理学尤其把“理”视作形上原则，并把人的心灵理解为最高之理在人性中的反映。由内在心性认识天与理，成为趋向成圣的重要路径。
+
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<div class="timeline-stage">
+第二代 · 1950—1979
+</div>
+
+<strong>
+心性之学与道德心理学
+</strong>
+
+<p>
+
+以方东美、唐君毅、牟宗三、徐复观等人为代表。第二代新儒家进一步突出“心性论”，认为中国文化的核心之一就在于对内在道德心性的探索。
+
+</p>
+
+<p>
+
+相较于基督教意义上的外在救赎，他们更加重视回归内在心灵，通过人的道德心理与形上境界的统一实现“天人合一”。
+
+</p>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+<div class="timeline-stage">
+第三代 · 1980—当代
+</div>
+
+<strong>
+关系性、创造性与“仁本体”
+</strong>
+
+<p>
+
+以成中英、刘述先、杜维明、陈来等人为代表。当代新儒家进一步发展具有动态、关系性和创造性的本体论解释。
+
+</p>
+
+<p>
+
+成中英以“创造性”重新理解最高原则的动态性；陈来则通过“仁本体”把仁理解为具有创造、关系之爱及普遍性的终极根源。这些理论使成圣与“关系性创造”“关系之爱”及终极实在人心中的临在发生新的连接。
+
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<h2>
+芬兰学派与新儒家的三个理论会通点
+</h2>
+
+
+<div class="convergence-grid">
+
+
+<div class="convergence-card">
+
+<div class="convergence-number">
+01
+</div>
+
+<h3>
+关系性的本体结构
+</h3>
+
+<p>
+
+第三代新儒家把终极原则理解为关系性、创造性和仁爱的实在；芬兰学派则强调三一上帝以及人在基督中的关系性联合。
+
+</p>
+
+</div>
+
+
+
+<div class="convergence-card">
+
+<div class="convergence-number">
+02
+</div>
+
+<h3>
+真实的内在临在
+</h3>
+
+<p>
+
+新儒家强调最高之理、道或仁在人心中的真实体现；芬兰学派则强调“Christ present in faith”，即基督真实临在信仰者生命之中。
+
+</p>
+
+</div>
+
+
+
+<div class="convergence-card">
+
+<div class="convergence-number">
+03
+</div>
+
+<h3>
+由内在心性走向终极联合
+</h3>
+
+<p>
+
+新儒家通过反求诸己、心性修养走向“天人合一”；芬兰路德宗则通过基督作为恩典与礼物在人心中的临在，趋向
+<span class="term">unio cum Christo</span>。
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<p>
+
+论文认为，上述相似性构成两个传统开展深层对话的重要基础。特别是“终极实在真实临在于人之生命”这一结构，成为芬兰神化论与新儒家成圣论之间最重要的比较节点之一。
+
+</p>
+
+
+
+<h2>
+但二者并不相同
+</h2>
+
+
+<div class="compare-grid">
+
+
+<div class="compare-card">
+
+<h3>
+芬兰学派 / Lutheran Deification
+</h3>
+
+<p>
+
+<strong>
+终极实在：</strong>
+Triune God
+
+</p>
+
+<p>
+
+<strong>
+人与终极实在关系：</strong>
+参与与联合，但仍保留造物主—受造物区分
+
+</p>
+
+<p>
+
+<strong>
+核心机制：</strong>
+Christ present in faith
+
+</p>
+
+<p>
+
+<strong>
+终极方向：</strong>
+Deification / participation in divine life
+
+</p>
+
+</div>
+
+
+
+<div class="compare-card">
+
+<h3>
+现代新儒家 / Sanctification
+</h3>
+
+<p>
+
+<strong>
+终极实在：</strong>
+Li / Dao / Ren / Supreme Ultimate
+
+</p>
+
+<p>
+
+<strong>
+人与终极实在关系：</strong>
+更强调心性与最高原则之间的本体连续性
+
+</p>
+
+<p>
+
+<strong>
+核心机制：</strong>
+反求诸己 · 心性修养 · 仁的内在实现
+
+</p>
+
+<p>
+
+<strong>
+终极方向：</strong>
+Sanctification / Tian Ren He Yi
+
+</p>
+
+</div>
+
+
+</div>
+
+
+<p>
+
+文章特别强调，两种传统虽然在“真实临在”和终极联合结构上存在相似性，但不能因此取消其根本差异。
+
+</p>
+
+
+<p>
+
+在路德宗和基督教传统中，即使神化者参与神圣生命，人仍然不是三一上帝的一个位格，造物主与受造者之间的本体区别仍然存在。现代新儒家则更倾向强调人心、天理或终极实在之间的本体连续性，由此产生不同的“成圣”模式。
+
+</p>
+
+
+
+<h2>
+新的理论进路：情感神化</h2>
+
+
+<div class="highlight">
+
+<strong>
+本文最具辨识度的理论推进：
+</strong>
+
+将
+<strong>“deification of emotions——情感神化”</strong>
+提出为路德宗—儒家关于神化、成圣与理想人格对话的新理论入口。
+
+</div>
+
+
+<p>
+
+论文指出，路德宗神化并不仅涉及抽象本体论。人在参与基督神圣生命的过程中，其内在精神生活和情感状态也发生真实转化。
+
+</p>
+
+
+<div class="discovery">
+
+<strong>
+芬兰路德宗：人的情感进入神圣生命
+</strong>
+
+<p>
+
+神化意味着人的生命进入与基督和三一上帝的联合。人的世俗情感因此可以被转化为一种新的神圣状态，包括意志自由、内心宁静，以及在神圣临在中的持续喜乐。
+
+</p>
+
+<p>
+
+因此，神化不仅意味着人的“身份”改变，也意味着情感、意志与精神生活的整体转化。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+新儒家：通过更新情感回归原初善性
+</strong>
+
+<p>
+
+现代新儒家的成圣模式同样不是抽象本体论。无论理学还是心学，都强调终极原则与人的心性之间存在深层联系。
+
+</p>
+
+<p>
+
+通过反求诸己、更新情感和回归人的原初善性，个体能够不断走向人格完善，并最终趋近“天人合一”。
+
+</p>
+
+</div>
+
+
+<p>
+
+由此，论文认为，尽管基督教神化与儒家成圣具有不同的本体论前提，但双方都涉及人的精神生命与情感状态在与终极实在结合过程中的真实更新。
+
+</p>
+
+
+<p>
+
+因此，“情感神化”提供了一个能够越过单纯概念比较、深入人格生命与精神实践的新对话模型。
+
+</p>
+
+
+
+<h2>
+核心发现
+</h2>
+
+
+<div class="discovery">
+
+<strong>
+第一：神化与成圣并非完全不可比较
+</strong>
+
+<p>
+
+路德宗神化论与现代新儒家的成圣论虽然来自不同文明和宗教传统，但双方都围绕人的终极完善、终极实在与人格生命之间的关系展开。
+
+</p>
+
+</div>
+
+
+<div class="discovery">
+
+<strong>
+第二：“real-ontic presence”成为重要比较枢纽
+</strong>
+
+<p>
+
+芬兰学派强调基督真实临在信仰者生命之中；现代新儒家则不断讨论“理”“道”“仁”等终极原则如何在人心与人性中得到真实呈现。
+
+</p>
+
+<p>
+
+这种“终极实在—内在临在—人格更新”的结构，是两个思想传统能够开展深入对话的重要理论基础。
+
+</p>
+
+</div>
+
+
+<div class="discovery">
+
+<strong>
+第三：“天人合一”与“unio cum Christo”存在结构性比较空间
+</strong>
+
+<p>
+
+新儒家成圣强调通过心性修养趋向天人合一；芬兰学派则强调信徒通过基督的真实临在而趋向与基督联合。
+
+</p>
+
+<p>
+
+双方并不意味着相同的本体身份，但都把理想人格理解为一种超越普通经验生命的精神联合状态。
+
+</p>
+
+</div>
+
+
+<div class="discovery">
+
+<strong>
+第四：情感神化成为新的对话入口
+</strong>
+
+<p>
+
+文章最终提出：人与终极实在的结合不仅是本体论问题，也是情感、意志和人格生命的真实转化问题。
+
+</p>
+
+<p>
+
+“情感神化”因此可以作为一种新的理论模型，把路德宗的神化传统、新儒家的成圣传统以及情感哲学连接起来。
+
+</p>
+
+</div>
+
+
+
+<h2>
+学术意义
+</h2>
+
+
+<p>
+
+高源教授的这项研究首先把芬兰学派原本形成于路德宗—东正教对话中的“神化”解释进一步推进到中国思想语境。曼纳玛学派关于“基督临在于信仰”的理论，因此不再局限于欧洲基督教内部争论，而进入与现代新儒家关于“成圣”和“天人合一”的跨文明比较。
+
+</p>
+
+
+<p>
+
+其次，论文并没有通过消除差异来寻求简单“会通”。它明确保留基督教造物主—受造物区分与新儒家天人关系之间的本体论差别，同时在“真实临在”“内在心性”“人格转化”和“终极联合”等结构层面寻找可比较空间。
+
+</p>
+
+
+<p>
+
+再次，“情感神化”的提出进一步突破了传统神化研究过于集中于本体论、基督论和救恩论的分析方式，把人的情感与心理生命纳入神化—成圣对话。由此，比较研究从抽象本体论进入道德心理学、情感哲学和精神实践层面。
+
+</p>
+
+
+<p>
+
+这种研究路径也使芬兰路德研究、中国现代新儒家、情感哲学以及中—北欧文明互鉴形成新的理论交叉点。
+
+</p>
+
+
+
+<h2>
+研究脉络
+</h2>
+
+
+<p>
+
+本文属于高源教授持续推进的“芬兰学派”“中国—北欧宗教哲学互动”“欧洲情感哲学”与“中欧文明互鉴”系列研究。
+
+</p>
+
+
+<p>
+
+与关于
+<em>Luther and Taoism</em>
+的研究相比，本篇论文将比较对象从道家进一步扩展至中国现代新儒家：前者重点讨论“道—德—爱”与路德宗神学之间的对话，本篇则集中分析“神化—成圣—天人合一—心性—情感更新”之间的比较理论结构。
+
+</p>
+
+
+<p>
+
+两篇论文共同形成一条更加完整的研究路径：
+
+<strong>
+芬兰学派 → 路德神学 → 中国哲学 → 儒道传统 → 情感与人格更新 → 中国—北欧宗教哲学对话。
+</strong>
+
+</p>
+
+
+
+<div class="back-links">
+
+←
+<a href="/research/">
+返回全部研究成果
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/research/luther-taoism/">
+查看：Luther and Taoism
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/research/confucianism-finland/">
+查看：芬兰儒学研究
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/">
+返回高源学术主页
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     右侧信息栏
+     ========================================================= -->
+
+<aside class="sidebar">
+
+
+
+<div class="side-card">
+
+<h3>
+Publication
+</h3>
+
+
+<p>
+
+<strong>
+Title
+</strong>
+
+<br>
+
+Deification and Sanctification in the Dialogue between the Finnish Lutheran School and the Chinese Neo-Confucian School
+
+</p>
+
+
+<p>
+
+<strong>
+Author
+</strong>
+
+<br>
+
+Yuan GAO · 高源
+
+</p>
+
+
+<p>
+
+<strong>
+Journal
+</strong>
+
+<br>
+
+Dialog: A Journal of Theology
+
+</p>
+
+
+<p>
+
+<strong>
+Volume / Issue
+</strong>
+
+<br>
+
+Volume 61 · Number 1
+
+</p>
+
+
+<p>
+
+<strong>
+Date
+</strong>
+
+<br>
+
+Spring 2022 · March
+
+</p>
+
+
+<p>
+
+<strong>
+Pages
+</strong>
+
+<br>
+
+39–46
+
+</p>
+
+
+<p>
+
+<strong>
+DOI
+</strong>
+
+<br>
+
+<span class="doi">
+10.1111/dial.12705
+</span>
+
+</p>
+
+
+<a class="official-link"
+   href="https://doi.org/10.1111/dial.12705">
+
+Wiley / DOI official article →
+
+</a>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+Article Type
+</h3>
+
+
+<p>
+
+<strong>
+Theme Article
+</strong>
+
+</p>
+
+<p>
+
+Theologies of Hope
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+Official Keywords
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+deification
+</span>
+
+<span class="tag">
+Finnish Mannermaa School
+</span>
+
+<span class="tag">
+Lutheran-Confucian dialogue
+</span>
+
+<span class="tag">
+Neo-Confucianism
+</span>
+
+<span class="tag">
+sanctification
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+核心概念
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+Christ Present in Faith
+</span>
+
+<span class="tag">
+Real-Ontic Presence
+</span>
+
+<span class="tag">
+Theosis
+</span>
+
+<span class="tag">
+Sanctification
+</span>
+
+<span class="tag">
+Tian Ren He Yi
+</span>
+
+<span class="tag">
+Mind-Nature
+</span>
+
+<span class="tag">
+Li
+</span>
+
+<span class="tag">
+Ren
+</span>
+
+<span class="tag">
+Relational Creativity
+</span>
+
+<span class="tag">
+Deification of Emotions
+</span>
+
+<span class="tag">
+神化
+</span>
+
+<span class="tag">
+成圣
+</span>
+
+<span class="tag">
+天人合一
+</span>
+
+<span class="tag">
+心性
+</span>
+
+<span class="tag">
+仁本体
+</span>
+
+<span class="tag">
+情感神化
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+主要思想传统
+</h3>
+
+
+<p>
+
+<strong>
+Finnish Lutheran School
+</strong>
+
+<br>
+
+Tuomo Mannermaa
+
+</p>
+
+
+<p>
+
+<strong>
+Neo-Confucianism
+</strong>
+
+<br>
+
+梁漱溟 · 熊十力 · 冯友兰
+
+<br>
+
+唐君毅 · 牟宗三 · 徐复观
+
+<br>
+
+成中英 · 杜维明 · 陈来等
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+核心比较结构
+</h3>
+
+
+<p>
+
+<strong>
+芬兰学派
+</strong>
+
+<br>
+
+Christ Present in Faith
+
+<br>
+
+↓
+
+<br>
+
+Real-Ontic Union
+
+<br>
+
+↓
+
+<br>
+
+Deification
+
+</p>
+
+
+<p>
+
+<strong>
+现代新儒家
+</strong>
+
+<br>
+
+Li / Dao / Ren in Mind
+
+<br>
+
+↓
+
+<br>
+
+Mind-Nature Cultivation
+
+<br>
+
+↓
+
+<br>
+
+Sanctification / Tian Ren He Yi
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+Funding
+</h3>
+
+
+<p>
+
+National Social Science Fund of China
+
+</p>
+
+
+<p>
+
+<strong>
+“The Polar Silk Road: A Study of the Finnish Translation of Chinese Classics of Confucianism, Buddhism and Taoism”
+</strong>
+
+</p>
+
+
+<p>
+
+Grant No.
+
+<br>
+
+<strong>
+21CZX044
+</strong>
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+作者
+</h3>
+
+
+<p>
+
+高源（芬兰赫尔辛基大学），主要从事欧洲思想史、芬兰学派、中国—北欧哲学与宗教比较、中国哲学国际传播、欧洲情感哲学以及中欧文明互鉴研究。
+
+</p>
+
+
+<a class="official-link"
+
+href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+
+高源 -
+上海交通大学欧洲文化高等研究院官方主页 →
+
+</a>
+
+
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+
+<footer>
+
+© 高源| 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院 | gaoyuanhelsinki.cn
+
+</footer>
+
+
+</body>
+
+</html>
