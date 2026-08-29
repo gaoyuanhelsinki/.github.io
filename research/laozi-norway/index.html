@@ -5,15 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>高源：挪威《老子》早期译介与传播研究｜北欧研究与中国哲学经典传播</title>
+  <title>高源：挪威《老子》早期译介研究｜北欧研究与中国哲学传播</title>
 
   <meta name="description"
-        content="高源关于挪威探华进程中老学与《老子》早期译介的研究成果介绍，涉及北欧区域国别研究、挪威中国学、欧洲思想史、中国哲学国际传播及中欧文明互鉴。">
+        content="高源关于挪威探华进程中老学与《老子》早期译介的研究成果介绍，涉及北欧区域国别研究、挪威中国学、中国哲学国际传播及中欧文明互鉴。">
 
   <meta name="author" content="高源 Gao Yuan">
-
-  <meta name="keywords"
-        content="高源, Gao Yuan, 挪威, 北欧研究, 老子, 道德经, 欧洲区域国别研究, 中欧文明互鉴, Nordic Studies, Norway, Laozi">
 
   <link rel="canonical"
         href="https://gaoyuanhelsinki.cn/research/laozi-norway/">
@@ -23,26 +20,42 @@
       box-sizing: border-box;
     }
 
+    :root {
+      --ink: #1f2937;
+      --navy: #18324a;
+      --navy-soft: #2f4f68;
+      --paper: #fbfaf7;
+      --panel: #ffffff;
+      --line: #e6e8ec;
+      --muted: #6b7280;
+      --accent-bg: #eef3f6;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, "Microsoft YaHei", "PingFang SC", sans-serif;
-      color: #222;
-      background: #f7f8fa;
+      font-family: "Noto Serif SC", "Songti SC", "STSong", "Microsoft YaHei", serif;
+      color: var(--ink);
+      background: var(--paper);
       line-height: 1.9;
     }
 
+    a {
+      color: var(--navy-soft);
+    }
+
     .topbar {
-      background: rgba(255,255,255,0.97);
-      border-bottom: 1px solid #e5e5e5;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid var(--line);
       position: sticky;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(10px);
     }
 
     .nav {
-      max-width: 1050px;
-      margin: auto;
-      padding: 17px 24px;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 16px 24px;
       display: flex;
       gap: 26px;
       align-items: center;
@@ -50,152 +63,240 @@
     }
 
     .nav a {
-      color: #222;
+      color: #263238;
       text-decoration: none;
       font-weight: 600;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
     }
 
     .nav a:hover {
-      text-decoration: underline;
+      color: var(--navy-soft);
     }
 
-    .container {
-      max-width: 920px;
-      margin: 45px auto;
-      padding: 0 22px;
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(24,50,74,.98), rgba(47,79,104,.93));
+      color: white;
+      padding: 72px 24px 64px;
+    }
+
+    .hero-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.4fr .6fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      font-size: 13px;
+      opacity: .8;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .hero-meta {
+      margin-top: 22px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      font-size: 15px;
+      line-height: 1.8;
+      opacity: .92;
+    }
+
+    .cover-wrap {
+      text-align: center;
+    }
+
+    .journal-cover {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 16px 38px rgba(0,0,0,.28);
+    }
+
+    .cover-caption {
+      margin-top: 12px;
+      font-size: 13px;
+      opacity: .8;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
     }
 
     .breadcrumb {
-      margin-bottom: 20px;
-      color: #777;
+      max-width: 1180px;
+      margin: 22px auto 0;
+      padding: 0 24px;
+      color: #7a8188;
       font-size: 14px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
     }
 
     .breadcrumb a {
-      color: #555;
+      color: #5a6874;
       text-decoration: none;
     }
 
-    .breadcrumb a:hover {
-      text-decoration: underline;
+    .page {
+      max-width: 1180px;
+      margin: 40px auto 70px;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      gap: 34px;
     }
 
-    .article {
-      background: #fff;
-      padding: 48px;
-      border-radius: 14px;
-      box-shadow: 0 3px 18px rgba(0,0,0,0.06);
+    .main-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 44px 46px;
+      box-shadow: 0 5px 22px rgba(0,0,0,.045);
     }
 
-    h1 {
+    .main-card h2 {
+      margin-top: 42px;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--line);
+      font-size: 24px;
+      color: var(--navy);
+    }
+
+    .main-card h2:first-child {
       margin-top: 0;
-      line-height: 1.45;
-      font-size: 34px;
     }
 
-    .meta {
-      color: #666;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #eee;
+    .main-card p {
+      margin: 14px 0;
+      text-align: justify;
     }
 
-    h2 {
-      margin-top: 38px;
-      margin-bottom: 12px;
-      font-size: 23px;
+    .highlight {
+      background: var(--accent-bg);
+      border-left: 4px solid var(--navy-soft);
+      padding: 20px 24px;
+      border-radius: 8px;
+      margin: 22px 0;
     }
 
-    p {
-      margin: 12px 0;
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
     }
 
-    .keywords {
-      background: #f5f7fa;
-      padding: 16px 20px;
-      border-radius: 9px;
+    .side-card {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.035);
+    }
+
+    .side-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    .side-card p {
+      margin: 8px 0;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: var(--accent-bg);
+      border: 1px solid #dde5ea;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+      color: #41515f;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
     }
 
     .official-link {
-      margin-top: 30px;
-      padding: 20px;
-      background: #f5f7fa;
-      border-radius: 9px;
+      display: block;
+      text-decoration: none;
+      font-weight: 600;
+      line-height: 1.7;
     }
 
-    a {
-      color: #2457a6;
-    }
-
-    .back {
-      margin-top: 35px;
-      padding-top: 22px;
-      border-top: 1px solid #eee;
+    .back-links {
+      margin-top: 36px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-family: Arial, "Microsoft YaHei", sans-serif;
     }
 
     footer {
+      border-top: 1px solid var(--line);
+      background: #fff;
       text-align: center;
-      color: #777;
-      padding: 35px 20px;
+      color: #7b8085;
+      padding: 28px 20px;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      font-size: 14px;
     }
 
-    @media (max-width: 700px) {
-      .article {
-        padding: 26px 20px;
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
       }
 
-      h1 {
-        font-size: 27px;
+      .cover-wrap {
+        margin-top: 10px;
+      }
+
+      .page {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .main-card {
+        padding: 30px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 48px 18px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
       }
 
       .nav {
-        gap: 15px;
+        gap: 14px;
+      }
+
+      .page {
+        padding: 0 14px;
       }
     }
-    .cover-box {
-  text-align: center;
-  margin: 32px 0 38px 0;
-}
-
-.journal-cover {
-  display: block;
-  max-width: 360px;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 6px 22px rgba(0,0,0,0.14);
-}
-
-.cover-caption {
-  margin-top: 12px;
-  color: #666;
-  font-size: 14px;
-}
   </style>
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "叩问东方之道：挪威探华进程中老学的最早译介与研究",
-    "author": {
-      "@type": "Person",
-      "name": "高源",
-      "alternateName": "Gao Yuan",
-      "url": "https://gaoyuanhelsinki.cn/"
-    },
-    "keywords": [
-      "北欧研究",
-      "挪威",
-      "老子",
-      "欧洲区域国别研究",
-      "中国哲学国际传播",
-      "中欧文明互鉴"
-    ],
-    "url": "https://gaoyuanhelsinki.cn/research/laozi-norway/",
-    "inLanguage": "zh-CN"
-  }
-  </script>
 
 </head>
 
@@ -208,139 +309,153 @@
   </nav>
 </header>
 
-<main class="container">
+<section class="hero">
+  <div class="hero-inner">
 
-  <div class="breadcrumb">
-    <a href="/">首页</a>
-    &nbsp;›&nbsp;
-    <a href="/research/">研究成果</a>
-    &nbsp;›&nbsp;
-    挪威《老子》研究
+    <div>
+      <div class="eyebrow">Research Highlight · Nordic Studies</div>
+
+      <h1>
+        叩问东方之道：<br>
+        挪威探华进程中老学的最早译介与研究
+      </h1>
+
+      <div class="hero-meta">
+        <strong>高源 Gao Yuan</strong><br>
+        《近代史研究》2025年第2期<br>
+        北欧区域国别研究 · 欧洲思想史 · 中国哲学国际传播 · 中欧文明互鉴
+      </div>
+    </div>
+
+    <div class="cover-wrap">
+      <img src="/images/mchs-2025-2-cover.png"
+           alt="《近代史研究》2025年第2期期刊封面"
+           class="journal-cover">
+
+      <div class="cover-caption">
+        《近代史研究》2025年第2期
+      </div>
+    </div>
+
   </div>
+</section>
 
-  <article class="article">
-
-    <h1>
-      叩问东方之道：挪威探华进程中老学的最早译介与研究
-    </h1>
-
-    <p class="meta">
-      <strong>作者：高源 Gao Yuan</strong><br>
-      《近代史研究》，2025年第2期<br>
-      研究领域：北欧区域国别研究 · 欧洲思想史 · 中国哲学国际传播 · 中欧文明互鉴
-    </p>
-    
-<div class="cover-box">
-  <img src="/images/mchs-2025-2-cover.png"
-       alt="《近代史研究》2025年第2期期刊封面"
-       class="journal-cover">
-
-  <p class="cover-caption">
-    《近代史研究》2025年第2期
-  </p>
+<div class="breadcrumb">
+  <a href="/">首页</a>
+  &nbsp;›&nbsp;
+  <a href="/research/">研究成果</a>
+  &nbsp;›&nbsp;
+  挪威《老子》研究
 </div>
-    
-<h2>研究简介</h2>
 
-<p>
-本文以近代挪威对中国的早期认知、传教活动与汉学发展为背景，系统考察挪威信义会传教士、哲学家、神学家兼汉学家艾香德（Karl Ludvig Reichelt）对老子及《道德经》的挪威文译介与研究。文章指出，挪威对华认知深嵌于北欧近代新教传教士“播道”与“问道”的历史进程之中，而艾香德1948年出版的挪威文《老子》则标志着挪威老学研究的重要开端。本文从译本结构、底本来源、诠释方法与思想特征等层面对该译本进行系统分析，并把挪威老学置于芬兰、瑞典、丹麦、冰岛等北欧国家《老子》译介与欧洲道学发展的整体脉络中重新审视。研究特别关注挪威文《老子》如何吸收欧洲英、德老学传统与北欧新教译介经验，同时保持与中国传统《道德经》文本语境之间的联系。
-</p>
+<div class="page">
 
-  <h2>核心发现</h2>
+  <main class="main-card">
 
-<p>
-研究首先确认，艾香德的《老子》是挪威文语境中具有开拓意义的老学译介成果。他不仅提出“老子学派”（Laotses skole）概念，而且将“道”解释为“生命法”（livsloven），将“德”解释为“生命法的展现”（livslovens utfoldelse），形成区别于芬兰、瑞典、丹麦等北欧早期译本的独特诠释。
-</p>
+    <h2>研究简介</h2>
 
-<p>
-在底本谱系方面，本文通过德文、挪威文、瑞典文和英文《老子》文本的结构及章节比对发现：艾香德译著的“评论/研究”部分与理雅各英译本关系最为密切；具体译文则主要受到符恺励瑞典文译本与理雅各英译本影响，并可进一步追溯至河上公中文本；卫礼贤德译本则主要发挥辅助作用。由此形成“挪威文—瑞典文—英文—中文”相互关联的文本源流链条。
-</p>
+    <p>
+      本文以近代挪威对中国的早期认知、传教活动与汉学发展为背景，系统考察挪威信义会传教士、哲学家、神学家兼汉学家艾香德（Karl Ludvig Reichelt）对老子及《道德经》的挪威文译介与研究。
+    </p>
 
-<p>
-此外，论文重新审视艾香德晚年的“宗教比较学”立场，指出其并非始终保持完全中立的“宗教科学研究”取向，而是在晚年对老子之“道”的解释中呈现出明显的基督教神学棱镜和“以神释道”特征，体现出其思想立场的复杂变化。
-</p>
+    <p>
+      文章指出，挪威对华认知深嵌于北欧近代新教传教士“播道”与“问道”的历史进程之中，而艾香德1948年出版的挪威文《老子》则标志着挪威老学研究的重要开端。本文从译本结构、底本来源、诠释方法与思想特征等层面对该译本进行系统分析，并把挪威老学置于芬兰、瑞典、丹麦、冰岛等北欧国家《老子》译介与欧洲道学发展的整体脉络中重新审视。
+    </p>
 
-<h2>学术意义</h2>
+    <h2>核心发现</h2>
 
-<p>
-这项研究把挪威老学从单一译本研究扩展到北欧区域国别研究、中欧思想交流史与中国哲学国际传播的综合视野。文章揭示，近代挪威对中国的认知不仅与传教史和宗教交流有关，也深度参与了欧洲理解中国哲学特别是老子思想的知识生产过程。艾香德的挪威文《老子》既承接英、德等欧陆老学传统，也吸收瑞典等北欧语境中的翻译经验，从而成为观察“道”如何在欧洲不同语言、宗教和思想传统之间流动的重要案例。
-</p>
+    <div class="highlight">
+      艾香德的《老子》不仅是挪威文语境中具有开拓意义的老学译介成果，而且提出“老子学派”（Laotses skole）概念，并将“道”解释为“生命法”（livsloven），将“德”解释为“生命法的展现”（livslovens utfoldelse）。
+    </div>
 
-<p>
-同时，论文通过反思艾香德“宗教比较学”及其“以神释道”的解释方式，进一步提出，在当代中欧文明交流与价值对话中，应更加重视平等、谦和、多元诠释与跨文明理解。这使该研究不仅具有历史文献和翻译史意义，也为当代中国哲学国际传播、北欧区域国别研究以及中欧文明互鉴提供了方法论参照。
-</p>
+    <p>
+      在底本谱系方面，本文通过德文、挪威文、瑞典文和英文《老子》文本的结构及章节比对发现：艾香德译著的“评论/研究”部分与理雅各英译本关系最为密切；具体译文则主要受到符恺励瑞典文译本与理雅各英译本影响，并可进一步追溯至河上公中文本；卫礼贤德译本则主要发挥辅助作用。
+    </p>
 
- <h2>正式发表信息</h2>
+    <p>
+      此外，论文重新审视艾香德晚年的“宗教比较学”立场，指出其并非始终保持完全中立的“宗教科学研究”取向，而是在晚年对老子之“道”的解释中呈现出明显的基督教神学棱镜和“以神释道”特征，体现出其思想立场的复杂变化。
+    </p>
 
-<p>
-<strong>论文：</strong>
-《叩问东方之道：挪威探华进程中老学的最早译介与研究》
-</p>
+    <h2>学术意义</h2>
 
-<p>
-<strong>作者：</strong>
-高源
-</p>
+    <p>
+      这项研究把挪威老学从单一译本研究扩展到北欧区域国别研究、中欧思想交流史与中国哲学国际传播的综合视野。文章揭示，近代挪威对中国的认知不仅与传教史和宗教交流有关，也深度参与了欧洲理解中国哲学特别是老子思想的知识生产过程。
+    </p>
 
-<p>
-<strong>期刊：</strong>
-《近代史研究》2025年第2期
-</p>
-
-<p>
-<strong>栏目：</strong>
-文明交流互鉴
-</p>
-
-<p>
-<strong>期刊属性：</strong>
-CSSCI来源期刊、全国中文核心期刊、中国人文社会科学综合评价（AMI）权威期刊
-</p>   
+    <p>
+      同时，论文通过反思艾香德“宗教比较学”及其“以神释道”的解释方式，进一步提出，在当代中欧文明交流与价值对话中，应更加重视平等、谦和、多元诠释与跨文明理解。
+    </p>
 
     <h2>研究脉络</h2>
 
-<p>
-本文属于作者持续推进的“北欧道学研究”系列成果之一。相关研究还包括芬兰文《道德经》译本、瑞典文《老子》译介、冰岛文《老子》珍稀译本以及中国道家经典在北欧传播路径等专题，共同构成对芬兰、瑞典、丹麦、冰岛、挪威等北欧语境中老学译介与传播的系统性研究。
-</p>
-
-    <h2>研究关键词</h2>
-
-    <p class="keywords">
-      高源 · Gao Yuan · 北欧研究 · 欧洲/北欧区域国别学 · 挪威 · 老子 · 道德经 ·
-     中国哲学国际传播 · 中欧文明互鉴 ·
-      Nordic Studies · Norway · Laozi
-    </p>
-
-    <h2>关于作者</h2>
-
     <p>
-      高源（Gao Yuan），主要从事欧洲区域国别研究、北欧思想史、
-      中欧文明互鉴及中国哲学经典在欧洲的译介与传播研究。
+      本文属于作者持续推进的“北欧道学研究”系列成果之一。相关研究还包括芬兰文《道德经》译本、瑞典文《老子》译介、冰岛文《老子》珍稀译本以及中国道家经典在北欧传播路径等专题，共同构成对芬兰、瑞典、丹麦、冰岛、挪威等北欧语境中老学译介与传播的系统性研究。
     </p>
 
-    <div class="official-link">
-      <strong>机构学术主页：</strong><br>
-
-      <a href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3"
-         title="高源 - 上海交通大学欧洲文化高等研究院官方主页">
-        高源 - 上海交通大学欧洲文化高等研究院
-      </a>
-    </div>
-
-    <div class="back">
+    <div class="back-links">
       ← <a href="/research/">返回全部研究成果</a>
       &nbsp;&nbsp;|&nbsp;&nbsp;
       <a href="/">返回高源个人学术主页</a>
     </div>
 
-  </article>
+  </main>
 
-</main>
+  <aside class="sidebar">
+
+    <div class="side-card">
+      <h3>正式发表信息</h3>
+
+      <p><strong>论文</strong><br>
+      《叩问东方之道：挪威探华进程中老学的最早译介与研究》</p>
+
+      <p><strong>作者</strong><br>
+      高源</p>
+
+      <p><strong>期刊</strong><br>
+      《近代史研究》2025年第2期</p>
+
+      <p><strong>栏目</strong><br>
+      文明交流互鉴</p>
+    </div>
+
+    <div class="side-card">
+      <h3>研究关键词</h3>
+
+      <div class="tag-list">
+        <span class="tag">高源</span>
+        <span class="tag">Gao Yuan</span>
+        <span class="tag">北欧研究</span>
+        <span class="tag">挪威</span>
+        <span class="tag">老子</span>
+        <span class="tag">道德经</span>
+        <span class="tag">中国哲学</span>
+        <span class="tag">中欧文明互鉴</span>
+        <span class="tag">Nordic Studies</span>
+        <span class="tag">Norway</span>
+        <span class="tag">Laozi</span>
+      </div>
+    </div>
+
+    <div class="side-card">
+      <h3>作者</h3>
+
+      <p>
+        高源（Gao Yuan），主要从事欧洲区域国别研究、北欧思想史、中欧文明互鉴及中国哲学经典在欧洲的译介与传播研究。
+      </p>
+
+      <a class="official-link"
+         href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+        高源 - 上海交通大学欧洲文化高等研究院官方学术主页 →
+      </a>
+    </div>
+
+  </aside>
+
+</div>
 
 <footer>
   © Gao Yuan · gaoyuanhelsinki.cn
 </footer>
 
 </body>
-
 </html>
