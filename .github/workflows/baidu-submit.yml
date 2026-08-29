@@ -1,0 +1,54 @@
+name: Baidu Auto Submit
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  submit-baidu:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Submit URLs to Baidu
+        shell: bash
+        env:
+          BAIDU_TOKEN: ${{ secrets.BAIDU_PUSH_TOKEN }}
+
+        run: |
+
+          URLS="https://gaoyuanhelsinki.cn/
+          https://gaoyuanhelsinki.cn/research/
+          https://gaoyuanhelsinki.cn/research/laozi-norway/
+          https://gaoyuanhelsinki.cn/research/laozi-iceland/
+          https://gaoyuanhelsinki.cn/research/confucianism-finland/
+          https://gaoyuanhelsinki.cn/research/plato-emotions/
+          https://gaoyuanhelsinki.cn/research/aristotle-emotions/
+          https://gaoyuanhelsinki.cn/research/luther-taoism/
+          https://gaoyuanhelsinki.cn/research/deification-sanctification/"
+
+          echo "Submitting URLs to Baidu..."
+
+          RESPONSE=$(printf "%s\n" "$URLS" | curl \
+            -s \
+            -H "Content-Type:text/plain" \
+            --data-binary @- \
+            "http://data.zz.baidu.com/urls?site=https://gaoyuanhelsinki.cn&token=${BAIDU_TOKEN}")
+
+          echo "Baidu response:"
+
+          echo "$RESPONSE"
+
+          if echo "$RESPONSE" | grep -q '"success"'; then
+            echo "Baidu submission successful."
+          else
+            echo "Baidu submission may have failed."
+            exit 1
+          fi
