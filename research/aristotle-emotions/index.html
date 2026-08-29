@@ -1,1 +1,1344 @@
-research/aristotle-emotions/
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>高源：论亚里士多德情感哲学的形成、发展与贡献｜欧洲思想史与情感哲学</title>
+
+<meta name="description"
+      content="高源关于亚里士多德情感哲学形成、发展与理论贡献的研究成果介绍，重点讨论柏拉图与亚里士多德情感哲学的师承关系、情感结构论、理性判断、快乐与苦恼、德性塑造、实践精神及西方情感哲学传统。">
+
+<meta name="author"
+      content="高源 Gao Yuan">
+
+<meta name="keywords"
+      content="高源, Gao Yuan, 亚里士多德, 情感哲学, 欧洲思想史, 古希腊哲学, 柏拉图, 情感结构论, 德性伦理, Aristotle, Philosophy of Emotions">
+
+<link rel="canonical"
+      href="https://gaoyuanhelsinki.cn/research/aristotle-emotions/">
+
+
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+
+  --ink: #1f2937;
+  --navy: #18324a;
+  --navy-soft: #2f4f68;
+
+  --paper: #fbfaf7;
+  --panel: #ffffff;
+
+  --line: #e6e8ec;
+  --muted: #6b7280;
+
+  --accent-bg: #eef3f6;
+  --gold: #c3a45e;
+
+}
+
+body {
+
+  margin: 0;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    "Microsoft YaHei",
+    serif;
+
+  color: var(--ink);
+
+  background: var(--paper);
+
+  line-height: 1.9;
+
+}
+
+a {
+  color: var(--navy-soft);
+}
+
+
+/* 顶部导航 */
+
+.topbar {
+
+  background: rgba(255,255,255,0.97);
+
+  border-bottom: 1px solid var(--line);
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  backdrop-filter: blur(10px);
+
+}
+
+.nav {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  padding: 16px 24px;
+
+  display: flex;
+
+  gap: 26px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+}
+
+.brand {
+
+  margin-right: auto;
+
+  color: var(--navy);
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 750;
+
+}
+
+.nav a {
+
+  color: #263238;
+
+  text-decoration: none;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-weight: 600;
+
+}
+
+.nav a:hover {
+
+  color: var(--navy-soft);
+
+}
+
+
+/* HERO */
+
+.hero {
+
+  color: white;
+
+  padding: 72px 24px 64px;
+
+  background:
+
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(255,255,255,.11),
+      transparent 30%
+    ),
+
+    linear-gradient(
+      135deg,
+      rgba(24,50,74,.99),
+      rgba(47,79,104,.94)
+    );
+
+}
+
+.hero-inner {
+
+  max-width: 1180px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1.4fr)
+    minmax(230px,.6fr);
+
+  gap: 54px;
+
+  align-items: center;
+
+}
+
+.eyebrow {
+
+  margin-bottom: 16px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  letter-spacing: .09em;
+
+  text-transform: uppercase;
+
+  font-size: 13px;
+
+  opacity: .80;
+
+}
+
+.hero h1 {
+
+  margin: 0;
+
+  font-size: 40px;
+
+  line-height: 1.48;
+
+  font-weight: 700;
+
+}
+
+.hero-meta {
+
+  margin-top: 22px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 15px;
+
+  line-height: 1.85;
+
+  opacity: .93;
+
+}
+
+
+/* 期刊封面 */
+
+.cover-wrap {
+
+  text-align: center;
+
+}
+
+.journal-cover {
+
+  width: 100%;
+
+  max-width: 280px;
+
+  height: auto;
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 16px 38px rgba(0,0,0,.28);
+
+}
+
+.cover-caption {
+
+  margin-top: 12px;
+
+  font-size: 13px;
+
+  opacity: .82;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+/* 面包屑 */
+
+.breadcrumb {
+
+  max-width: 1180px;
+
+  margin: 22px auto 0;
+
+  padding: 0 24px;
+
+  color: #7a8188;
+
+  font-size: 14px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+.breadcrumb a {
+
+  color: #5a6874;
+
+  text-decoration: none;
+
+}
+
+
+/* 正文双栏 */
+
+.page {
+
+  max-width: 1180px;
+
+  margin: 40px auto 70px;
+
+  padding: 0 24px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0,1fr)
+    320px;
+
+  gap: 34px;
+
+}
+
+.main-card {
+
+  background: var(--panel);
+
+  border: 1px solid var(--line);
+
+  border-radius: 16px;
+
+  padding: 44px 46px;
+
+  box-shadow:
+    0 5px 22px rgba(0,0,0,.045);
+
+}
+
+.main-card h2 {
+
+  margin-top: 42px;
+
+  margin-bottom: 15px;
+
+  padding-bottom: 10px;
+
+  border-bottom: 1px solid var(--line);
+
+  font-size: 24px;
+
+  color: var(--navy);
+
+}
+
+.main-card h2:first-child {
+
+  margin-top: 0;
+
+}
+
+.main-card p {
+
+  margin: 14px 0;
+
+  text-align: justify;
+
+}
+
+.highlight {
+
+  margin: 22px 0;
+
+  padding: 20px 24px;
+
+  background: var(--accent-bg);
+
+  border-left: 4px solid var(--navy-soft);
+
+  border-radius: 8px;
+
+}
+
+.discovery {
+
+  margin: 20px 0;
+
+  padding: 20px 22px;
+
+  border: 1px solid #e3e6e8;
+
+  border-radius: 9px;
+
+  background: #fcfcfb;
+
+}
+
+.discovery strong {
+
+  color: var(--navy);
+
+}
+
+
+/* 右侧栏 */
+
+.sidebar {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+
+}
+
+.side-card {
+
+  background: white;
+
+  border: 1px solid var(--line);
+
+  border-radius: 14px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,.035);
+
+}
+
+.side-card h3 {
+
+  margin-top: 0;
+
+  margin-bottom: 14px;
+
+  color: var(--navy);
+
+  font-size: 18px;
+
+}
+
+.side-card p {
+
+  margin: 8px 0;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+
+}
+
+.tag-list {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+}
+
+.tag {
+
+  padding: 6px 10px;
+
+  border-radius: 999px;
+
+  background: var(--accent-bg);
+
+  border: 1px solid #dde5ea;
+
+  color: #41515f;
+
+  font-size: 13px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+.official-link {
+
+  display: block;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  line-height: 1.7;
+
+}
+
+
+/* 返回链接 */
+
+.back-links {
+
+  margin-top: 36px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid var(--line);
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+}
+
+
+/* Footer */
+
+footer {
+
+  border-top: 1px solid var(--line);
+
+  background: #fff;
+
+  text-align: center;
+
+  color: #7b8085;
+
+  padding: 28px 20px;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 14px;
+
+}
+
+
+/* 手机 */
+
+@media (max-width: 900px) {
+
+  .hero-inner {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .cover-wrap {
+
+    margin-top: 10px;
+
+  }
+
+  .page {
+
+    grid-template-columns: 1fr;
+
+  }
+
+  .hero h1 {
+
+    font-size: 33px;
+
+  }
+
+  .main-card {
+
+    padding: 30px 24px;
+
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .hero {
+
+    padding: 48px 18px;
+
+  }
+
+  .hero h1 {
+
+    font-size: 27px;
+
+  }
+
+  .nav {
+
+    gap: 14px;
+
+  }
+
+  .page {
+
+    padding: 0 14px;
+
+  }
+
+}
+
+</style>
+
+
+<script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+
+  "@type": "ScholarlyArticle",
+
+  "headline":
+  "论亚里士多德情感哲学的形成、发展与贡献",
+
+  "author": {
+
+    "@type": "Person",
+
+    "name": "高源",
+
+    "alternateName": "Gao Yuan",
+
+    "url":
+    "https://gaoyuanhelsinki.cn/"
+
+  },
+
+  "datePublished": "2023",
+
+  "isPartOf": {
+
+    "@type": "Periodical",
+
+    "name":
+    "社会科学"
+
+  },
+
+  "keywords": [
+
+    "亚里士多德",
+
+    "情感哲学",
+
+    "结构情感论",
+
+    "情感实践精神",
+
+    "欧洲思想史",
+
+    "古希腊哲学",
+
+    "Aristotle",
+
+    "Philosophy of Emotions"
+
+  ],
+
+  "url":
+  "https://gaoyuanhelsinki.cn/research/aristotle-emotions/",
+
+  "inLanguage":
+  "zh-CN"
+
+}
+
+</script>
+
+
+</head>
+
+
+
+<body>
+
+
+<header class="topbar">
+
+<nav class="nav">
+
+<a class="brand"
+   href="/">
+
+高源 · Gao Yuan
+
+</a>
+
+<a href="/">
+首页
+</a>
+
+<a href="/research/">
+研究成果
+</a>
+
+</nav>
+
+</header>
+
+
+
+<section class="hero">
+
+<div class="hero-inner">
+
+
+<div>
+
+
+<div class="eyebrow">
+
+Research Highlight · Aristotle · Philosophy of Emotions
+
+</div>
+
+
+<h1>
+
+论亚里士多德情感哲学的形成、发展与贡献
+
+</h1>
+
+
+<div class="hero-meta">
+
+<strong>
+作者：高源 Gao Yuan
+</strong>
+
+<br>
+
+《社会科学》2023年第8期
+
+<br>
+
+DOI：10.13644/j.cnki.cn31-1112.2023.08.003
+
+<br>
+
+研究领域：
+欧洲思想史 · 古希腊哲学 · 情感哲学 · 德性伦理 · 哲学心理学
+
+</div>
+
+
+</div>
+
+
+
+<div class="cover-wrap">
+
+<img src="/images/social-sciences-2023-8-cover.png"
+     alt="《社会科学》2023年第8期期刊封面"
+     class="journal-cover">
+
+
+<div class="cover-caption">
+
+《社会科学》2023年第8期
+
+</div>
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<div class="breadcrumb">
+
+<a href="/">
+首页
+</a>
+
+&nbsp;›&nbsp;
+
+<a href="/research/">
+研究成果
+</a>
+
+&nbsp;›&nbsp;
+
+亚里士多德情感哲学
+
+</div>
+
+
+
+<div class="page">
+
+
+<main class="main-card">
+
+
+
+<h2>
+研究简介
+</h2>
+
+
+<p>
+
+本文以亚里士多德情感哲学的形成、发展与理论贡献为核心问题，将其置于从前苏格拉底哲学、柏拉图学园传统到吕克昂学派的发展脉络中加以考察。文章认为，亚里士多德情感哲学并非凭空生成，而是在继承并回应柏拉图心灵结构理论的基础上逐步形成。柏拉图《理想国》中“理性—勇气—情感／欲望”的心灵三分结构，以及晚年对心灵内部理智与情感关系的动态调整，为亚里士多德进一步建构情感理论提供了重要思想资源。
+
+</p>
+
+
+<p>
+
+然而，亚里士多德并未简单延续柏拉图以“理型”为中心的情感哲学模式，而是将情感研究重新拉回现实政治社会生活之中。他把情感视为一种包含理性判断、价值评估、快乐与苦恼体验，并最终通向实际行为的复杂心理结构，从而发展出一种具有明显实践取向的情感道德心理学与伦理学。这种由“理型世界”走向现实生活、由情感控制走向情感德性塑造的理论转向，构成亚里士多德情感哲学的重要特色。:contentReference[oaicite:2]{index=2}
+
+</p>
+
+
+
+<h2>
+核心发现
+</h2>
+
+
+<div class="highlight">
+
+<strong>
+核心判断：
+</strong>
+
+亚里士多德情感哲学既不是对柏拉图的简单承继，也不是彻底背离，而是在柏拉图心灵结构论基础上，通过理性判断、情感分类、德性塑造和政治实践实现的一次系统性深化。
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+① 从柏拉图心灵结构论出发，但走向更复杂的情感模型
+</strong>
+
+<p>
+
+文章指出，柏拉图首先对古希腊情感哲学进行了系统化处理，其“理性—勇气—情感／欲望”的心灵三分结构对亚里士多德产生了深刻影响。然而，柏拉图的模型难以充分解释羞耻、勇气、混合情感以及理性自身的欲望等复杂问题。亚里士多德正是在这些理论张力基础上继续推进情感哲学，并逐步摆脱简单的静态心灵分层模式。
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+② 情感必须包含“判断力”的参与
+</strong>
+
+<p>
+
+亚里士多德将未经心智判断的单纯身体冲动、印象或刺激，与真正意义上的“情感”区分开来。只有当理性判断和价值评估介入时，情感才真正形成。换言之，情感不是理性的简单对立面，而是一种具有认知、判断和价值评价结构的心理活动。
+
+</p>
+
+<p>
+
+这种观点使亚里士多德的情感理论具有鲜明的理性主义和哲学心理学特征，也使情感成为可以通过教育、习惯与伦理实践加以塑造的心灵力量。:contentReference[oaicite:3]{index=3}
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+③ 亚里士多德建立了系统性的情感类型结构
+</strong>
+
+<p>
+
+在《修辞学》《尼各马可伦理学》等著作中，亚里士多德对情感进行了精细分类。论文归纳出十二种主要情感：生气、憎恨、恐惧、害羞、遗憾、嫉妒，以及与之对应的温和、友爱、信任、宽容、义正与效仿。这些情感不是任意出现，而均涉及判断性评估，并分别伴随快乐或苦恼。
+
+</p>
+
+<p>
+
+论文进一步把“快乐／苦恼”区分为理性判断参与的当下活动与较为稳定的精神状态，从而揭示情感内部由判断、感觉到心理状态的复杂层级结构。:contentReference[oaicite:4]{index=4}
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+④ 情感形成具有“四阶段结构性实践过程”
+</strong>
+
+<p>
+
+论文进一步提出，亚里士多德的情感理论可以整理为一种完整的结构性实践过程：首先是理性评估，由此形成积极或消极情感；其次产生快乐或苦恼；随后出现行为建议与行动冲动；最终落实为身体或社会实践行为。
+
+</p>
+
+<p>
+
+因此，亚里士多德并不只是讨论“人有什么情感”，而是讨论情感如何通过理性判断转化为行动。由此形成的“情感结构性实践论”，成为其区别于柏拉图以及其他古典情感哲学流派的重要理论贡献。:contentReference[oaicite:5]{index=5}
+
+</p>
+
+</div>
+
+
+
+<div class="discovery">
+
+<strong>
+⑤ 从“走出洞穴”到“重回洞穴”：情感哲学的社会实践使命
+</strong>
+
+<p>
+
+文章借助柏拉图著名的“洞穴之喻”重新理解亚里士多德与柏拉图之间的思想关系。柏拉图强调哲学家摆脱洞穴、进入理型世界并认识最高善；亚里士多德则把哲学重新带回具体社会生活，强调现实中的善、政治共同体以及个人德性的塑造。
+
+</p>
+
+<p>
+
+但这种“重回洞穴”并不意味着亚里士多德背弃柏拉图。相反，文章认为，亚里士多德通过政治实践、情感教育和德性培养，将哲学家的拯救使命真正落实于现实社会之中。情感因此成为建构良善社会、培养年轻人以及实现幸福生活的重要力量。:contentReference[oaicite:6]{index=6}
+
+</p>
+
+</div>
+
+
+
+<h2>
+学术意义
+</h2>
+
+
+<p>
+
+本文首先试图突破“亚里士多德究竟继承还是背离柏拉图”的简单二元解释。文章认为，两者之间存在更加复杂的内在张力：亚里士多德继承了柏拉图心灵结构论及其哲学使命，却在方法上把情感从理型世界重新带回现实政治、伦理与社会生活，由此形成更具实践性和可操作性的情感哲学。
+
+</p>
+
+
+<p>
+
+其次，这项研究将亚里士多德情感哲学概括为以“理智德性—快乐思辨—实践精神”为核心的情感结构性实践论。它不仅改变了将情感视为非理性冲动的古典倾向，也赋予情感以价值理性、伦理判断和德性塑造功能，从而为西方古典情感道德心理学、城邦德性论及后世情感哲学奠定了重要基础。:contentReference[oaicite:7]{index=7}
+
+</p>
+
+
+<p>
+
+再次，论文提出亚里士多德的重要贡献包括三方面：重视情感中的价值理性与德性塑造；重新建构快乐观，将当下理性快乐与终极精神幸福联系起来；以及高扬实践智慧与现实生活精神。文章由此认为，亚里士多德把古希腊情感哲学推向了一个重要高峰，并对中世纪阿奎那的情感神学以及近代欧洲实践理性传统产生了深远影响。:contentReference[oaicite:8]{index=8}
+
+</p>
+
+
+
+<h2>
+研究脉络
+</h2>
+
+
+<p>
+
+本研究属于作者持续推进的“西方情感哲学传统”系列研究之一。文章从古希腊情感哲学源流出发，重点考察柏拉图与亚里士多德之间的思想承继、理论张力与范式转向，并试图由此建立理解西方古典情感哲学发展史的思想谱系。
+
+</p>
+
+
+<p>
+
+该研究与作者关于柏拉图情感哲学、欧洲情感哲学传统、古典哲学心理学以及“芬兰学派”情感哲学研究相互关联。论文同时明确指出，作者长期参与并师承芬兰学派情感哲学心理学传统，但在亚里士多德问题上提出了不同于简单“承继”或“重构”模式的解释，强调其“信仰实践论”、洞穴理想与现实拯救使命之间的内在统一。:contentReference[oaicite:9]{index=9}
+
+</p>
+
+
+
+<div class="back-links">
+
+←
+<a href="/research/">
+返回全部研究成果
+</a>
+
+&nbsp;&nbsp;|&nbsp;&nbsp;
+
+<a href="/">
+返回高源个人学术主页
+</a>
+
+</div>
+
+
+</main>
+
+
+
+<aside class="sidebar">
+
+
+
+<div class="side-card">
+
+<h3>
+正式发表信息
+</h3>
+
+<p>
+
+<strong>
+论文
+</strong>
+
+<br>
+
+《论亚里士多德情感哲学的形成、发展与贡献》
+
+</p>
+
+
+<p>
+
+<strong>
+作者
+</strong>
+
+<br>
+
+高源
+
+</p>
+
+
+<p>
+
+<strong>
+期刊
+</strong>
+
+<br>
+
+《社会科学》
+
+</p>
+
+
+<p>
+
+<strong>
+年份 / 期次
+</strong>
+
+<br>
+
+2023年第8期
+
+</p>
+
+
+<p>
+
+<strong>
+页码
+</strong>
+
+<br>
+
+46—55
+
+</p>
+
+
+<p>
+
+<strong>
+DOI
+</strong>
+
+<br>
+
+10.13644/j.cnki.cn31-1112.2023.08.003
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+核心概念
+</h3>
+
+
+<p>
+
+<strong>
+研究对象：
+</strong>
+
+亚里士多德情感哲学
+
+</p>
+
+
+<p>
+
+<strong>
+思想背景：
+</strong>
+
+柏拉图学园传统与古希腊情感哲学
+
+</p>
+
+
+<p>
+
+<strong>
+核心理论：
+</strong>
+
+情感结构性实践论
+
+</p>
+
+
+<p>
+
+<strong>
+关键问题：
+</strong>
+
+理性判断 · 快乐与苦恼 · 德性 · 政治实践 · 幸福
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+研究关键词
+</h3>
+
+
+<div class="tag-list">
+
+<span class="tag">
+高源
+</span>
+
+<span class="tag">
+Gao Yuan
+</span>
+
+<span class="tag">
+亚里士多德
+</span>
+
+<span class="tag">
+Aristotle
+</span>
+
+<span class="tag">
+情感哲学
+</span>
+
+<span class="tag">
+结构情感论
+</span>
+
+<span class="tag">
+情感实践精神
+</span>
+
+<span class="tag">
+柏拉图
+</span>
+
+<span class="tag">
+古希腊哲学
+</span>
+
+<span class="tag">
+德性伦理
+</span>
+
+<span class="tag">
+哲学心理学
+</span>
+
+<span class="tag">
+欧洲思想史
+</span>
+
+</div>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+期刊信息
+</h3>
+
+
+<p>
+
+《社会科学》由上海社会科学院主管主办，创刊于1979年。
+
+</p>
+
+
+<p>
+
+CSSCI来源期刊<br>
+中国人文社会科学核心期刊<br>
+中文核心期刊
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+基金项目
+</h3>
+
+
+<p>
+
+国家社会科学基金青年项目
+
+<br>
+
+<strong>
+“冰上丝绸之路视域下儒佛道哲学典籍的芬兰文译本研究”
+</strong>
+
+<br>
+
+21CZX044
+
+</p>
+
+
+<p>
+
+上海交通大学文科创新团队项目
+
+<br>
+
+<strong>
+“北欧哲学与文化传播”
+</strong>
+
+<br>
+
+WKCX029
+
+</p>
+
+
+</div>
+
+
+
+<div class="side-card">
+
+<h3>
+作者
+</h3>
+
+
+<p>
+
+高源（芬兰赫尔辛基大学），主要从事欧洲思想史、欧洲情感哲学传统、古典哲学心理学、中欧文明互鉴及北欧区域国别研究。
+
+</p>
+
+
+<a class="official-link"
+
+href="https://iasec.sjtu.edu.cn/CN/show.aspx?info_lb=18&amp;info_id=660&amp;flag=3">
+
+高源 |
+上海交通大学欧洲文化高等研究院官方学术主页 →
+
+</a>
+
+
+</div>
+
+
+</aside>
+
+
+</div>
+
+
+
+<footer>
+
+© 高源（芬兰赫尔辛基大学） · gaoyuanhelsinki.cn
+
+</footer>
+
+
+</body>
+
+</html>
