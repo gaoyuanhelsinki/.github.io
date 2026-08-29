@@ -1,10 +1,6 @@
-name: Baidu Auto Submit
+name: Baidu Submit
 
 on:
-  push:
-    branches:
-      - main
-
   workflow_dispatch:
 
 permissions:
@@ -17,7 +13,7 @@ jobs:
 
     steps:
 
-      - name: Submit URLs to Baidu
+      - name: Submit important URLs to Baidu
         shell: bash
         env:
           BAIDU_TOKEN: ${{ secrets.BAIDU_PUSH_TOKEN }}
@@ -43,12 +39,14 @@ jobs:
             "http://data.zz.baidu.com/urls?site=https://gaoyuanhelsinki.cn&token=${BAIDU_TOKEN}")
 
           echo "Baidu response:"
-
           echo "$RESPONSE"
 
           if echo "$RESPONSE" | grep -q '"success"'; then
             echo "Baidu submission successful."
+          elif echo "$RESPONSE" | grep -q '"over quota"'; then
+            echo "Baidu daily quota exhausted. Try again after quota resets."
+            exit 0
           else
-            echo "Baidu submission may have failed."
+            echo "Baidu submission failed."
             exit 1
           fi
