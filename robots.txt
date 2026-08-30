@@ -1,13 +1,16 @@
 User-agent: *
 Allow: /
 
-User-agent: Baiduspider
+User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
 Allow: /
 
 User-agent: BingPreview
+Allow: /
+
+User-agent: Baiduspider
 Allow: /
 
 Sitemap: https://gaoyuanhelsinki.cn/sitemap.xml
