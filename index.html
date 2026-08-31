@@ -2345,6 +2345,271 @@ a.course-row:hover {
   }
 
 }
+  /* ============================================================
+   MOBILE HEADER FINAL FIX
+   手机端顶部导航：品牌一行 + 导航独立区域
+   修复横向溢出 / 黑屏 / 页面被撑宽问题
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  /* ---------------------------------------------------------
+     1. 首先彻底阻止整个页面产生横向黑屏
+     --------------------------------------------------------- */
+
+  html,
+  body {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    overflow-x: hidden !important;
+  }
+
+
+  /* ---------------------------------------------------------
+     2. 手机端 Header 恢复正常宽度
+     覆盖之前桌面版 nowrap 强制单行规则
+     --------------------------------------------------------- */
+
+  header,
+  .site-header,
+  .topbar,
+  .navbar {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    overflow: visible !important;
+
+    background: #ffffff !important;
+  }
+
+
+  /* ---------------------------------------------------------
+     3. 顶部总容器变成上下两层
+     --------------------------------------------------------- */
+
+  header .container,
+  .site-header .container,
+  .topbar .container,
+  .navbar .container,
+  .header-inner,
+  .nav-container {
+
+    display: flex !important;
+    flex-direction: column !important;
+
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+
+    flex-wrap: nowrap !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    gap: 0 !important;
+
+    padding:
+      0 18px !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* =========================================================
+     第一层：高源｜芬兰赫尔辛基大学｜北欧芬兰学派
+     ========================================================= */
+
+  .site-title,
+  .brand,
+  .logo,
+  .header-title {
+
+    display: block !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    flex: none !important;
+
+    margin: 0 !important;
+
+    padding:
+      18px 0 15px !important;
+
+    white-space: nowrap !important;
+
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+
+    color: #18344e !important;
+
+    font-size: 17px !important;
+    font-weight: 700 !important;
+
+    line-height: 1.4 !important;
+
+    border-bottom:
+      1px solid #edf0f1 !important;
+  }
+
+
+  /* =========================================================
+     第二层：导航菜单
+     ========================================================= */
+
+  nav,
+  .nav,
+  .nav-links,
+  .navbar-nav,
+  .menu {
+
+    display: flex !important;
+
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      10px 0 11px !important;
+
+    gap:
+      4px 0 !important;
+
+    white-space: normal !important;
+
+    overflow: visible !important;
+  }
+
+
+  /* 每个菜单项 */
+  nav a,
+  .nav a,
+  .nav-links a,
+  .navbar-nav a,
+  .menu a {
+
+    flex:
+      0 0 auto !important;
+
+    display: inline-flex !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+
+    margin: 0 !important;
+
+    padding:
+      7px 10px !important;
+
+    white-space: nowrap !important;
+
+    color: #273c4d !important;
+
+    font-size: 13px !important;
+    font-weight: 600 !important;
+
+    line-height: 1.25 !important;
+
+    transform: none !important;
+  }
+
+
+  /* hover / 点击 */
+  nav a:hover,
+  .nav a:hover,
+  .nav-links a:hover,
+  .navbar-nav a:hover,
+  .menu a:hover {
+
+    color: #a3833d !important;
+
+    background:
+      #f7f8f6 !important;
+
+    border-radius:
+      5px !important;
+  }
+
+
+  /* li本身也允许换行 */
+  nav li,
+  .nav li,
+  .nav-links li,
+  .navbar-nav li,
+  .menu li {
+
+    flex:
+      0 0 auto !important;
+
+    width: auto !important;
+
+    white-space: nowrap !important;
+  }
+
+
+  /* ---------------------------------------------------------
+     4. 清除以前为桌面导航设置的危险 min-width
+     --------------------------------------------------------- */
+
+  nav,
+  .nav,
+  .nav-links,
+  .navbar-nav,
+  .menu,
+  nav ul,
+  .nav ul {
+
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+
+  /* ---------------------------------------------------------
+     5. 网站所有主要板块禁止超出手机宽度
+     --------------------------------------------------------- */
+
+  main,
+  section,
+  .section,
+  .container,
+  .wrap,
+  .wrapper,
+  .hero,
+  .hero-inner {
+
+    max-width:
+      100% !important;
+
+    min-width:
+      0 !important;
+  }
+
+
+  img {
+    max-width:
+      100% !important;
+
+    height:
+      auto !important;
+  }
+
+}
 </style>
 
 
