@@ -216,8 +216,77 @@ a {
 }
 
 .course-hero-inner {
-  max-width: 1160px;
+  max-width: 1180px;
   margin: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 420px;
+  gap: 64px;
+
+  align-items: center;
+}
+
+.course-hero-text {
+  min-width: 0;
+}
+
+
+/* =========================================================
+   课程页右侧个人学术名片
+   ========================================================= */
+
+.course-profile-card {
+  width: 100%;
+  max-width: 420px;
+
+  margin-left: auto;
+
+  padding: 8px;
+
+  background: #ffffff;
+
+  border: 1px solid #e3e7e9;
+  border-radius: 10px;
+
+  box-shadow:
+    0 18px 48px rgba(25, 52, 72, .12);
+
+  transition:
+    transform .25s ease,
+    box-shadow .25s ease;
+}
+
+.course-profile-card:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 26px 58px rgba(25, 52, 72, .17);
+}
+
+.course-profile-card img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+}
+
+.course-profile-caption {
+  padding: 10px 6px 4px;
+
+  color: #7a8995;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 12px;
+
+  letter-spacing: .04em;
 }
 
 .hero-kicker {
@@ -630,6 +699,17 @@ footer {
       64px 20px 55px;
   }
 
+  .course-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .course-profile-card {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
   .course-hero h1 {
     font-size: 38px;
   }
@@ -710,39 +790,60 @@ footer {
 
 <section class="course-hero">
 
-<div class="course-hero-inner">
+  <div class="course-hero-inner">
 
-  <div class="hero-kicker">
-    TEACHING · CORE CURRICULUM · PHILOSOPHY OF EMOTIONS
+    <!-- 左侧：课程信息 -->
+    <div class="course-hero-text">
+
+      <div class="hero-kicker">
+        TEACHING · CORE CURRICULUM · PHILOSOPHY OF EMOTIONS
+      </div>
+
+      <h1>
+        欧洲情感心理哲学专题
+      </h1>
+
+      <div class="hero-en">
+        The Psychological Philosophy of Emotions in Europe
+      </div>
+
+      <div class="hero-line"></div>
+
+      <div class="hero-meta">
+
+        <span>
+          通识核心课程
+        </span>
+
+        <span>
+          中英双语
+        </span>
+
+        <span>
+          课程负责人：高源
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- 右侧：个人学术名片 -->
+    <aside class="course-profile-card">
+
+      <img
+        src="/images/wechat-share-card.png"
+        alt="高源 Gao Yuan 学术名片｜芬兰赫尔辛基大学｜北欧芬兰学派"
+        loading="eager"
+        fetchpriority="high">
+
+      <div class="course-profile-caption">
+        Gao Yuan · Academic Profile
+      </div>
+
+    </aside>
+
   </div>
-
-  <h1>
-    欧洲情感心理哲学专题
-  </h1>
-
-  <div class="hero-en">
-    The Psychological Philosophy of Emotions in Europe
-  </div>
-
-  <div class="hero-line"></div>
-
-  <div class="hero-meta">
-
-    <span>
-      通识核心课程
-    </span>
-
-    <span>
-      中英双语
-    </span>
-
-    <span>
-      课程负责人：高源
-    </span>
-
-  </div>
-
-</div>
 
 </section>
 
