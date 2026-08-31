@@ -1704,6 +1704,249 @@ a {
     letter-spacing:0;
   }
 }
+  /* =========================================================
+   顶部导航：强制单行 + 高级紧凑布局
+   ========================================================= */
+
+header,
+.topbar,
+.navbar,
+.site-header {
+  width: 100%;
+}
+
+/* 顶部整体容器 */
+header .container,
+.topbar .container,
+.navbar .container,
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: nowrap !important;
+
+  width: 100%;
+  max-width: 100%;
+
+  padding-left: 42px;
+  padding-right: 42px;
+
+  gap: 28px;
+}
+
+/* 左侧站点标题 */
+.site-title,
+.logo,
+.brand,
+.header-title {
+  flex: 0 0 auto;
+
+  white-space: nowrap;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  letter-spacing: -0.02em;
+
+  color: #17324d;
+}
+
+/* 右侧导航区域 */
+nav,
+.nav,
+.navbar-nav,
+.nav-links,
+.menu {
+  display: flex !important;
+
+  align-items: center;
+
+  flex-wrap: nowrap !important;
+
+  white-space: nowrap !important;
+
+  margin-left: auto;
+
+  gap: 26px;
+}
+
+/* 每一个菜单项 */
+nav a,
+.nav a,
+.navbar-nav a,
+.nav-links a,
+.menu a {
+  flex: 0 0 auto;
+
+  white-space: nowrap !important;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  padding: 22px 0;
+
+  color: #161616;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+nav a:hover,
+.nav a:hover,
+.navbar-nav a:hover,
+.nav-links a:hover,
+.menu a:hover {
+  color: #b18a39;
+  transform: translateY(-1px);
+}
+
+/* 防止“联系”等项目掉到第二行 */
+nav li,
+.nav li,
+.navbar-nav li,
+.nav-links li,
+.menu li {
+  flex: 0 0 auto;
+
+  white-space: nowrap !important;
+}
+
+/* 顶部导航本身禁止换行 */
+header,
+.topbar,
+.navbar,
+.site-header,
+header nav,
+.topbar nav,
+.navbar nav,
+.site-header nav {
+  flex-wrap: nowrap !important;
+}
+
+/* =========================================================
+   宽屏优化
+   ========================================================= */
+
+@media (min-width: 1200px) {
+
+  header .container,
+  .topbar .container,
+  .navbar .container,
+  .site-header .container {
+    gap: 24px;
+  }
+
+  nav,
+  .nav,
+  .navbar-nav,
+  .nav-links,
+  .menu {
+    gap: 24px;
+  }
+
+  nav a,
+  .nav a,
+  .navbar-nav a,
+  .nav-links a,
+  .menu a {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================================
+   中等屏幕：继续保持一行
+   ========================================================= */
+
+@media (max-width: 1500px) {
+
+  header .container,
+  .topbar .container,
+  .navbar .container,
+  .site-header .container {
+    padding-left: 28px;
+    padding-right: 28px;
+    gap: 18px;
+  }
+
+  .site-title,
+  .logo,
+  .brand,
+  .header-title {
+    font-size: 25px;
+  }
+
+  nav,
+  .nav,
+  .navbar-nav,
+  .nav-links,
+  .menu {
+    gap: 18px;
+  }
+
+  nav a,
+  .nav a,
+  .navbar-nav a,
+  .nav-links a,
+  .menu a {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================================
+   更窄屏幕：宁可横向滚动，也不换成两行
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  header .container,
+  .topbar .container,
+  .navbar .container,
+  .site-header .container {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+  }
+
+  header .container::-webkit-scrollbar,
+  .topbar .container::-webkit-scrollbar,
+  .navbar .container::-webkit-scrollbar,
+  .site-header .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  nav,
+  .nav,
+  .navbar-nav,
+  .nav-links,
+  .menu {
+    min-width: max-content;
+  }
+
+  .site-title,
+  .logo,
+  .brand,
+  .header-title {
+    font-size: 22px;
+  }
+
+  nav a,
+  .nav a,
+  .navbar-nav a,
+  .nav-links a,
+  .menu a {
+    font-size: 14px;
+  }
+
+}
 </style>
 
 
