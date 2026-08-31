@@ -325,8 +325,82 @@ a {
 .hero-inner {
   position: relative;
   z-index: 2;
+
   max-width: 1160px;
   margin: auto;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 330px;
+  gap: 70px;
+  align-items: center;
+}
+
+.hero-text {
+  min-width: 0;
+}
+
+/* ===============================
+   DIALOG 封面
+   =============================== */
+
+.hero-cover {
+  position: relative;
+
+  width: 100%;
+  max-width: 330px;
+
+  margin-left: auto;
+
+  padding: 12px;
+
+  background: rgba(255,255,255,.97);
+
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 10px;
+
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.28),
+    0 8px 20px rgba(0,0,0,.12);
+
+  transform: rotate(1.2deg);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.hero-cover:hover {
+  transform: rotate(0deg) translateY(-5px);
+
+  box-shadow:
+    0 36px 80px rgba(0,0,0,.32),
+    0 10px 24px rgba(0,0,0,.15);
+}
+
+.hero-cover img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  border-radius: 4px;
+}
+
+.cover-caption {
+  padding: 12px 7px 5px;
+
+  color: #405566;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Microsoft YaHei",
+    serif;
+
+  font-size: 13px;
+  line-height: 1.55;
 }
 
 .journal-tag {
@@ -639,6 +713,21 @@ footer {
 
 @media (max-width:800px) {
 
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .hero-cover {
+    width: 76%;
+    max-width: 300px;
+    margin: 5px auto 0;
+  }
+
+  .hero-text {
+    text-align: left;
+  }
+
   .info-grid,
   .theme-grid {
     grid-template-columns: 1fr;
@@ -698,35 +787,59 @@ footer {
 
 <section class="hero">
 
-<div class="hero-inner">
+  <div class="hero-inner">
 
-  <div class="journal-tag">
-    DIALOG · A JOURNAL OF THEOLOGY · VOL. 61 · 2022
+    <!-- 左侧：论文信息 -->
+    <div class="hero-text">
+
+      <div class="journal-tag">
+        DIALOG · A JOURNAL OF THEOLOGY · VOL. 61 · 2022
+      </div>
+
+      <h1>
+        A Theology<br>
+        of Hope
+      </h1>
+
+      <div class="cn-title">
+        希望神学
+      </div>
+
+      <div class="authors">
+        <strong>高源（芬兰赫尔辛基大学）</strong>
+        &nbsp;×&nbsp;
+        <strong>萨瑞宁（Risto Saarinen）院士</strong>
+      </div>
+
+      <div class="journal-info">
+        Dialog: A Journal of Theology · 61(1) · 11–12
+        <br>
+        DOI: 10.1111/dial.12716
+      </div>
+
+      <div class="hero-line"></div>
+
+    </div>
+
+
+    <!-- 右侧：DIALOG 期刊封面 -->
+    <div class="hero-cover">
+
+      <img
+        src="/images/dialog-2022-1-cover.png"
+        alt="Dialog: A Journal of Theology, Volume 61, Number 1, Spring 2022, Theologies of Hope"
+        loading="eager"
+        fetchpriority="high">
+
+      <div class="cover-caption">
+        DIALOG · Volume 61:1 · Spring 2022
+        <br>
+        <em>Theologies of Hope</em>
+      </div>
+
+    </div>
+
   </div>
-
-  <h1>
-    A Theology<br>
-    of Hope
-  </h1>
-
-  <div class="cn-title">
-    希望神学
-  </div>
-
-  <div class="authors">
-    <strong>高源（芬兰赫尔辛基大学）与</strong>
-    &nbsp;×&nbsp;
-    <strong>萨瑞宁（Risto Saarinen）院士</strong>
-  </div>
-
-  <div class="journal-info">
-    Dialog: A Journal of Theology · 61(1) · 11–12 ·
-    DOI 10.1111/dial.12716
-  </div>
-
-  <div class="hero-line"></div>
-
-</div>
 
 </section>
 
