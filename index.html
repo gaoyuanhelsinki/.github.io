@@ -2038,6 +2038,163 @@ a.course-row:hover {
   }
 
 }
+  /* =========================================================
+   通识核心课程列表
+   与首页其他学术板块统一字号的最终修正版
+   ========================================================= */
+
+#courses .course-list-clean {
+  margin-top: 26px;
+  border-top: 1px solid #e7eaec;
+}
+
+
+/* 每一行：减少上下留白，更接近主页其他列表 */
+#courses .course-row {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 22px;
+
+  padding: 22px 8px;
+
+  border-bottom: 1px solid #e7eaec;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+
+/* 只有第一项是链接时保留很轻微的反馈 */
+#courses a.course-row:hover {
+  background: rgba(245,247,247,.55);
+  transform: translateX(2px);
+}
+
+
+/* 01、02、03…… */
+#courses .course-index {
+  padding-top: 2px;
+
+  color: #aa8738;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* 中文课程名称
+   关键：从原来的23px降为18px左右 */
+#courses .course-title-cn {
+  color: #24445f;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    serif;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  line-height: 1.55;
+}
+
+
+/* 英文名称 + 课程性质
+   调整为辅助信息，而不是第二个大标题 */
+#courses .course-title-en {
+  margin-top: 5px;
+
+  color: #7f8d99;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    serif;
+
+  font-size: 15px;
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* 保持整个课程区与前后 section 内容宽度一致 */
+#courses .course-list-clean {
+  width: 100%;
+}
+
+
+/* =========================================================
+   中等尺寸屏幕
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  #courses .course-row {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 17px;
+    padding: 20px 6px;
+  }
+
+  #courses .course-title-cn {
+    font-size: 17px;
+  }
+
+  #courses .course-title-en {
+    font-size: 14px;
+  }
+
+  #courses .course-index {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   手机
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  #courses .course-row {
+    grid-template-columns: 36px minmax(0, 1fr);
+    gap: 12px;
+
+    padding: 18px 2px;
+  }
+
+  #courses .course-title-cn {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  #courses .course-title-en {
+    margin-top: 4px;
+
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  #courses .course-index {
+    font-size: 13px;
+  }
+
+}
 </style>
 
 
