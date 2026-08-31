@@ -4,42 +4,163 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<!-- =========================================================
+     Search Engine Indexing
+     Google · Bing · Baidu · Sogou
+     ========================================================= -->
 
 <meta name="robots"
       content="index, follow, max-snippet:-1, max-image-preview:large">
 
-<meta name="googlebot" content="index, follow">
-<meta name="bingbot" content="index, follow">
-<meta name="baiduspider" content="index, follow">
+<meta name="googlebot"
+      content="index, follow, max-snippet:-1, max-image-preview:large">
+
+<meta name="bingbot"
+      content="index, follow">
+
+<meta name="baiduspider"
+      content="index, follow">
+
+<meta name="sogou spider"
+      content="index, follow">
+
+
+<!-- =========================================================
+     SEO
+     ========================================================= -->
 
 <title>
-北欧芬兰学派｜欧洲情感心理哲学研究｜高源 Gao Yuan
+高源｜北欧芬兰学派｜欧洲情感心理哲学研究
 </title>
 
-<meta name="description"
-      content="高源北欧芬兰学派研究专题：以欧洲情感心理哲学、道德心理学、心灵哲学、宗教哲学及芬兰思想传统为核心，从柏拉图、亚里士多德、斯多亚主义、奥古斯丁延伸至现代欧洲思想，研究情感、意志、爱、德性与人的精神生命。">
 
-<meta name="author" content="高源 Gao Yuan">
+<meta name="description"
+      content="高源北欧芬兰学派与欧洲情感心理哲学研究专题。围绕柏拉图、亚里士多德、斯多亚主义、新柏拉图主义、奥古斯丁、路德及芬兰Mannermaa学派，系统研究欧洲情感哲学、道德心理学、爱的哲学、情感成神、关系性之爱以及中西宗教哲学对话。">
+
+
+<meta name="keywords"
+      content="高源,Gao Yuan,北欧芬兰学派,Finnish School,欧洲情感哲学,Philosophy of Emotions,柏拉图情感哲学,亚里士多德情感哲学,奥古斯丁情感哲学,Freedom from Passions in Augustine,Mannermaa,芬兰路德学派,情感成神,deification of emotions,relational love,Luther and Taoism,道德心理学,欧洲思想史">
+
+
+<meta name="author"
+      content="高源 Gao Yuan">
+
 
 <link rel="canonical"
       href="https://gaoyuanhelsinki.cn/nordic/finnish-school-emotions/">
 
+
+<!-- =========================================================
+     Open Graph
+     ========================================================= -->
+
+<meta property="og:type"
+      content="website">
+
+<meta property="og:url"
+      content="https://gaoyuanhelsinki.cn/nordic/finnish-school-emotions/">
+
+<meta property="og:title"
+      content="北欧芬兰学派：欧洲情感心理哲学研究">
+
+<meta property="og:description"
+      content="从柏拉图、亚里士多德和奥古斯丁，到芬兰Mannermaa学派、情感成神与关系性之爱，构建欧洲情感心理哲学的连续研究谱系。">
+
+<meta property="og:site_name"
+      content="高源 Gao Yuan Academic Website">
+
+<meta property="og:image"
+      content="https://gaoyuanhelsinki.cn/images/wechat-share-card.png">
+
+
+<!-- =========================================================
+     Schema.org
+     ========================================================= -->
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+
+  "@id": "https://gaoyuanhelsinki.cn/nordic/finnish-school-emotions/#webpage",
+
+  "name": "北欧芬兰学派：欧洲情感心理哲学研究",
+
+  "alternateName": "Nordic Finnish School and European Philosophy of Emotions",
+
+  "description": "围绕古典哲学、中世纪思想、奥古斯丁传统及芬兰学派，系统研究欧洲情感心理哲学、道德心理学、爱的哲学、情感成神和关系性之爱。",
+
+  "url": "https://gaoyuanhelsinki.cn/nordic/finnish-school-emotions/",
+
+  "inLanguage": "zh-CN",
+
+  "author": {
+    "@type": "Person",
+    "@id": "https://gaoyuanhelsinki.cn/#person",
+    "name": "高源",
+    "alternateName": "Gao Yuan",
+    "url": "https://gaoyuanhelsinki.cn/"
+  },
+
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Philosophy of Emotions"
+    },
+    {
+      "@type": "Thing",
+      "name": "Finnish School"
+    },
+    {
+      "@type": "Thing",
+      "name": "Moral Psychology"
+    },
+    {
+      "@type": "Thing",
+      "name": "Augustine"
+    },
+    {
+      "@type": "Thing",
+      "name": "Lutheran Theology"
+    },
+    {
+      "@type": "Thing",
+      "name": "Relational Love"
+    }
+  ]
+}
+</script>
+
+
 <style>
+
+/* =========================================================
+   全局
+   ========================================================= */
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 
-  background: #fff;
-  color: #455b6a;
+  background: #ffffff;
+
+  color: #425866;
 
   font-family:
     "Noto Serif SC",
     "Songti SC",
+    "STSong",
     Georgia,
     serif;
 
@@ -51,19 +172,33 @@ a {
   text-decoration: none;
 }
 
+
+/* =========================================================
+   顶部导航
+   ========================================================= */
+
 .topbar {
-  border-bottom: 1px solid #e8ebed;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
   background: rgba(255,255,255,.97);
+
+  border-bottom:
+    1px solid #e8ebed;
 }
 
 .nav {
   max-width: 1180px;
-  margin: auto;
+  margin: 0 auto;
 
   display: flex;
+  align-items: center;
+
   gap: 28px;
 
-  padding: 17px 24px;
+  padding:
+    17px 24px;
 
   white-space: nowrap;
 
@@ -78,179 +213,721 @@ a {
 
 .nav-brand {
   margin-right: auto;
+
   color: #1d3d56;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    serif;
+
+  font-size: 16px;
 }
 
-.hero {
-  padding: 90px 26px 72px;
+.nav a:hover {
+  color: #a7833b;
+}
 
-  border-bottom: 1px solid #e7eaec;
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+
+  overflow: hidden;
+
+  padding:
+    92px 28px 78px;
+
+  border-bottom:
+    1px solid #e8ebed;
 
   background:
+    radial-gradient(
+      circle at 88% 13%,
+      rgba(182,151,77,.07),
+      transparent 29%
+    ),
+
     linear-gradient(
       180deg,
-      #fff,
-      #fafbfa
+      #ffffff 0%,
+      #fafbfa 100%
     );
 }
 
 .hero-inner {
-  max-width: 1120px;
-  margin: auto;
+  max-width: 1130px;
+  margin: 0 auto;
 }
 
-.kicker {
+.hero-kicker {
+  margin-bottom: 21px;
+
   color: #315a78;
 
-  font-family: Arial,sans-serif;
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
 
   font-size: 12px;
+  font-weight: 500;
 
-  letter-spacing: .17em;
-
-  margin-bottom: 18px;
+  letter-spacing: .18em;
 }
 
-h1 {
-  max-width: 950px;
+.hero h1 {
+  max-width: 1000px;
 
   margin: 0;
 
-  color: #19354e;
+  color: #193650;
 
   font-size:
-    clamp(39px,5vw,61px);
+    clamp(40px,5.2vw,63px);
 
-  line-height: 1.35;
+  font-weight: 600;
+
+  line-height: 1.32;
 }
 
-.subtitle {
-  margin-top: 15px;
+.hero-en {
+  margin-top: 16px;
 
-  color: #84929d;
+  color: #83919c;
 
   font-family:
     Georgia,
     "Times New Roman",
     serif;
 
-  font-size: 22px;
+  font-size:
+    clamp(19px,2.1vw,25px);
 }
 
 .gold-line {
-  width: 72px;
+  width: 76px;
   height: 2px;
 
-  margin-top: 29px;
+  margin-top: 31px;
 
-  background: #b49347;
+  background: #b49348;
 }
 
+.hero-note {
+  max-width: 790px;
+
+  margin-top: 24px;
+
+  color: #677985;
+
+  font-size: 15.5px;
+
+  line-height: 1.85;
+}
+
+
+/* =========================================================
+   正文
+   ========================================================= */
+
 main {
-  max-width: 1030px;
+  max-width: 1040px;
 
-  margin: auto;
+  margin: 0 auto;
 
-  padding: 58px 25px 90px;
+  padding:
+    62px 26px 96px;
 }
 
 .section {
-  padding: 42px 0;
+  padding:
+    45px 0;
 
   border-bottom:
     1px solid #e8ebed;
 }
 
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-kicker {
+  margin-bottom: 8px;
+
+  color: #a3833c;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: .15em;
+}
+
 .section h2 {
-  color: #24455e;
+  margin:
+    0 0 23px;
 
-  font-size: 27px;
+  color: #23445d;
 
-  margin: 0 0 20px;
+  font-size: 29px;
+
+  line-height: 1.45;
 }
 
 .section p {
-  font-size: 16.5px;
+  margin:
+    12px 0;
 
-  color: #5c6f7c;
+  color: #596e7b;
+
+  font-size: 16.5px;
 
   line-height: 1.95;
 }
 
 .lead {
-  color: #344f62 !important;
+  color: #354f62 !important;
 
   font-size: 19px !important;
+
+  line-height: 2 !important;
 }
 
-.research-list {
-  border-top: 1px solid #e6e9eb;
+
+/* =========================================================
+   核心命题
+   ========================================================= */
+
+.core-statement {
+  margin:
+    28px 0 2px;
+
+  padding:
+    25px 29px;
+
+  border-left:
+    3px solid #b49248;
+
+  background:
+    #f8f9f7;
+
+  color: #2b4b60;
+
+  font-size: 18px;
+
+  line-height: 1.9;
+}
+
+
+/* =========================================================
+   思想谱系
+   ========================================================= */
+
+.genealogy {
+  margin-top: 29px;
+
+  border-top:
+    1px solid #e6eaec;
+}
+
+.genealogy-row {
+  display: grid;
+
+  grid-template-columns:
+    56px 210px minmax(0,1fr);
+
+  gap: 24px;
+
+  padding:
+    23px 6px;
+
+  border-bottom:
+    1px solid #e6eaec;
+}
+
+.genealogy-number {
+  color: #aa8739;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+}
+
+.genealogy-name {
+  color: #274860;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.genealogy-text {
+  color: #71808b;
+
+  font-size: 15.5px;
+
+  line-height: 1.78;
+}
+
+
+/* =========================================================
+   成果列表
+   ========================================================= */
+
+.publication-list {
+  margin-top: 30px;
+
+  border-top:
+    1px solid #e6eaec;
+}
+
+.publication-item {
+  display: grid;
+
+  grid-template-columns:
+    52px minmax(0,1fr) auto;
+
+  gap: 20px;
+
+  align-items: center;
+
+  padding:
+    24px 5px;
+
+  border-bottom:
+    1px solid #e6eaec;
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+a.publication-item:hover {
+  background: #fafbf9;
+
+  transform: translateX(2px);
+}
+
+.publication-index {
+  color: #aa8739;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 14px;
+}
+
+.publication-title {
+  color: #294a61;
+
+  font-size: 16.5px;
+
+  font-weight: 600;
+
+  line-height: 1.55;
+}
+
+.publication-meta {
+  margin-top: 5px;
+
+  color: #83909a;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    serif;
+
+  font-size: 13.5px;
+
+  line-height: 1.65;
+}
+
+.publication-contribution {
+  margin-top: 7px;
+
+  color: #6f7f8b;
+
+  font-size: 14.5px;
+
+  line-height: 1.75;
+}
+
+.publication-arrow {
+  color: #aa8739;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   贡献矩阵
+   ========================================================= */
+
+.contribution-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2,1fr);
+
+  margin-top: 30px;
+
+  border-top:
+    1px solid #e6eaec;
+
+  border-left:
+    1px solid #e6eaec;
+}
+
+.contribution-item {
+  padding:
+    27px 25px;
+
+  border-right:
+    1px solid #e6eaec;
+
+  border-bottom:
+    1px solid #e6eaec;
+}
+
+.contribution-number {
+  color: #ac893e;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 13px;
+}
+
+.contribution-title {
+  margin-top: 9px;
+
+  color: #274860;
+
+  font-size: 17px;
+
+  font-weight: 600;
+}
+
+.contribution-text {
+  margin-top: 8px;
+
+  color: #74838e;
+
+  font-size: 14.5px;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   概念链
+   ========================================================= */
+
+.concept-line {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
 
   margin-top: 27px;
 }
 
-.research-row {
+.concept-line span {
+  padding:
+    7px 14px;
+
+  color: #294a61;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    serif;
+
+  font-size: 14px;
+
+  border-right:
+    1px solid #dfe3e5;
+}
+
+.concept-line span:first-child {
+  padding-left: 0;
+}
+
+
+/* =========================================================
+   方法论
+   ========================================================= */
+
+.method-list {
+  margin-top: 28px;
+
+  border-top:
+    1px solid #e6eaec;
+}
+
+.method-row {
   display: grid;
 
   grid-template-columns:
-    52px 210px 1fr;
+    52px 220px minmax(0,1fr);
 
   gap: 22px;
 
-  padding: 22px 5px;
+  padding:
+    23px 5px;
 
   border-bottom:
-    1px solid #e6e9eb;
+    1px solid #e6eaec;
 }
 
-.number {
+.method-index {
   color: #aa8739;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 14px;
 }
 
-.name {
-  color: #274860;
+.method-title {
+  color: #294a61;
+
+  font-size: 16.5px;
+
   font-weight: 600;
 }
 
-.text {
-  color: #71808b;
+.method-text {
+  color: #75848f;
+
+  font-size: 14.5px;
+
+  line-height: 1.75;
 }
 
-.back {
-  display: inline-block;
 
-  margin-top: 20px;
+/* =========================================================
+   相关入口
+   ========================================================= */
 
-  color: #315873;
-
-  border-bottom:
-    1px solid #b49248;
-}
-
-footer {
-  padding: 35px;
-
-  text-align: center;
-
-  color: #7a8994;
+.related-list {
+  margin-top: 28px;
 
   border-top:
     1px solid #e7eaec;
 }
 
-@media(max-width:700px) {
+.related-item {
+  display: grid;
 
-  .research-row {
-    grid-template-columns:
-      35px 1fr;
-  }
+  grid-template-columns:
+    52px minmax(0,1fr) auto;
 
-  .text {
-    grid-column: 2;
-  }
+  gap: 20px;
+
+  align-items: center;
+
+  padding:
+    22px 5px;
+
+  border-bottom:
+    1px solid #e7eaec;
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+.related-item:hover {
+  background: #fafbf9;
+
+  transform: translateX(2px);
+}
+
+.related-number {
+  color: #aa8739;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 14px;
+}
+
+.related-title {
+  color: #294a61;
+
+  font-size: 16px;
+
+  font-weight: 600;
+}
+
+.related-subtitle {
+  margin-top: 4px;
+
+  color: #81909b;
+
+  font-size: 13.5px;
+}
+
+.related-arrow {
+  color: #aa8739;
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   返回
+   ========================================================= */
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  margin-top: 15px;
+
+  padding-bottom: 3px;
+
+  border-bottom:
+    1px solid #b49348;
+
+  color: #315873;
+
+  font-size: 15px;
+}
+
+.back-link:hover {
+  color: #92712f;
+}
+
+
+/* =========================================================
+   页脚
+   ========================================================= */
+
+footer {
+  padding:
+    37px 20px;
+
+  border-top:
+    1px solid #e8ebed;
+
+  background: #fbfcfb;
+
+  color: #7c8993;
+
+  text-align: center;
+
+  font-family:
+    Arial,
+    "Microsoft YaHei",
+    sans-serif;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+@media (max-width: 760px) {
 
   .nav {
     overflow-x: auto;
+
+    gap: 19px;
+
+    padding:
+      15px 18px;
+  }
+
+  .hero {
+    padding:
+      64px 21px 55px;
+  }
+
+  .hero h1 {
+    font-size: 37px;
+  }
+
+  .hero-en {
+    font-size: 18px;
+  }
+
+  main {
+    padding:
+      40px 21px 72px;
+  }
+
+  .section {
+    padding:
+      36px 0;
+  }
+
+  .section h2 {
+    font-size: 25px;
+  }
+
+  .genealogy-row,
+  .method-row {
+    grid-template-columns:
+      37px 1fr;
+
+    gap:
+      10px 15px;
+  }
+
+  .genealogy-text,
+  .method-text {
+    grid-column: 2;
+  }
+
+  .publication-item {
+    grid-template-columns:
+      36px minmax(0,1fr) 18px;
+
+    gap: 12px;
+  }
+
+  .contribution-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-item {
+    grid-template-columns:
+      35px minmax(0,1fr) 20px;
+
+    gap: 12px;
   }
 
 }
@@ -262,141 +939,948 @@ footer {
 
 <body>
 
+
+<!-- =========================================================
+     导航
+     ========================================================= -->
+
 <header class="topbar">
 
 <nav class="nav">
 
-<a class="nav-brand" href="/">
-高源 · Gao Yuan
-</a>
+  <a href="/"
+     class="nav-brand">
+    高源 | 芬兰赫尔辛基大学 | University of Helsinki, Finland
+  </a>
 
-<a href="/">首页</a>
+  <a href="/">
+    首页
+  </a>
 
-<a href="/research/">研究成果</a>
+  <a href="/research/">
+    研究成果
+  </a>
 
-<a href="/#nordic">北欧学术</a>
+  <a href="/#nordic">
+    北欧学术
+  </a>
 
 </nav>
 
 </header>
 
 
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
 <section class="hero">
 
 <div class="hero-inner">
 
-<div class="kicker">
-NORDIC FINNISH SCHOOL · PHILOSOPHY OF EMOTIONS
-</div>
+  <div class="hero-kicker">
+    NORDIC FINNISH SCHOOL · PHILOSOPHY OF EMOTIONS · MORAL PSYCHOLOGY
+  </div>
 
-<h1>
-北欧芬兰学派：<br>
-欧洲情感心理哲学研究
-</h1>
+  <h1>
+    北欧芬兰学派：<br>
+    欧洲情感心理哲学研究
+  </h1>
 
-<div class="subtitle">
-Nordic Finnish School · European Philosophy of Emotions
-</div>
+  <div class="hero-en">
+    Nordic Finnish School · European Philosophy of Emotions
+  </div>
 
-<div class="gold-line"></div>
+  <div class="gold-line"></div>
+
+  <div class="hero-note">
+    从古典希腊的情感—心灵结构，
+    经由奥古斯丁的爱与意志，
+    进入芬兰学派关于参与、成神、关系性之爱与真实临在的讨论，
+    形成贯通古典哲学、中世纪思想、北欧神学与中西文明对话的研究谱系。
+  </div>
 
 </div>
 
 </section>
+
 
 
 <main>
 
+
+<!-- =========================================================
+     01 研究定位
+     ========================================================= -->
+
 <section class="section">
 
-<h2>研究定位</h2>
+<div class="section-kicker">
+01 · RESEARCH VISION
+</div>
+
+<h2>
+研究定位
+</h2>
 
 <p class="lead">
-以芬兰哲学与神学研究传统为知识背景，
-重新考察欧洲思想史中关于情感、意志、爱、
-德性与人的精神生命的基本问题。
+这一研究方向尝试重新发现一条贯穿欧洲精神史的思想主线：
+情感并非理性的简单对立面，
+而是理解人的心灵结构、德性、意志、爱、
+信仰以及终极生命理想的重要哲学入口。
 </p>
 
 <p>
-这一研究方向将欧洲情感哲学放回古典哲学、
-中世纪思想、宗教哲学以及现代心灵研究的连续历史之中，
-关注情感如何由伦理生活中的问题，
-逐渐转化为理解人的主体性、道德心理、
-信仰与精神世界的重要哲学入口。
+研究从古希腊情感心理哲学出发，
+考察柏拉图与亚里士多德如何建立
+情感、灵魂与德性之间的理论关系；
+继而进入奥古斯丁及中世纪，
+讨论爱、意志、激情和精神转化；
+最终延伸到现代芬兰学派关于
+union、participation、gift、favor、
+real-ontic presence 与 deification 的解释传统。
 </p>
-
-</section>
-
-
-<section class="section">
-
-<h2>核心思想谱系</h2>
-
-<div class="research-list">
-
-<div class="research-row">
-<div class="number">01</div>
-<div class="name">古典基础</div>
-<div class="text">
-柏拉图与亚里士多德：灵魂、情感、德性与实践生活。
-</div>
-</div>
-
-<div class="research-row">
-<div class="number">02</div>
-<div class="name">晚期希腊</div>
-<div class="text">
-斯多亚主义与新柏拉图主义：情感疗治、心灵秩序与生命哲学。
-</div>
-</div>
-
-<div class="research-row">
-<div class="number">03</div>
-<div class="name">中世纪转型</div>
-<div class="text">
-奥古斯丁及两希文明交汇：爱、意志、罪与情感秩序。
-</div>
-</div>
-
-<div class="research-row">
-<div class="number">04</div>
-<div class="name">芬兰学术传统</div>
-<div class="text">
-从欧洲哲学史、哲学心理学到芬兰思想传统中的情感与宗教哲学研究。
-</div>
-</div>
-
-</div>
-
-</section>
-
-
-<section class="section">
-
-<h2>研究关键词</h2>
 
 <p>
-European Philosophy of Emotions · Moral Psychology ·
-Philosophy of Mind · Finnish School · Augustine ·
-Love · Will · Virtue · Intellectual History
+在这一连续思想史框架中，
+“欧洲情感心理哲学”不再被理解为若干人物和概念的简单集合，
+而成为一条从古典哲学一直延伸至
+北欧当代哲学与神学研究的历史谱系。
 </p>
+
+<div class="core-statement">
+核心问题是：
+<strong>
+人的情感如何从需要被理性控制的“激情”，
+逐步转化为德性、爱、关系、参与以及精神生命完善的积极力量？
+</strong>
+</div>
 
 </section>
 
 
+
+<!-- =========================================================
+     02 思想谱系
+     ========================================================= -->
+
 <section class="section">
 
-<a class="back" href="/#nordic">
-← 返回“北欧学术与研究亮点”
+<div class="section-kicker">
+02 · INTELLECTUAL GENEALOGY
+</div>
+
+<h2>
+从柏拉图到芬兰学派
+</h2>
+
+<div class="genealogy">
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      01
+    </div>
+
+    <div class="genealogy-name">
+      Plato · 柏拉图
+    </div>
+
+    <div class="genealogy-text">
+      从早期灵肉二分、成熟期心灵三分，
+      到晚年对情感功用的积极化调整，
+      奠定古典欧洲情感哲学的结构性基础。
+    </div>
+
+  </div>
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      02
+    </div>
+
+    <div class="genealogy-name">
+      Aristotle · 亚里士多德
+    </div>
+
+    <div class="genealogy-text">
+      将柏拉图式情感结构从理型秩序带入现实政治与社会生活，
+      发展出情感、德性、实践理性与幸福生活之间的理论联系。
+    </div>
+
+  </div>
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      03
+    </div>
+
+    <div class="genealogy-name">
+      Stoicism · Neoplatonism
+    </div>
+
+    <div class="genealogy-text">
+      把情感问题推进至心灵疗治、精神医学、
+      内在秩序与生命实践，
+      形成古代晚期的重要情感疗治传统。
+    </div>
+
+  </div>
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      04
+    </div>
+
+    <div class="genealogy-name">
+      Augustine · 奥古斯丁
+    </div>
+
+    <div class="genealogy-text">
+      重新解释激情、意志与爱，
+      将柏拉图主义的心灵秩序置于“双城与双爱”
+      及基督教精神转化的历史框架之中。
+    </div>
+
+  </div>
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      05
+    </div>
+
+    <div class="genealogy-name">
+      Finnish School
+    </div>
+
+    <div class="genealogy-text">
+      Mannermaa及其后继者重新解释路德关于
+      union、participation、gift、favor与真实临在的思想，
+      把爱与人的精神转化推进至当代北欧哲学—神学讨论。
+    </div>
+
+  </div>
+
+
+  <div class="genealogy-row">
+
+    <div class="genealogy-number">
+      06
+    </div>
+
+    <div class="genealogy-name">
+      Sino-Nordic Dialogue
+    </div>
+
+    <div class="genealogy-text">
+      从“情感成神”与“关系性之爱”出发，
+      把芬兰学派进一步带入儒、佛、道传统的比较研究，
+      形成北欧思想与中国哲学之间新的概念对话。
+    </div>
+
+  </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     03 已发表研究成果
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+03 · SELECTED PUBLICATIONS
+</div>
+
+<h2>
+代表性研究成果
+</h2>
+
+<p>
+这一研究方向已经形成从希腊古典哲学、
+欧洲奥古斯丁主义研究到芬兰学派与中西哲学对话的连续成果。
+</p>
+
+<div class="publication-list">
+
+
+  <a href="/research/plato-emotions/"
+     class="publication-item">
+
+    <div class="publication-index">
+      01
+    </div>
+
+    <div>
+
+      <div class="publication-title">
+        《柏拉图情感哲学的历史生成与理论转型》
+      </div>
+
+      <div class="publication-meta">
+        《学术月刊》2023年第12期
+      </div>
+
+      <div class="publication-contribution">
+        系统重构柏拉图情感哲学从灵肉二分、
+        心灵三分到晚年情感价值积极化转型的发展过程，
+        并追踪其对亚里士多德、斯多亚及奥古斯丁传统的长时段影响。
+      </div>
+
+    </div>
+
+    <div class="publication-arrow">
+      →
+    </div>
+
+  </a>
+
+
+
+  <a href="/research/aristotle-emotions/"
+     class="publication-item">
+
+    <div class="publication-index">
+      02
+    </div>
+
+    <div>
+
+      <div class="publication-title">
+        《论亚里士多德情感哲学的形成、发展与贡献》
+      </div>
+
+      <div class="publication-meta">
+        《社会科学》2023年第8期
+      </div>
+
+      <div class="publication-contribution">
+        从柏拉图—亚里士多德的师承关系重新解释
+        亚里士多德情感哲学，
+        强调其由“结构情感”走向“情感实践”的思想转型，
+        并将情感重新放入德性、政治与现实生活。
+      </div>
+
+    </div>
+
+    <div class="publication-arrow">
+      →
+    </div>
+
+  </a>
+
+
+
+  <a href="/research/deification-sanctification/"
+     class="publication-item">
+
+    <div class="publication-index">
+      03
+    </div>
+
+    <div>
+
+      <div class="publication-title">
+        Deification and Sanctification in the Dialogue between
+        the Finnish Lutheran School and the Chinese Neo-Confucian School
+      </div>
+
+      <div class="publication-meta">
+        Dialog · 2022 · Vol. 61 · pp. 39–46 · DOI 10.1111/dial.12705
+      </div>
+
+      <div class="publication-contribution">
+        将芬兰Mannermaa学派关于成神、
+        参与及真实临在的解释推进至新儒家语境，
+        并提出“deification of emotions”
+        作为路德宗—儒家对话的新理论路径。
+      </div>
+
+    </div>
+
+    <div class="publication-arrow">
+      →
+    </div>
+
+  </a>
+
+
+
+  <a href="/research/relational-love-dialog/"
+     class="publication-item">
+
+    <div class="publication-index">
+      04
+    </div>
+
+    <div>
+
+      <div class="publication-title">
+        The Relational Love in the Dialogue between
+        Lutheran Theology and Chinese Traditional Religions
+      </div>
+
+      <div class="publication-meta">
+        Dialog · 2024 · DOI 10.1111/dial.12855
+      </div>
+
+      <div class="publication-contribution">
+        以“关系性之爱”为概念桥梁，
+        将芬兰路德研究中的两种爱、union、
+        participation、gift、favor与real-ontic presence，
+        同儒、道、佛传统的关系性本体结构展开对话。
+      </div>
+
+    </div>
+
+    <div class="publication-arrow">
+      →
+    </div>
+
+  </a>
+
+
+
+  <a href="/research/luther-taoism/"
+     class="publication-item">
+
+    <div class="publication-index">
+      05
+    </div>
+
+    <div>
+
+      <div class="publication-title">
+        Luther and Taoism:
+        The Early Lutheran Interpretation of the Taoist Conception of Love
+        in the Sino-Nordic Religious Encounter
+      </div>
+
+      <div class="publication-meta">
+        Dialog · 2024 · Vol. 63 · pp. 100–107 · DOI 10.1111/dial.12857
+      </div>
+
+      <div class="publication-contribution">
+        从早期北欧路德宗与中国道家相遇的历史出发，
+        研究“爱”如何成为东西方宗教价值冲突、
+        误读与重新理解的核心概念。
+      </div>
+
+    </div>
+
+    <div class="publication-arrow">
+      →
+    </div>
+
+  </a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     04 核心贡献
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+04 · SCHOLARLY CONTRIBUTIONS
+</div>
+
+<h2>
+研究亮点与理论贡献
+</h2>
+
+<div class="contribution-grid">
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      01
+    </div>
+
+    <div class="contribution-title">
+      重建欧洲情感哲学的历史谱系
+    </div>
+
+    <div class="contribution-text">
+      不把情感哲学局限于现代“emotion studies”，
+      而是向前追溯至柏拉图、亚里士多德、
+      晚期希腊及奥古斯丁，
+      形成古典—中世纪—现代北欧思想之间的连续解释框架。
+    </div>
+
+  </div>
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      02
+    </div>
+
+    <div class="contribution-title">
+      从结构情感走向情感实践
+    </div>
+
+    <div class="contribution-text">
+      通过柏拉图与亚里士多德的比较，
+      揭示欧洲古典情感哲学由心灵结构论
+      向德性、政治和社会生活中的情感实践转型。
+    </div>
+
+  </div>
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      03
+    </div>
+
+    <div class="contribution-title">
+      把奥古斯丁置于情感思想史中心
+    </div>
+
+    <div class="contribution-text">
+      将激情、意志、爱、双城与双爱
+      作为理解奥古斯丁道德心理学的重要线索，
+      并研究其如何重新塑造古典哲学传统。
+    </div>
+
+  </div>
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      04
+    </div>
+
+    <div class="contribution-title">
+      提出“情感成神”研究路径
+    </div>
+
+    <div class="contribution-text">
+      将芬兰学派关于theosis、
+      participation和real-ontic presence的解释，
+      同人的情感转化联系起来，
+      形成“deification of emotions”的概念路径。
+    </div>
+
+  </div>
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      05
+    </div>
+
+    <div class="contribution-title">
+      发展“关系性之爱”概念模型
+    </div>
+
+    <div class="contribution-text">
+      从芬兰学派关于love、gift、favor与union的解释，
+      进一步发展“relational love”，
+      用以连接路德神学与儒、佛、道的关系性思想。
+    </div>
+
+  </div>
+
+
+  <div class="contribution-item">
+
+    <div class="contribution-number">
+      06
+    </div>
+
+    <div class="contribution-title">
+      从欧洲思想史进入中西文明对话
+    </div>
+
+    <div class="contribution-text">
+      把欧洲情感哲学研究进一步推进至
+      中国哲学与北欧思想的比较研究，
+      使情感、爱和人的完善成为文明互鉴的共同问题。
+    </div>
+
+  </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     05 概念链
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+05 · CONCEPTUAL ARCHITECTURE
+</div>
+
+<h2>
+核心概念链
+</h2>
+
+<p class="lead">
+这一研究并不是若干论文主题的简单并列，
+而是围绕人的情感生命与精神转化形成一条具有内在关联的概念链。
+</p>
+
+<div class="concept-line">
+
+  <span>Passion</span>
+
+  <span>Emotion</span>
+
+  <span>Soul</span>
+
+  <span>Reason</span>
+
+  <span>Virtue</span>
+
+  <span>Will</span>
+
+  <span>Love</span>
+
+  <span>Participation</span>
+
+  <span>Union</span>
+
+  <span>Gift</span>
+
+  <span>Favor</span>
+
+  <span>Deification</span>
+
+  <span>Relational Love</span>
+
+</div>
+
+<div class="core-statement">
+从“激情是否应被抑制”，
+到“情感如何形成德性”，
+再到“爱如何使人与终极存在发生关系”，
+<strong>
+研究对象由心理结构逐步进入人的整体精神生命。
+</strong>
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     06 芬兰学派方法
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+06 · FINNISH SCHOOL
+</div>
+
+<h2>
+芬兰学派提供的方法论启发
+</h2>
+
+<p>
+芬兰学派的重要启发之一，
+在于不把思想史研究停留在概念的外在比较，
+而强调概念背后的真实存在关系以及人的整体转化。
+</p>
+
+<div class="method-list">
+
+
+  <div class="method-row">
+
+    <div class="method-index">
+      01
+    </div>
+
+    <div class="method-title">
+      Historical Genealogy
+    </div>
+
+    <div class="method-text">
+      从原典与思想史追踪概念如何形成、
+      调整并进入后续传统，
+      强调思想的历史连续性。
+    </div>
+
+  </div>
+
+
+  <div class="method-row">
+
+    <div class="method-index">
+      02
+    </div>
+
+    <div class="method-title">
+      Moral Psychology
+    </div>
+
+    <div class="method-text">
+      将情感、欲望、理性、意志与德性
+      置于人的完整心理—伦理结构中理解。
+    </div>
+
+  </div>
+
+
+  <div class="method-row">
+
+    <div class="method-index">
+      03
+    </div>
+
+    <div class="method-title">
+      Participation &amp; Union
+    </div>
+
+    <div class="method-text">
+      研究人与终极价值之间的参与、联合和真实关系，
+      从而超越纯粹观念史层面的比较。
+    </div>
+
+  </div>
+
+
+  <div class="method-row">
+
+    <div class="method-index">
+      04
+    </div>
+
+    <div class="method-title">
+      Comparative Philosophy
+    </div>
+
+    <div class="method-text">
+      在承认本体论差异的前提下寻找
+      不同文明传统之间真正可以展开对话的概念结构，
+      而不是进行表面对应。
+    </div>
+
+  </div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     07 研究与教学
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+07 · RESEARCH &amp; TEACHING
+</div>
+
+<h2>
+从学术研究进入课程体系
+</h2>
+
+<p class="lead">
+上述研究最终被重新组织进入
+《欧洲情感心理哲学专题》的课程体系，
+形成由科研成果反哺教学、
+由原典研究支撑通识教育的知识结构。
+</p>
+
+<p>
+课程从柏拉图、亚里士多德开始，
+进入斯多亚主义、新柏拉图主义、
+奥古斯丁与中世纪，
+最后抵达弗洛伊德与现代精神分析，
+以此帮助学生建立欧洲情感心理哲学及
+精神医学哲学的系统知识脉络。
+</p>
+
+<a href="/courses/european-emotions/"
+   class="back-link">
+
+  进入《欧洲情感心理哲学专题》课程主页 →
+
 </a>
 
 </section>
 
+
+
+<!-- =========================================================
+     08 相关专题
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+08 · RELATED RESEARCH
+</div>
+
+<h2>
+继续浏览相关研究
+</h2>
+
+<div class="related-list">
+
+
+  <a href="/nordic/sino-nordic-dialogue/"
+     class="related-item">
+
+    <div class="related-number">
+      01
+    </div>
+
+    <div>
+
+      <div class="related-title">
+        北欧区域国别：中国—北欧文明互鉴与文化传播
+      </div>
+
+      <div class="related-subtitle">
+        Sino-Nordic Studies · Civilizational Dialogue
+      </div>
+
+    </div>
+
+    <div class="related-arrow">
+      →
+    </div>
+
+  </a>
+
+
+  <a href="/nordic/polar-silk-road/"
+     class="related-item">
+
+    <div class="related-number">
+      02
+    </div>
+
+    <div>
+
+      <div class="related-title">
+        国家北极战略：冰上丝绸之路研究
+      </div>
+
+      <div class="related-subtitle">
+        Arctic Strategy · Polar Silk Road
+      </div>
+
+    </div>
+
+    <div class="related-arrow">
+      →
+    </div>
+
+  </a>
+
+
+  <a href="/research/"
+     class="related-item">
+
+    <div class="related-number">
+      03
+    </div>
+
+    <div>
+
+      <div class="related-title">
+        全部研究成果
+      </div>
+
+      <div class="related-subtitle">
+        Publications · Research Portfolio
+      </div>
+
+    </div>
+
+    <div class="related-arrow">
+      →
+    </div>
+
+  </a>
+
+
+</div>
+
+</section>
+
+
+
+<!-- =========================================================
+     返回
+     ========================================================= -->
+
+<section class="section">
+
+<div class="section-kicker">
+BACK
+</div>
+
+<h2>
+返回北欧学术
+</h2>
+
+<a href="/#nordic"
+   class="back-link">
+
+  ← 返回“北欧学术与研究亮点”
+
+</a>
+
+</section>
+
+
 </main>
 
+
+
 <footer>
-高源 · Gao Yuan Academic Website
+
+© 高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院
+
+<br>
+
+北欧芬兰学派 · 欧洲情感心理哲学 · 欧洲道德心理学 · 中国——北欧文明对话
+
 </footer>
 
+
 </body>
+
 </html>
