@@ -2195,6 +2195,156 @@ a.course-row:hover {
   }
 
 }
+  /* =========================================================
+   欧洲学术兼职 · 与课程列表统一
+   ========================================================= */
+
+#appointments .appointment-list-clean {
+  margin-top: 26px;
+  border-top: 1px solid #e7eaec;
+}
+
+
+#appointments .appointment-row {
+  display: grid;
+
+  grid-template-columns:
+    54px minmax(0, 1fr);
+
+  gap: 22px;
+
+  padding:
+    22px 8px;
+
+  border-bottom:
+    1px solid #e7eaec;
+}
+
+
+/* 01、02、03…… */
+#appointments .appointment-index {
+  padding-top: 2px;
+
+  color: #aa8738;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* 中文主标题 */
+#appointments .appointment-title-cn {
+  color: #24445f;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.55;
+}
+
+
+/* 英文 / 机构 / 时间 */
+#appointments .appointment-title-en {
+  margin-top: 5px;
+
+  color: #7f8d99;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   中等屏幕
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  #appointments .appointment-row {
+    grid-template-columns:
+      46px minmax(0, 1fr);
+
+    gap: 17px;
+
+    padding:
+      20px 6px;
+  }
+
+  #appointments .appointment-title-cn {
+    font-size: 17px;
+  }
+
+  #appointments .appointment-title-en {
+    font-size: 14px;
+  }
+
+  #appointments .appointment-index {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  #appointments .appointment-row {
+    grid-template-columns:
+      36px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding:
+      18px 2px;
+  }
+
+  #appointments .appointment-title-cn {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+  #appointments .appointment-title-en {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+  #appointments .appointment-index {
+    font-size: 13px;
+  }
+
+}
 </style>
 
 
@@ -3658,80 +3808,243 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 
 </section>
 
-
 <!-- =========================================================
-     学术兼职
+     欧洲学术兼职
      ========================================================= -->
 
 <section class="section"
          id="appointments">
 
+  <div class="kicker">
+    Academic Appointments
+  </div>
 
-<div class="kicker">
-Academic Appointments
-</div>
+  <h2>
+    欧洲学术兼职
+  </h2>
 
-<h2>
-欧洲学术兼职
-</h2>
+  <div class="appointment-list-clean">
+
+    <!-- 01 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        01
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          英国牛津大学 C. S. Lewis 研究会理事
+        </div>
+
+        <div class="appointment-title-en">
+          Oxford University C. S. Lewis Society
+        </div>
+
+      </div>
+
+    </div>
 
 
-<details open>
+    <!-- 02 -->
+    <div class="appointment-row">
 
-<summary>
-查看欧洲及国际学术兼职
-</summary>
+      <div class="appointment-index">
+        02
+      </div>
 
-<div class="details-body">
+      <div class="appointment-row-content">
 
-<ul>
+        <div class="appointment-title-cn">
+          美国权威 A&amp;HCI 期刊《DIALOG》核心编委与合作主编
+        </div>
 
-<li>
-1. 英国牛津大学C.S.Lewis 研究会理事，Oxford University C.S. Lewis Society。
-</li>
+        <div class="appointment-title-en">
+          DIALOG · A Journal of Theology
+        </div>
 
-<li>
-2. 美国权威A&amp;HCI期刊《DIALOG》核心编委与合作主编。
-</li>
+      </div>
 
-<li>
-3. 北欧“路德研究的芬兰学派与汉语语境的互动”论坛负责人之一，赫尔辛基大学。
-</li>
+    </div>
 
-<li>
-4. 世界路德研究大会/芬兰赫尔辛基大学路德研究委员会核心成员，赫尔辛基大学。
-</li>
 
-<li>
-5. 北欧系统神学大会/芬兰赫尔辛基大学天主教研究核心成员（2016），赫尔辛基大学。
-</li>
+    <!-- 03 -->
+    <div class="appointment-row">
 
-<li>
-6. 芬兰科学院/赫尔辛基大学 ‘The Origins of Religion in Philosophy, Theology and Religious Studies’ 组织者之一（2015），赫尔辛基大学 / 芬兰科学院。
-</li>
+      <div class="appointment-index">
+        03
+      </div>
 
-<li>
-7. 芬兰学派与“马丁·路德证道集”编译组审校（2012—2015），赫尔辛基大学。
-</li>
+      <div class="appointment-row-content">
 
-<li>
-8. 芬兰华人科技协会人文科学顾问（Chinese Association of Science and Technology in Finland, 成立之初主要创建人之一），芬兰·艾斯波/Espoo。
-</li>
+        <div class="appointment-title-cn">
+          北欧“路德研究的芬兰学派与汉语语境的互动”论坛负责人之一
+        </div>
 
-<li>
-9. 芬兰赫尔辛基大学孔子学院授课专家（2012—2016），芬兰赫尔辛基大学孔子学院/中国国家汉办。
-</li>
+        <div class="appointment-title-en">
+          University of Helsinki · Finnish School of Luther Studies
+        </div>
 
-<li>
-10. 芬兰天主教研究与文明对话学术委员会（Studium Catholicum）核心成员（2012—），赫尔辛基。
-</li>
+      </div>
 
-</ul>
+    </div>
 
-</div>
 
-</details>
+    <!-- 04 -->
+    <div class="appointment-row">
 
+      <div class="appointment-index">
+        04
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          世界路德研究大会 / 芬兰赫尔辛基大学路德研究委员会核心成员
+        </div>
+
+        <div class="appointment-title-en">
+          University of Helsinki · Luther Research Committee
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 05 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        05
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          北欧系统神学大会 / 芬兰赫尔辛基大学天主教研究核心成员
+        </div>
+
+        <div class="appointment-title-en">
+          Nordic Systematic Theology · University of Helsinki
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 06 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        06
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          芬兰科学院 / 赫尔辛基大学 “The Origins of Religion in Philosophy, Theology and Religious Studies” 组织者之一
+        </div>
+
+        <div class="appointment-title-en">
+          Academy of Finland · University of Helsinki · 2015
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 07 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        07
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          芬兰学派与“马丁·路德证道集”编译组审校
+        </div>
+
+        <div class="appointment-title-en">
+          University of Helsinki · 2012–2015
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 08 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        08
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          芬兰华人科技协会人文科学顾问
+        </div>
+
+        <div class="appointment-title-en">
+          Chinese Association of Science and Technology in Finland · Espoo
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 09 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        09
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          芬兰赫尔辛基大学孔子学院授课专家
+        </div>
+
+        <div class="appointment-title-en">
+          Confucius Institute · University of Helsinki · 2012–2016
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- 10 -->
+    <div class="appointment-row">
+
+      <div class="appointment-index">
+        10
+      </div>
+
+      <div class="appointment-row-content">
+
+        <div class="appointment-title-cn">
+          芬兰天主教研究与文明对话学术委员会核心成员
+        </div>
+
+        <div class="appointment-title-en">
+          Studium Catholicum · Helsinki · 2012–
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
