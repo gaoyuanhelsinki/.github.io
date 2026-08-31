@@ -2906,6 +2906,218 @@ a.course-row:hover {
   }
 
 }
+  /* =========================================================
+   北欧学术与研究亮点
+   与“课程 / 欧洲学术兼职”完全统一
+   ========================================================= */
+
+#nordic .nordic-list-clean {
+  margin-top: 26px;
+  border-top: 1px solid #e7eaec;
+}
+
+
+#nordic .nordic-row {
+  display: grid;
+
+  grid-template-columns:
+    54px minmax(0, 1fr);
+
+  gap: 22px;
+
+  padding:
+    22px 8px;
+
+  border-bottom:
+    1px solid #e7eaec;
+
+  color: inherit;
+  text-decoration: none;
+
+  transition:
+    background .18s ease,
+    transform .18s ease;
+}
+
+
+#nordic .nordic-row:hover {
+  background: rgba(245,247,247,.55);
+  transform: translateX(2px);
+}
+
+
+/* 01 / 02 / 03 */
+
+#nordic .nordic-index {
+  padding-top: 2px;
+
+  color: #aa8738;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* 中文标题 */
+
+#nordic .nordic-title-cn {
+  color: #24445f;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    "STSong",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.55;
+}
+
+
+/* 英文副标题 */
+
+#nordic .nordic-title-en {
+  margin-top: 5px;
+
+  color: #7f8d99;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    serif;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.6;
+}
+
+
+/* 箭头 */
+
+#nordic .nordic-title-with-arrow {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+
+#nordic .nordic-arrow {
+  display: inline-block;
+
+  color: #aa8738;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  transition:
+    transform .2s ease,
+    color .2s ease;
+}
+
+
+#nordic .nordic-row:hover .nordic-arrow {
+  transform: translateX(5px);
+
+  color: #836621;
+}
+
+
+#nordic .nordic-row:hover .nordic-title-cn {
+  color: #183650;
+}
+
+
+/* =========================================================
+   中等屏幕
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  #nordic .nordic-row {
+    grid-template-columns:
+      46px minmax(0, 1fr);
+
+    gap: 17px;
+
+    padding:
+      20px 6px;
+  }
+
+  #nordic .nordic-title-cn {
+    font-size: 17px;
+  }
+
+  #nordic .nordic-title-en {
+    font-size: 14px;
+  }
+
+  #nordic .nordic-index {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   手机端
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  #nordic .nordic-row {
+    grid-template-columns:
+      36px minmax(0, 1fr);
+
+    gap: 12px;
+
+    padding:
+      18px 2px;
+  }
+
+  #nordic .nordic-title-cn {
+    font-size: 16px;
+
+    line-height: 1.5;
+  }
+
+  #nordic .nordic-title-en {
+    margin-top: 4px;
+
+    font-size: 13px;
+
+    line-height: 1.55;
+  }
+
+  #nordic .nordic-index {
+    font-size: 13px;
+  }
+
+  #nordic .nordic-title-with-arrow {
+    gap: 8px;
+  }
+
+}
 </style>
 
 
@@ -4609,6 +4821,124 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 
 </section>
 
+  <!-- =========================================================
+     北欧学术与研究亮点
+     ========================================================= -->
+
+<section class="section"
+         id="nordic">
+
+  <div class="kicker">
+    Nordic Studies
+  </div>
+
+  <h2>
+    北欧学术与研究亮点
+  </h2>
+
+  <div class="nordic-list-clean">
+
+
+    <!-- 01 -->
+    <a href="/nordic/finnish-school-emotions/"
+       class="nordic-row"
+       aria-label="进入北欧芬兰学派与欧洲情感心理哲学研究专题">
+
+      <div class="nordic-index">
+        01
+      </div>
+
+      <div class="nordic-row-content">
+
+        <div class="nordic-title-cn nordic-title-with-arrow">
+
+          <span>
+            北欧芬兰学派：欧洲情感心理哲学研究
+          </span>
+
+          <span class="nordic-arrow">
+            →
+          </span>
+
+        </div>
+
+        <div class="nordic-title-en">
+          Nordic Finnish School · European Philosophy of Emotions
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <!-- 02 -->
+    <a href="/nordic/sino-nordic-dialogue/"
+       class="nordic-row"
+       aria-label="进入中国北欧文明互鉴与文化传播专题">
+
+      <div class="nordic-index">
+        02
+      </div>
+
+      <div class="nordic-row-content">
+
+        <div class="nordic-title-cn nordic-title-with-arrow">
+
+          <span>
+            北欧区域国别：中国—北欧文明互鉴与文化传播
+          </span>
+
+          <span class="nordic-arrow">
+            →
+          </span>
+
+        </div>
+
+        <div class="nordic-title-en">
+          Sino-Nordic Studies · Civilizational Dialogue &amp; Cultural Transmission
+        </div>
+
+      </div>
+
+    </a>
+
+
+    <!-- 03 -->
+    <a href="/nordic/polar-silk-road/"
+       class="nordic-row"
+       aria-label="进入冰上丝绸之路与北极战略研究专题">
+
+      <div class="nordic-index">
+        03
+      </div>
+
+      <div class="nordic-row-content">
+
+        <div class="nordic-title-cn nordic-title-with-arrow">
+
+          <span>
+            国家北极战略：冰上丝绸之路研究
+          </span>
+
+          <span class="nordic-arrow">
+            →
+          </span>
+
+        </div>
+
+        <div class="nordic-title-en">
+          Arctic Strategy · Polar Silk Road Studies
+        </div>
+
+      </div>
+
+    </a>
+
+
+  </div>
+
+</section>
+
 
 </div>
 
@@ -4653,7 +4983,7 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 
 <div class="copyright">
 
-© 高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院 | gaoyuanhelsinki.cn | 2025
+© 高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院 | gaoyuanhelsinki.cn | 2025——
 
 </div>
 
