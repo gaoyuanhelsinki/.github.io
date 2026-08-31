@@ -798,7 +798,251 @@ footer {
   }
 
 }
+/* ==========================================================
+   POLAR SILK ROAD HERO · 左文右图最终版
+   ========================================================== */
 
+.hero .hero-inner.polar-hero {
+  width: min(1180px, calc(100% - 48px));
+
+  margin: 0 auto;
+
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 1.04fr)
+    minmax(420px, .96fr) !important;
+
+  column-gap: 62px;
+
+  align-items: center !important;
+}
+
+
+/* 左侧文字 */
+
+.hero .hero-copy {
+  min-width: 0;
+  width: 100%;
+}
+
+.hero .hero-copy h1 {
+  margin: 0;
+
+  color: #193650;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    Georgia,
+    serif;
+
+  font-size: clamp(40px, 4.35vw, 63px);
+
+  font-weight: 600;
+
+  line-height: 1.3;
+
+  letter-spacing: -.025em;
+}
+
+.hero .hero-en {
+  margin-top: 24px;
+
+  color: #82909b;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: clamp(20px, 2vw, 26px);
+
+  line-height: 1.48;
+}
+
+.hero .gold-line {
+  width: 72px;
+  height: 2px;
+
+  margin: 31px 0 25px;
+
+  background: #b38c39;
+}
+
+.hero .hero-note {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: #6e808c;
+
+  font-size: 16px;
+
+  line-height: 1.95;
+}
+
+
+/* ==========================================================
+   右侧会议照片
+   ========================================================== */
+
+.hero .hero-photo {
+  width: 100% !important;
+
+  max-width: 590px !important;
+
+  margin: 0 !important;
+
+  justify-self: end !important;
+
+  align-self: center !important;
+}
+
+.hero .hero-photo-frame {
+  position: relative;
+
+  width: 100%;
+
+  padding: 5px;
+
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff,
+      #f4f1e8
+    );
+
+  border:
+    1px solid rgba(181,145,60,.78);
+
+  border-radius: 8px;
+
+  box-shadow:
+    0 21px 50px rgba(22,48,68,.13),
+    0 5px 14px rgba(22,48,68,.06);
+}
+
+.hero .hero-photo-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 10px;
+
+  border:
+    1px solid rgba(181,145,60,.24);
+
+  border-radius: 5px;
+
+  pointer-events: none;
+}
+
+.hero .hero-photo-frame img {
+  display: block !important;
+
+  width: 100% !important;
+
+  height: auto !important;
+
+  aspect-ratio: 4 / 3;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  margin: 0 !important;
+
+  border-radius: 5px;
+
+  filter:
+    contrast(1.02)
+    saturate(.96)
+    brightness(1.01);
+}
+
+.hero .hero-photo figcaption {
+  margin-top: 13px;
+
+  color: #6e808c;
+
+  text-align: center;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 12.5px;
+
+  line-height: 1.6;
+}
+
+
+/* 中等屏幕继续保持左右 */
+
+@media (max-width: 1050px) {
+
+  .hero .hero-inner.polar-hero {
+    width: min(94%, 1180px);
+
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(350px, .9fr) !important;
+
+    column-gap: 38px;
+  }
+
+  .hero .hero-copy h1 {
+    font-size: 45px;
+  }
+
+}
+
+
+/* 手机端改成上下 */
+
+@media (max-width: 760px) {
+
+  .hero .hero-inner.polar-hero {
+    width: calc(100% - 36px);
+
+    grid-template-columns: 1fr !important;
+
+    row-gap: 36px;
+  }
+
+  .hero .hero-copy h1 {
+    font-size: clamp(35px, 9.6vw, 47px);
+  }
+
+  .hero .hero-en {
+    font-size: 19px;
+  }
+
+  .hero .hero-note {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+  .hero .hero-photo {
+    width: 100% !important;
+
+    max-width: 560px !important;
+
+    margin: 0 auto !important;
+
+    justify-self: center !important;
+  }
+
+  .hero .hero-photo figcaption {
+    text-align: left;
+  }
+
+}
 </style>
 
 </head>
@@ -842,26 +1086,63 @@ footer {
      HERO
      ========================================================= -->
 
+<!-- =========================================================
+     HERO · 国家北极战略 · 左文右图
+     ========================================================= -->
+
 <section class="hero">
 
-<div class="hero-inner">
+  <div class="hero-inner polar-hero">
 
-  <div class="hero-kicker">
-    ARCTIC STRATEGY · POLAR SILK ROAD · NORDIC AREA STUDIES
+    <!-- 左侧：研究主题 -->
+    <div class="hero-copy">
+
+      <div class="hero-kicker">
+        ARCTIC STRATEGY · POLAR SILK ROAD · NORDIC AREA STUDIES
+      </div>
+
+      <h1>
+        国家北极战略：<br>
+        冰上丝绸之路研究
+      </h1>
+
+      <div class="hero-en">
+        Arctic Strategy · Polar Silk Road Studies
+      </div>
+
+      <div class="gold-line"></div>
+
+      <p class="hero-note">
+        从北欧区域国别研究进一步进入北极空间，
+        结合区域知识、文明传播、北极走廊与国家战略，
+        研究冰上丝绸之路及中国—北欧在北极议题中的历史联系、
+        区域互动与长期合作逻辑。
+      </p>
+
+    </div>
+
+
+    <!-- 右侧：北欧研究会议照片 -->
+    <figure class="hero-photo">
+
+      <div class="hero-photo-frame">
+
+        <img
+          src="/images/nordic-research-conference-2012.jpeg"
+          alt="北欧研究会议合影，赫尔辛基大学，2012年8月10日"
+          loading="eager"
+          fetchpriority="high"
+        >
+
+      </div>
+
+      <figcaption>
+        北欧研究会议合影留念 · 赫尔辛基大学 · 2012年8月10日
+      </figcaption>
+
+    </figure>
+
   </div>
-
-  <h1>
-    国家北极战略：<br>
-    冰上丝绸之路研究
-  </h1>
-
-  <div class="hero-en">
-    Arctic Strategy · Polar Silk Road Studies
-  </div>
-
-  <div class="gold-line"></div>
-
-</div>
 
 </section>
 
