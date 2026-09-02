@@ -423,34 +423,45 @@
     }
     
 /* ==========================================================
-   POLAR SILK ROAD · THEMATIC RESEARCH CLUSTER
-   独立命名，避免与论文页现有 CSS 冲突
+   POLAR TOPIC CLUSTER · CARD VERSION
+   与“相关其他研究”保持统一学院风
    ========================================================== */
 
-.polar-topic-cluster {
+.polar-topic-cluster-card {
   width: 100%;
   max-width: 1180px;
-
-  box-sizing: border-box;
 
   margin: 42px auto 54px;
 
   padding: 0;
 
-  background: transparent;
+  box-sizing: border-box;
 
-  border: 0;
+  background: #ffffff;
 
-  box-shadow: none;
+  border: 1px solid rgba(31, 67, 94, .08);
 
-  clear: both;
+  border-radius: 22px;
+
+  box-shadow:
+    0 16px 42px rgba(31, 67, 94, .07),
+    0 3px 10px rgba(31, 67, 94, .03);
+
+  overflow: hidden;
+}
+
+
+/* 内部留白 */
+
+.polar-topic-cluster-inner {
+  padding: 44px 54px 42px;
 }
 
 
 /* 英文眉题 */
 
 .polar-topic-kicker {
-  margin: 0 0 20px;
+  margin: 0 0 18px;
 
   color: #315672;
 
@@ -459,17 +470,17 @@
     "Times New Roman",
     serif;
 
-  font-size: 15px;
+  font-size: 14px;
 
   font-weight: 500;
 
   line-height: 1.5;
 
-  letter-spacing: .04em;
+  letter-spacing: .045em;
 }
 
 
-/* 中文主标题 */
+/* 中文标题 */
 
 .polar-topic-title {
   margin: 0 !important;
@@ -501,7 +512,7 @@
 }
 
 
-/* 暖金色分隔线 */
+/* 暖金线 */
 
 .polar-topic-line {
   width: 100%;
@@ -514,8 +525,8 @@
     linear-gradient(
       90deg,
       #b69346 0%,
-      rgba(182,147,70,.72) 58%,
-      rgba(182,147,70,.18) 100%
+      rgba(182, 147, 70, .70) 60%,
+      rgba(182, 147, 70, .10) 100%
     );
 }
 
@@ -523,15 +534,13 @@
 /* 正文 */
 
 .polar-topic-text {
-  width: 100%;
-
-  max-width: none !important;
-
-  margin: 0 0 23px !important;
+  margin: 0 0 25px !important;
 
   padding: 0 !important;
 
-  color: #60798b !important;
+  max-width: none !important;
+
+  color: #61798b !important;
 
   background: transparent !important;
 
@@ -556,7 +565,7 @@
 }
 
 
-/* 专题入口 */
+/* 进入专题页 */
 
 .polar-topic-link {
   display: inline-flex !important;
@@ -567,11 +576,9 @@
 
   max-width: 100%;
 
-  box-sizing: border-box;
-
   margin: 0 !important;
 
-  padding: 0 0 7px !important;
+  padding: 0 0 6px !important;
 
   color: #315873 !important;
 
@@ -579,8 +586,7 @@
 
   border: 0 !important;
 
-  border-bottom:
-    1px solid #b69346 !important;
+  border-bottom: 1px solid #b69346 !important;
 
   border-radius: 0 !important;
 
@@ -627,23 +633,18 @@
 .polar-topic-link:hover {
   color: #9a742d !important;
 
-  border-bottom-color:
-    #9a742d !important;
+  border-bottom-color: #9a742d !important;
 }
 
 
 .polar-topic-link:hover .polar-topic-arrow {
-  transform:
-    translateX(4px);
+  transform: translateX(4px);
 }
 
 
-/* ==========================================================
-   与后面的“相关其他研究”明确分开
-   ========================================================== */
+/* 与上下模块自然拉开 */
 
-.polar-topic-cluster + section,
-.polar-topic-cluster + div {
+.polar-topic-cluster-card {
   clear: both;
 }
 
@@ -654,41 +655,34 @@
 
 @media (max-width: 760px) {
 
-  .polar-topic-cluster {
-    margin:
-      34px auto 42px;
+  .polar-topic-cluster-card {
+    margin: 32px auto 40px;
+
+    border-radius: 16px;
+  }
+
+  .polar-topic-cluster-inner {
+    padding: 30px 24px 28px;
   }
 
   .polar-topic-kicker {
-    font-size:
-      13px;
+    font-size: 13px;
   }
 
   .polar-topic-title {
-    font-size:
-      25px !important;
+    font-size: 24px !important;
 
-    line-height:
-      1.45 !important;
+    line-height: 1.45 !important;
   }
 
   .polar-topic-text {
-    font-size:
-      15px !important;
+    font-size: 15px !important;
 
-    line-height:
-      1.9 !important;
+    line-height: 1.9 !important;
   }
 
   .polar-topic-link {
-    display:
-      flex !important;
-
-    width:
-      fit-content;
-
-    font-size:
-      14px !important;
+    font-size: 14px !important;
   }
 
 }
@@ -959,49 +953,53 @@
 
     </section>
 
-  <!-- =========================================================
+ <!-- =========================================================
      POLAR SILK ROAD · THEMATIC RESEARCH CLUSTER
-     独立样式版，不与原页面 CSS 冲突
+     卡片式学院风
      ========================================================= -->
 
-<section class="polar-topic-cluster">
+<section class="polar-topic-cluster-card">
 
-  <div class="polar-topic-kicker">
-    THEMATIC RESEARCH CLUSTER
+  <div class="polar-topic-cluster-inner">
+
+    <div class="polar-topic-kicker">
+      THEMATIC RESEARCH CLUSTER
+    </div>
+
+    <h2 class="polar-topic-title">
+      冰上丝绸之路与北极区域国别研究
+    </h2>
+
+    <div class="polar-topic-line"></div>
+
+    <p class="polar-topic-text">
+      本文属于高源“冰上丝绸之路与北极区域国别研究”系列成果。
+      该研究以芬兰及北欧区域国别研究为基础，从北极空间、文明传播、
+      文学译介与区域互动等维度，考察中国—北欧关系及冰上丝绸之路的
+      历史文化基础，并进一步进入国家北极战略与北极区域研究。
+    </p>
+
+    <a
+      class="polar-topic-link"
+      href="/nordic/polar-silk-road/"
+    >
+      <span>
+        进入“高源｜冰上丝绸之路与北极区域国别研究”专题页
+      </span>
+
+      <span class="polar-topic-arrow">
+        →
+      </span>
+    </a>
+
   </div>
-
-  <h2 class="polar-topic-title">
-    冰上丝绸之路与北极区域国别研究
-  </h2>
-
-  <div class="polar-topic-line"></div>
-
-  <p class="polar-topic-text">
-    本文属于高源“冰上丝绸之路与北极区域国别研究”系列成果。
-    该研究以芬兰及北欧区域国别研究为基础，从北极空间、文明传播、
-    文学译介与区域互动等维度，考察中国—北欧关系及冰上丝绸之路的
-    历史文化基础，并进一步进入国家北极战略与北极区域研究。
-  </p>
-
-  <a
-    class="polar-topic-link"
-    href="/nordic/polar-silk-road/"
-  >
-    <span>
-      进入“高源｜冰上丝绸之路与北极区域国别研究”专题页
-    </span>
-
-    <span class="polar-topic-arrow">
-      →
-    </span>
-  </a>
 
 </section>
 
 
     <section class="card related">
 
-      <h2>相关其他研究</h2>
+      <h2>相关研究</h2>
 
       <a href="/research/laozi-iceland/">
         → 道入北极：现存最早的冰岛文《老子》珍稀译本研究
