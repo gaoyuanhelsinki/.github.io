@@ -633,6 +633,59 @@ h1 {
   border-bottom-color:
     rgba(162,127,53,.55);
 }
+ /* =========================================================
+   HERO ACADEMIC BANNER
+   ========================================================= */
+
+.hero-academic-banner {
+  width: 100%;
+
+  max-width: 640px;
+
+  margin-bottom: 28px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #0b2d4d;
+
+  border:
+    1px solid rgba(181,144,67,.18);
+
+  box-shadow:
+    0 8px 24px rgba(31,67,94,.07);
+}
+
+
+.hero-academic-banner img {
+  display: block;
+
+  width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* 让横幅和下面文字之间更像学院式版式 */
+
+.hero-academic-banner + .kicker {
+  margin-top: 0;
+}
+
+
+/* 手机端 */
+
+@media (max-width: 820px) {
+
+  .hero-academic-banner {
+    max-width: 100%;
+    margin-bottom: 22px;
+  }
+
+}     
 </style>
 
 </head>
@@ -672,13 +725,22 @@ h1 {
 
   <div>
 
-    <div class="kicker">
-      UNIVERSITY OF HELSINKI · NORDIC STUDIES · EUROPEAN INTELLECTUAL HISTORY
-    </div>
+   <div class="hero-academic-banner">
 
-    <h1>
-      Gao Yuan
-    </h1>
+  <img
+    src="/images/helsinki-nordic-finnish-school.png"
+    alt="University of Helsinki · Nordic Finnish School"
+  >
+
+</div>
+
+<div class="kicker">
+  NORDIC STUDIES · EUROPEAN INTELLECTUAL HISTORY · SINO-NORDIC STUDIES
+</div>
+
+<h1>
+  Gao Yuan
+</h1>
 
     <div class="subtitle">
       Ph.D., University of Helsinki, Finland
