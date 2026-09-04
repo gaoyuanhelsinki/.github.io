@@ -1043,6 +1043,232 @@ footer {
   }
 
 }
+  /* =========================================================
+   GAO YUAN · ACADEMIC FOOTER
+   ========================================================= */
+
+.gy-academic-footer {
+  width: 100%;
+
+  margin-top: 70px;
+
+  padding: 42px 28px 36px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #102f49 0%,
+      #173e5d 55%,
+      #1b4564 100%
+    );
+
+  border-top: 1px solid rgba(202, 166, 82, 0.28);
+
+  text-align: center;
+
+  box-sizing: border-box;
+}
+
+
+.gy-footer-inner {
+  max-width: 1180px;
+
+  margin: 0 auto;
+}
+
+
+/* 第一行：版权与机构 */
+
+.gy-footer-copyright {
+  color: rgba(255,255,255,.80);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.9;
+
+  letter-spacing: .02em;
+}
+
+
+.gy-footer-separator {
+  margin: 0 5px;
+
+  color: rgba(208,171,83,.78);
+}
+
+
+/* 第二行：研究方向 */
+
+.gy-footer-research {
+  margin-top: 8px;
+
+  color: rgba(255,255,255,.52);
+
+  font-size: 12.5px;
+
+  line-height: 1.8;
+
+  letter-spacing: .04em;
+}
+
+
+.gy-footer-research span {
+  margin: 0 8px;
+
+  color: rgba(201,163,78,.70);
+}
+
+
+/* 第三行：金色版权链接 */
+
+.gy-footer-policy {
+  margin-top: 19px;
+}
+
+
+.gy-footer-policy a {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #d0aa52;
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    serif;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  line-height: 1.6;
+
+  letter-spacing: .03em;
+
+  text-decoration: none;
+
+  padding-bottom: 4px;
+
+  border-bottom:
+    1px solid rgba(208,170,82,.50);
+
+  transition:
+    color .22s ease,
+    border-color .22s ease,
+    transform .22s ease;
+}
+
+
+.gy-footer-policy a:hover {
+  color: #ebca78;
+
+  border-bottom-color: #ebca78;
+
+  transform: translateY(-1px);
+}
+
+
+.gy-footer-arrow {
+  font-size: 16px;
+
+  transition: transform .22s ease;
+}
+
+
+.gy-footer-policy a:hover .gy-footer-arrow {
+  transform: translateX(3px);
+}
+
+
+/* 最下面域名 */
+
+.gy-footer-domain {
+  margin-top: 16px;
+
+  color: rgba(255,255,255,.34);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 11px;
+
+  letter-spacing: .10em;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .gy-academic-footer {
+    margin-top: 52px;
+
+    padding:
+      34px 20px 30px;
+  }
+
+
+  .gy-footer-copyright {
+    font-size: 12px;
+
+    line-height: 2;
+  }
+
+
+  .gy-footer-separator {
+    margin: 0 2px;
+  }
+
+
+  .gy-footer-research {
+    margin-top: 10px;
+
+    font-size: 11px;
+
+    line-height: 2;
+  }
+
+
+  .gy-footer-research span {
+    margin: 0 4px;
+  }
+
+
+  .gy-footer-policy {
+    margin-top: 17px;
+  }
+
+
+  .gy-footer-policy a {
+    font-size: 12px;
+  }
+
+
+  .gy-footer-domain {
+    font-size: 10px;
+  }
+
+}    
 </style>
 
 </head>
@@ -1996,20 +2222,60 @@ BACK
 </main>
 
 
+<!-- =========================================================
+     ACADEMIC FOOTER
+     ========================================================= -->
 
-<footer>
+<footer class="gy-academic-footer">
 
-© 高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院
+  <div class="gy-footer-inner">
 
-<br>
+    <div class="gy-footer-copyright">
 
-北极研究 · 北欧区域国别研究 · 冰上丝绸之路研究
+      © 高源 Gao Yuan
 
- <a href="/copyright/">
-  版权与学术引用说明
-</a>
+      <span class="gy-footer-separator">｜</span>
+
+      芬兰赫尔辛基大学
+
+      <span class="gy-footer-separator">｜</span>
+
+      上海交通大学欧洲文化高等研究院
+
+    </div>
+
+
+    <div class="gy-footer-research">
+
+      北极研究
+      <span>·</span>
+      北欧区域国别研究
+      <span>·</span>
+      冰上丝绸之路研究
+
+    </div>
+
+
+    <div class="gy-footer-policy">
+
+      <a href="/copyright/">
+        版权与学术引用说明
+        <span class="gy-footer-arrow">→</span>
+      </a>
+
+    </div>
+
+
+    <div class="gy-footer-domain">
+
+      gaoyuanhelsinki.cn
+
+    </div>
+
+  </div>
 
 </footer>
+
 
 
 </body>
