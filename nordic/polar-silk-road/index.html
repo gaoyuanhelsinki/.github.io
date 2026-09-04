@@ -1329,7 +1329,126 @@ footer {
     margin-top: 9px;
   }
 
-}    
+} 
+ /* =========================================================
+   GAO YUAN · MINIMAL ACADEMIC FOOTER
+   ========================================================= */
+
+.gy-academic-footer {
+  width: 100%;
+  margin-top: 55px;
+  padding: 27px 24px 25px;
+  background: linear-gradient(
+    135deg,
+    #102f49 0%,
+    #173e5d 55%,
+    #1b4564 100%
+  );
+  border-top: 1px solid rgba(202,166,82,.22);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.gy-footer-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+/* 第一行：作者与机构 */
+
+.gy-footer-copyright {
+  color: rgba(255,255,255,.78);
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.gy-footer-copyright span {
+  margin: 0 5px;
+  color: rgba(208,171,83,.65);
+}
+
+/* 第二行：研究领域 */
+
+.gy-footer-research {
+  margin-top: 5px;
+  color: rgba(255,255,255,.48);
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.gy-footer-research span {
+  margin: 0 7px;
+  color: rgba(208,171,83,.55);
+}
+
+/* 第三行：低调的网站信息 */
+
+.gy-footer-meta {
+  margin-top: 8px;
+  color: rgba(255,255,255,.32);
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    serif;
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: .025em;
+}
+
+.gy-footer-meta > span {
+  margin: 0 7px;
+  color: rgba(208,171,83,.45);
+}
+
+.gy-footer-meta a {
+  color: rgba(208,171,83,.72);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(208,171,83,.25);
+  padding-bottom: 1px;
+  transition: color .2s ease;
+}
+
+.gy-footer-meta a:hover {
+  color: #e4c36e;
+}
+
+
+/* 手机端 */
+
+@media (max-width: 760px) {
+
+  .gy-academic-footer {
+    margin-top: 45px;
+    padding: 23px 18px 22px;
+  }
+
+  .gy-footer-copyright {
+    font-size: 11.5px;
+    line-height: 1.7;
+  }
+
+  .gy-footer-research {
+    margin-top: 4px;
+    font-size: 10.5px;
+    line-height: 1.7;
+  }
+
+  .gy-footer-meta {
+    margin-top: 7px;
+    font-size: 10px;
+  }
+
+}     
 </style>
 
 </head>
@@ -2284,7 +2403,7 @@ BACK
 
 
 <!-- =========================================================
-     ACADEMIC FOOTER
+     GAO YUAN · ACADEMIC FOOTER
      ========================================================= -->
 
 <footer class="gy-academic-footer">
@@ -2292,51 +2411,30 @@ BACK
   <div class="gy-footer-inner">
 
     <div class="gy-footer-copyright">
-
-      © 高源 Gao Yuan
-
-      <span class="gy-footer-separator">｜</span>
-
+      © 2025–2026 高源 Gao Yuan
+      <span>｜</span>
       芬兰赫尔辛基大学
-
-      <span class="gy-footer-separator">｜</span>
-
+      <span>｜</span>
       上海交通大学欧洲文化高等研究院
-
     </div>
 
-
     <div class="gy-footer-research">
-
       北极研究
       <span>·</span>
       北欧区域国别研究
       <span>·</span>
       冰上丝绸之路研究
-
     </div>
 
-
-    <div class="gy-footer-policy">
-
-      <a href="/copyright/">
-        版权与学术引用说明
-        <span class="gy-footer-arrow">→</span>
-      </a>
-
-    </div>
-
-
-    <div class="gy-footer-domain">
-
+    <div class="gy-footer-meta">
+      <a href="/copyright/">版权与引用说明</a>
+      <span>·</span>
       gaoyuanhelsinki.cn
-
     </div>
 
   </div>
 
 </footer>
-
 
 
 </body>
