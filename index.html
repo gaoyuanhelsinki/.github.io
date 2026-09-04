@@ -3269,6 +3269,19 @@ a.course-row:hover {
   color: #e0be6d;
   border-bottom-color: #e0be6d;
 }
+ /* 版权说明链接的小箭头 */
+
+.footer-link-arrow {
+  display: inline-block;
+  margin-left: 3px;
+  font-size: 0.92em;
+  opacity: 0.78;
+  transition: transform .2s ease;
+}
+
+.footer-copyright-link:hover .footer-link-arrow {
+  transform: translateX(2px);
+} 
 </style>
 
 
@@ -5175,8 +5188,8 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
     本网站原创内容版权归高源所有。引用请注明作者及原始来源。
     <span class="footer-note-sep">·</span>
     <a href="/copyright/" class="footer-copyright-link">
-      版权说明
-    </a>
+  版权说明 <span class="footer-link-arrow" aria-hidden="true">→</span>
+</a>
   </div>
 
 </div>
