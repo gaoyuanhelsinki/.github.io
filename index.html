@@ -3118,6 +3118,131 @@ a.course-row:hover {
   }
 
 }
+  /* ==========================================================
+   ACADEMIC COPYRIGHT & CITATION FOOTER
+   ========================================================== */
+
+.academic-legal-footer {
+  margin-top: 26px;
+  padding-top: 24px;
+
+  border-top: 1px solid rgba(255,255,255,.15);
+
+  text-align: center;
+}
+
+
+/* 第一层：身份版权 */
+
+.academic-copyright-main {
+  color: rgba(255,255,255,.88);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    "Noto Serif SC",
+    "Songti SC",
+    STSong,
+    serif;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  letter-spacing: .01em;
+}
+
+
+.footer-sep {
+  margin: 0 4px;
+
+  color: rgba(214,183,106,.75);
+}
+
+
+/* 第二层：版权与引用说明 */
+
+.academic-copyright-note {
+  max-width: 980px;
+
+  margin: 10px auto 0;
+
+  color: rgba(255,255,255,.55);
+
+  font-size: 12px;
+
+  line-height: 1.9;
+
+  letter-spacing: .01em;
+}
+
+
+/* 第三层：正式版权页入口 */
+
+.academic-copyright-links {
+  margin-top: 10px;
+}
+
+
+.academic-copyright-links a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  color: #d2b56b;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(210,181,107,.45);
+
+  padding-bottom: 2px;
+
+  transition:
+    color .2s ease,
+    border-color .2s ease;
+}
+
+
+.academic-copyright-links a:hover {
+  color: #ecd392;
+
+  border-bottom-color: #ecd392;
+}
+
+
+/* 手机端 */
+
+@media (max-width: 760px) {
+
+  .academic-legal-footer {
+    margin-top: 22px;
+    padding-top: 20px;
+  }
+
+  .academic-copyright-main {
+    font-size: 12px;
+    line-height: 1.9;
+  }
+
+  .academic-copyright-note {
+    padding: 0 8px;
+
+    font-size: 10.5px;
+
+    line-height: 1.85;
+  }
+
+  .academic-copyright-links a {
+    font-size: 11px;
+  }
+
+}
 </style>
 
 
@@ -5004,12 +5129,35 @@ Miikka Ruokanen and Gao Yuan (高源), “The Polar Silk Road: Introducing Moder
 </div>
 
 
-<div class="copyright">
+<!-- =========================================================
+     ACADEMIC COPYRIGHT & CITATION
+     ========================================================= -->
 
-© 高源 | 芬兰赫尔辛基大学 | 上海交通大学欧洲文化高等研究院 | gaoyuanhelsinki.cn | 2025——
+<div class="academic-legal-footer">
 
-</div>
+  <div class="academic-copyright-main">
+    © 高源 Gao Yuan
+    <span class="footer-sep">｜</span>
+    芬兰赫尔辛基大学
+    <span class="footer-sep">｜</span>
+    上海交通大学欧洲文化高等研究院
+    <span class="footer-sep">｜</span>
+    gaoyuanhelsinki.cn｜2025—2026 
+  </div>
 
+  <div class="academic-copyright-note">
+    本网站原创学术内容、研究介绍及原创页面文字，除另有注明外，
+    其相关著作权及合法权益归作者高源所有。
+    学术引用请明确注明作者、标题及原始来源。
+    第三方文献、期刊封面及出版资料的相关权利归其各自权利人所有。
+  </div>
+
+  <div class="academic-copyright-links">
+    <a href="/copyright/">
+      版权与学术引用说明
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
 
 </div>
 
