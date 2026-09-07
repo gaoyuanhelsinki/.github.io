@@ -1164,6 +1164,199 @@ h1{
     padding: 24px 24px 28px;
   }
 
+} 
+  /* =========================================================
+   03 · STOCKHOLM
+   两张完整竖幅照片 · 左右整齐 · 不裁切
+========================================================= */
+
+.stockholm-section {
+  margin-top: 70px;
+}
+
+
+/* ---------------------------------------------------------
+   TWO-COLUMN GRID
+--------------------------------------------------------- */
+
+.stockholm-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* ---------------------------------------------------------
+   CARD
+--------------------------------------------------------- */
+
+.stockholm-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(32, 63, 84, .075);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(31, 61, 80, .065);
+}
+
+
+/* ---------------------------------------------------------
+   IMAGE AREA
+   关键：完整展示原始照片，不裁切
+--------------------------------------------------------- */
+
+.stockholm-image {
+  width: 100%;
+
+  height: 650px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f2f1ed 0%,
+      #f7f6f2 100%
+    );
+}
+
+
+.stockholm-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+
+  transition: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENT
+--------------------------------------------------------- */
+
+.stockholm-content {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 34px 34px;
+
+  background: #ffffff;
+}
+
+
+/* 地点 */
+.stockholm-meta {
+  margin-bottom: 14px;
+
+  color: #a57b2d;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  letter-spacing: .17em;
+
+  text-transform: uppercase;
+}
+
+
+/* 中文标题 */
+.stockholm-content h3 {
+  margin:
+    0 0 14px;
+
+  color: #1d435e;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* 解说 */
+.stockholm-content p {
+  margin: 0;
+
+  color: #788892;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 13.5px;
+
+  line-height: 1.95;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+--------------------------------------------------------- */
+
+@media (max-width: 820px) {
+
+  .stockholm-grid {
+    grid-template-columns: 1fr;
+
+    gap: 26px;
+  }
+
+  .stockholm-image {
+    height: auto;
+  }
+
+  .stockholm-image img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain !important;
+  }
+
+  .stockholm-content {
+    padding: 24px 24px 28px;
+  }
+
 }    
 </style>
 
@@ -1770,13 +1963,12 @@ h1{
 
 </style>
 
-
-
 <!-- =========================================================
-     03 · STOCKHOLM
-     ========================================================= -->
+     03 · STOCKHOLM · SWEDEN
+     斯德哥尔摩与北欧学术网络
+========================================================= -->
 
-<section class="journey-section">
+<section class="journey-section stockholm-section" id="stockholm">
 
   <div class="section-head">
 
@@ -1791,7 +1983,7 @@ h1{
       </h2>
 
       <p>
-        SWEDEN · NORDIC STUDIES · ACADEMIC NETWORKS
+        SWEDEN · STOCKHOLM · RIKSDAGSHUSET · NORDIC PUBLIC CULTURE
       </p>
 
     </div>
@@ -1801,70 +1993,104 @@ h1{
 
   <div class="section-intro">
 
-    从芬兰延伸至瑞典及其他北欧国家，
-    高源长期关注北欧区域国别、思想传统与中北欧文明交流。
-    本节记录斯德哥尔摩及瑞典相关学术与文化交流经历。
+    从赫尔辛基延伸至斯德哥尔摩，
+    北欧研究不仅关涉思想传统与学术网络，
+    也植根于北欧国家独特的制度文化、历史空间与公共生活。
+
+    本节以斯德哥尔摩瑞典议会建筑群及圣灵岛
+    （Helgeandsholmen）周边城市空间为线索，
+    呈现北欧政治传统、历史建筑与现代公共文化彼此交织的城市景观。
 
   </div>
 
 
-  <div class="gallery">
+  <div class="stockholm-grid">
 
 
-    <article class="photo-card">
+    <!-- =====================================================
+         PHOTO 01 · HELGEANDSHOLMEN
+         ===================================================== -->
 
-      <img
-        src="/images/academic-journey/stockholm-01.jpg"
-        alt="Gao Yuan in Stockholm Sweden">
+    <article class="stockholm-card">
 
-      <div class="photo-info">
+      <div class="stockholm-image">
 
-        <div class="photo-location">
-          STOCKHOLM · SWEDEN
+        <img
+          src="/images/斯德哥尔摩.jpeg"
+          alt="Gao Yuan near the Swedish Parliament buildings in Stockholm"
+          loading="lazy">
+
+      </div>
+
+      <div class="stockholm-content">
+
+        <div class="stockholm-meta">
+          STOCKHOLM · HELGEANDSHOLMEN
         </div>
 
-        <div class="photo-title">
-          斯德哥尔摩
-        </div>
+        <h3>
+          斯德哥尔摩 · 北欧制度文化与城市空间
+        </h3>
 
-        <div class="photo-caption">
-          北欧区域国别研究与瑞典相关学术交流。
-        </div>
+        <p>
+          摄于斯德哥尔摩圣灵岛（Helgeandsholmen）
+          瑞典议会建筑群一带。
+          历史建筑、水道与城市公共空间彼此交织，
+          构成斯德哥尔摩最具代表性的北欧政治文化景观之一。
+        </p>
 
       </div>
 
     </article>
 
 
-    <article class="photo-card">
 
-      <img
-        src="/images/academic-journey/stockholm-02.jpg"
-        alt="Gao Yuan during academic and cultural exchange in Stockholm">
+    <!-- =====================================================
+         PHOTO 02 · SWEDISH PARLIAMENT
+         ===================================================== -->
 
-      <div class="photo-info">
+    <article class="stockholm-card">
 
-        <div class="photo-location">
-          SWEDEN
+      <div class="stockholm-image">
+
+        <img
+          src="/images/斯德哥尔摩瑞典议会大厦.jpeg"
+          alt="Gao Yuan at the Swedish Parliament building in Stockholm"
+          loading="lazy">
+
+      </div>
+
+      <div class="stockholm-content">
+
+        <div class="stockholm-meta">
+          RIKSDAGSHUSET · STOCKHOLM
         </div>
 
-        <div class="photo-title">
-          瑞典与北欧学术交流
-        </div>
+        <h3>
+          瑞典议会 · 北欧政治传统与公共文化
+        </h3>
 
-        <div class="photo-caption">
-          可填写实际访问机构、会议名称或具体年份。
-        </div>
+        <p>
+          摄于斯德哥尔摩瑞典议会大厦（Riksdagshuset）。
+          这座位于圣灵岛的历史建筑，
+          既是瑞典现代议会制度的重要空间象征，
+          也是理解北欧政治文化、公共制度与国家历史记忆的代表性场所。
+        </p>
 
       </div>
 
     </article>
 
 
+  </div>
+
+
+  <div class="timeline-note">
+    STOCKHOLM · SWEDEN · HELGEANDSHOLMEN · RIKSDAGSHUSET ·
+    NORDIC PUBLIC CULTURE · REGIONAL STUDIES
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
