@@ -1934,6 +1934,99 @@ h1{
     padding: 24px 24px 28px;
   }
 
+}  
+  /* =========================================================
+   GREECE · ACADEMY OF ATHENS
+   雅典科学院主图 · 缩小并居中 · 完整显示
+========================================================= */
+
+.greece-featured {
+  grid-column: 1 / -1 !important;
+
+  width: min(100%, 820px) !important;
+  max-width: 820px !important;
+
+  margin-left: auto !important;
+  margin-right: auto !important;
+
+  display: grid !important;
+
+  grid-template-columns:
+    minmax(0, 1.08fr)
+    minmax(280px, .92fr) !important;
+
+  min-height: 0 !important;
+}
+
+
+/* 图片区域 */
+.greece-featured .greece-image {
+  width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+  justify-content: center !important;
+
+  overflow: hidden !important;
+
+  background: #f4f3ef;
+}
+
+
+/* 雅典科学院原图完整显示 */
+.greece-featured .greece-image img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  max-width: 100% !important;
+  max-height: none !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+
+/* 右侧文字 */
+.greece-featured .greece-content {
+  display: flex !important;
+
+  flex-direction: column !important;
+  justify-content: center !important;
+
+  padding: 36px 38px !important;
+
+  background: #ffffff;
+}
+
+
+/* 手机 */
+@media (max-width: 820px) {
+
+  .greece-featured {
+    width: 100% !important;
+
+    display: block !important;
+  }
+
+  .greece-featured .greece-image img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .greece-featured .greece-content {
+    padding: 24px 24px 28px !important;
+  }
+
 }    
 </style>
 
