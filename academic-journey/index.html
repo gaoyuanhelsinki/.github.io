@@ -2028,6 +2028,108 @@ h1{
   }
 
 }    
+  /* =========================================================
+   HELSINKI DOCTORAL DEFENSE
+   博士答辩照片 · 完整显示 · 不裁切
+========================================================= */
+
+.helsinki-defense-card {
+  display: flex !important;
+  flex-direction: column !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  overflow: hidden !important;
+
+  background: #ffffff;
+  border: 1px solid rgba(35, 67, 88, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 38px rgba(31, 61, 80, 0.065);
+}
+
+
+/* 照片容器 */
+.helsinki-defense-image {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  overflow: hidden !important;
+
+  background: #f5f3ee;
+}
+
+
+/* 照片完整显示 */
+.helsinki-defense-image img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  min-height: 0 !important;
+  max-height: none !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  transform: none !important;
+}
+
+
+/* 文字区域 */
+.helsinki-defense-card .photo-info {
+  display: block !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  padding: 28px 32px 32px !important;
+
+  background: #ffffff;
+}
+
+
+/* 禁止鼠标经过时图片放大 */
+.helsinki-defense-card:hover img {
+  transform: none !important;
+}
+
+
+/* 手机端 */
+@media (max-width: 820px) {
+
+  .helsinki-defense-card {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .helsinki-defense-image,
+  .helsinki-defense-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .helsinki-defense-card .photo-info {
+    padding: 24px 24px 28px !important;
+  }
+
+}    
 </style>
 
 </head>
@@ -2175,7 +2277,40 @@ h1{
 
     </article>
 
+<!-- =========================================================
+     HELSINKI · DOCTORAL DEFENSE
+     赫尔辛基大学博士答辩
+========================================================= -->
 
+<article class="photo-card helsinki-defense-card">
+
+  <div class="helsinki-defense-image">
+    <img
+      src="/images/博士答辩.jpeg"
+      alt="Gao Yuan during his doctoral defense at the University of Helsinki"
+      loading="lazy">
+  </div>
+
+  <div class="photo-info">
+
+    <div class="photo-location">
+      UNIVERSITY OF HELSINKI · DOCTORAL DEFENSE
+    </div>
+
+    <div class="photo-title">
+      赫尔辛基大学 · 博士答辩与学术训练
+    </div>
+
+    <div class="photo-caption">
+      摄于赫尔辛基大学博士答辩现场。
+      正式博士答辩是芬兰大学博士培养与学术评价体系的重要环节，
+      也是高源在赫尔辛基大学接受欧洲思想史与哲学研究训练的重要学术记录。
+    </div>
+
+  </div>
+
+</article>
+        
     <!-- =====================================================
          PHOTO 02 · UNIVERSITY OF HELSINKI
          ===================================================== -->
