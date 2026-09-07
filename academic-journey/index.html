@@ -652,6 +652,103 @@ h1{
     padding: 22px 22px 26px;
   }
 
+} 
+ /* =========================================================
+   01 HELSINKI · FULL PORTRAIT PHOTOS
+   第一板块两张竖幅照片：完整显示，不裁切
+   ========================================================= */
+
+/* 仅针对第一板块中的两张普通照片 */
+.journey-section:first-of-type .photo-card:not(.featured) img {
+  display: block;
+
+  /* 图片占满卡片宽度 */
+  width: 100%;
+
+  /* 最重要：按原始比例自动计算高度 */
+  height: auto !important;
+
+  /* 完整显示照片，禁止裁切 */
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  /* 不限制最大高度 */
+  max-height: none !important;
+
+  /* 图片背景 */
+  background: #f5f4f0;
+}
+
+
+/* 两张照片卡片保持精致的圆角与阴影 */
+.journey-section:first-of-type .photo-card:not(.featured) {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(35, 67, 88, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 38px rgba(31, 61, 80, 0.065);
+}
+
+
+/* 图片下方文字区域 */
+.journey-section:first-of-type .photo-card:not(.featured) .photo-info {
+  padding: 28px 34px 32px;
+}
+
+
+/* 地点英文 */
+.journey-section:first-of-type .photo-card:not(.featured) .photo-location {
+  color: #a47d32;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* 中文标题 */
+.journey-section:first-of-type .photo-card:not(.featured) .photo-title {
+  margin-top: 10px;
+
+  color: #244860;
+
+  font-size: 18px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* 图片说明 */
+.journey-section:first-of-type .photo-card:not(.featured) .photo-caption {
+  margin-top: 10px;
+
+  color: #758793;
+
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+
+/* 手机端 */
+@media (max-width: 720px) {
+
+  .journey-section:first-of-type .photo-card:not(.featured) img {
+    width: 100%;
+    height: auto !important;
+
+    object-fit: contain !important;
+  }
+
+  .journey-section:first-of-type .photo-card:not(.featured) .photo-info {
+    padding: 22px 22px 26px;
+  }
+
 }     
 </style>
 
