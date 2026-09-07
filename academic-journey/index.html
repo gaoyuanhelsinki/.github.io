@@ -991,6 +991,179 @@ h1{
     padding: 24px 24px 28px !important;
   }
 
+}  
+  /* =========================================================
+   02 · CONFERMENT TRADITION
+   第二板块专属布局：主图 + 两张完整图片
+   ========================================================= */
+
+.conferment-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: stretch;
+}
+
+
+/* 主图横跨整行 */
+.conferment-featured {
+  grid-column: 1 / -1;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr);
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(35, 67, 88, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 42px rgba(31, 61, 80, 0.07);
+}
+
+
+/* 主图完整显示，不裁切 */
+.conferment-featured img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 420px;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #f4f2ed;
+}
+
+
+/* 主图文字 */
+.conferment-featured .photo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 38px 40px;
+
+  background: #ffffff;
+}
+
+
+/* 下方两张完整图片 */
+.conferment-full {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(35, 67, 88, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 38px rgba(31, 61, 80, 0.065);
+}
+
+
+/* 完整显示原图，不裁切 */
+.conferment-full img {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  background: #f5f3ee;
+}
+
+
+/* 下方文字自动补齐，使两张卡片底边对齐 */
+.conferment-full .photo-info {
+  flex: 1 1 auto;
+
+  padding: 28px 32px 32px;
+
+  background: #ffffff;
+}
+
+
+/* 地点标签 */
+.conferment-section .photo-location {
+  color: #a47b2d;
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+}
+
+
+/* 标题 */
+.conferment-section .photo-title {
+  margin-top: 9px;
+
+  color: #244861;
+
+  font-size: 19px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* 图注 */
+.conferment-section .photo-caption {
+  margin-top: 9px;
+
+  color: #778893;
+
+  font-size: 13px;
+
+  line-height: 1.9;
+}
+
+
+/* 不做hover裁切 */
+.conferment-section img:hover {
+  transform: none !important;
+}
+
+
+/* 手机端 */
+@media (max-width: 820px) {
+
+  .conferment-gallery {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .conferment-featured {
+    grid-column: auto;
+    display: block;
+  }
+
+  .conferment-featured img {
+    width: 100%;
+    height: auto;
+
+    min-height: 0;
+
+    object-fit: contain;
+  }
+
+  .conferment-featured .photo-info,
+  .conferment-full .photo-info {
+    padding: 24px 24px 28px;
+  }
+
 }    
 </style>
 
@@ -1215,10 +1388,10 @@ h1{
 
 
 <!-- =========================================================
-     02 · CONFERMENT
+     02 · CONFERMENT TRADITION · FINNISH UNIVERSITY HERITAGE
      ========================================================= -->
 
-<section class="journey-section">
+<section class="journey-section conferment-section">
 
   <div class="section-head">
 
@@ -1233,7 +1406,7 @@ h1{
       </h2>
 
       <p>
-        HELSINKI · ACADEMIC CEREMONIAL TRADITION · UNIVERSITY HERITAGE
+        ACADEMIC CONFERMENT · UNIVERSITY CEREMONY · FINNISH ACADEMIC TRADITION
       </p>
 
     </div>
@@ -1243,38 +1416,46 @@ h1{
 
   <div class="section-intro">
 
-    芬兰大学传统具有悠久而独特的学术礼仪体系。
-    本节以赫尔辛基相关仪式、城市学术空间及大学传统照片，
-    呈现芬兰高等教育与欧洲大学文化的历史延续。
+    芬兰大学的 Conferment Tradition
+    是欧洲大学礼仪传统中极具辨识度的一部分。
+    从正式授予仪式、大学共同体的集体见证，
+    到赫尔辛基学术空间中的礼仪延续，
+    这一传统将学位、学术身份与大学历史记忆连接起来。
+
+    本节以赫尔辛基相关仪式影像，
+    呈现芬兰高等教育中庄重、连续而具有象征意义的学术文化。
 
   </div>
 
 
-  <div class="gallery">
+  <div class="conferment-gallery">
 
 
-    <!-- 重要照片：可以放大 -->
+    <!-- =====================================================
+         PHOTO 01 · FEATURED · CONFERMENT CEREMONY
+         ===================================================== -->
 
-    <article class="photo-card featured">
+    <article class="photo-card conferment-featured">
 
       <img
-        src="/images/academic-journey/helsinki-conferment-01.jpg"
-        alt="Gao Yuan at an academic conferment ceremony in Helsinki">
+        src="https://gaoyuanhelsinki.cn/images/HELSINKI%20UNIVERSITY%20HALL-CONFERMENT-GAO%20YUAN(1).jpg"
+        alt="Gao Yuan during an academic conferment ceremony in Helsinki">
 
       <div class="photo-info">
 
         <div class="photo-location">
-          HELSINKI · CONFERMENT
+          HELSINKI · ACADEMIC CONFERMENT
         </div>
 
         <div class="photo-title">
-          芬兰学术授予传统
+          芬兰学术授予仪式 · 大学共同体的正式见证
         </div>
 
         <div class="photo-caption">
-          此处填写正式仪式名称、年份及地点。
-          如果属于加冕博士 / Doctoral Conferment，
-          建议按照正式活动名称准确填写。
+          赫尔辛基相关学术授予仪式现场。
+          正式授予、握手致意与大学共同体的在场见证，
+          共同构成芬兰 Conferment Tradition
+          中关于学位、学术身份与大学共同体的重要象征。
         </div>
 
       </div>
@@ -1282,25 +1463,31 @@ h1{
     </article>
 
 
+    <!-- =====================================================
+         PHOTO 02 · CEREMONIAL AUDIENCE
+         ===================================================== -->
 
-   <article class="photo-card portrait-full">
+    <article class="photo-card conferment-full">
 
       <img
-        src="/images/academic-journey/helsinki-hall.jpg"
-        alt="Academic ceremonial setting in Helsinki">
+        src="https://gaoyuanhelsinki.cn/images/HELSINKI%20UNIVERSITY%20CONFERMENT-GAO%20YUAN(1).jpg"
+        alt="Academic conferment audience in Helsinki with Gao Yuan">
 
       <div class="photo-info">
 
         <div class="photo-location">
-          HELSINKI
+          HELSINKI · UNIVERSITY CEREMONY
         </div>
 
         <div class="photo-title">
-          赫尔辛基学术礼仪空间
+          学术礼仪中的大学共同体
         </div>
 
         <div class="photo-caption">
-          芬兰大学传统与城市学术文化。
+          正式会场中的大学授予仪式。
+          师生、学者与来宾共同参与，
+          使学位授予不仅是一项个人荣誉，
+          也成为大学共同体延续自身传统与身份认同的重要时刻。
         </div>
 
       </div>
@@ -1308,25 +1495,31 @@ h1{
     </article>
 
 
+    <!-- =====================================================
+         PHOTO 03 · CEREMONIAL DRESS & HELSINKI SPACE
+         ===================================================== -->
 
-  <article class="photo-card portrait-full">
+    <article class="photo-card conferment-full">
 
       <img
-        src="/images/academic-journey/helsinki-cathedral.jpg"
-        alt="Helsinki Cathedral during academic activities">
+        src="https://gaoyuanhelsinki.cn/images/HELSINKI-CONFERMENT-GAO%20YUAN(1).jpeg"
+        alt="Gao Yuan in formal academic dress during conferment activities in Helsinki">
 
       <div class="photo-info">
 
         <div class="photo-location">
-          HELSINKI CATHEDRAL
+          HELSINKI · ACADEMIC CEREMONIAL TRADITION
         </div>
 
         <div class="photo-title">
-          赫尔辛基大教堂与大学传统
+          正式学术礼服与赫尔辛基大学传统
         </div>
 
         <div class="photo-caption">
-          赫尔辛基大学及芬兰学术礼仪传统的重要城市空间。
+          芬兰大学的正式学术礼服与仪式空间，
+          延续着欧洲大学关于学位、礼仪与学术身份的历史传统。
+          在赫尔辛基，这种传统既属于大学，
+          也构成城市文化记忆的一部分。
         </div>
 
       </div>
@@ -1334,6 +1527,12 @@ h1{
     </article>
 
 
+  </div>
+
+
+  <div class="timeline-note">
+    HELSINKI · ACADEMIC CONFERMENT · UNIVERSITY CEREMONY ·
+    FINNISH UNIVERSITY HERITAGE · ACADEMIC COMMUNITY
   </div>
 
 </section>
