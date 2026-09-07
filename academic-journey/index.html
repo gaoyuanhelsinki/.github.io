@@ -1632,6 +1632,309 @@ h1{
   }
 
 }
+  /* =========================================================
+   06 · GREECE
+   Classical Civilization · Modern Greece · Aegean Culture
+========================================================= */
+
+.greece-section {
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.greece-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.greece-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(31, 63, 84, .075);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 42px rgba(29, 60, 80, .07);
+}
+
+
+/* =========================================================
+   FEATURED · ACADEMY OF ATHENS
+========================================================= */
+
+.greece-featured {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.28fr)
+    minmax(320px, .72fr);
+
+  min-height: 470px;
+}
+
+.greece-featured .greece-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 470px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f1f0ec 0%,
+      #f7f6f2 100%
+    );
+}
+
+.greece-featured .greece-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+.greece-featured .greece-content {
+  justify-content: center;
+
+  padding: 42px;
+}
+
+
+/* =========================================================
+   NORMAL PHOTO AREA
+========================================================= */
+
+.greece-image-full {
+  width: 100%;
+
+  height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f2f1ed 0%,
+      #f7f6f3 100%
+    );
+}
+
+.greece-image-full img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================================
+   WIDE · SANTORINI
+========================================================= */
+
+.greece-wide {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.45fr)
+    minmax(300px, .55fr);
+}
+
+.greece-wide .greece-image {
+  min-height: 430px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eff3f5 0%,
+      #f7f6f2 100%
+    );
+}
+
+.greece-wide .greece-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+.greece-wide .greece-content {
+  justify-content: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.greece-content {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 34px 34px;
+
+  background: #ffffff;
+}
+
+.greece-meta {
+  margin-bottom: 14px;
+
+  color: #a57b2d;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  letter-spacing: .17em;
+
+  text-transform: uppercase;
+}
+
+.greece-content h3 {
+  margin: 0 0 14px;
+
+  color: #1d435e;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+.greece-content p {
+  margin: 0;
+
+  color: #788892;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 13.5px;
+
+  line-height: 1.95;
+}
+
+
+/* 禁止旧 hover 导致图片被放大或裁切 */
+.greece-section img:hover {
+  transform: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 820px) {
+
+  .greece-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 26px;
+  }
+
+  .greece-featured,
+  .greece-wide {
+    grid-column: auto;
+
+    display: block;
+
+    min-height: 0;
+  }
+
+  .greece-featured .greece-image,
+  .greece-wide .greece-image,
+  .greece-image-full {
+    height: auto;
+    min-height: 0;
+  }
+
+  .greece-featured .greece-image img,
+  .greece-wide .greece-image img,
+  .greece-image-full img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain !important;
+  }
+
+  .greece-content,
+  .greece-featured .greece-content {
+    padding: 24px 24px 28px;
+  }
+
+}    
 </style>
 
 </head>
@@ -2723,9 +3026,10 @@ h1{
 
 <!-- =========================================================
      06 · GREECE
-     ========================================================= -->
+     古典文明、现代国家与欧洲思想源流
+========================================================= -->
 
-<section class="journey-section">
+<section class="journey-section greece-section" id="greece">
 
   <div class="section-head">
 
@@ -2736,11 +3040,11 @@ h1{
     <div class="section-title">
 
       <h2>
-        Greece & Europe · 希腊与欧洲学术交流
+        Greece · 古典文明、现代国家与欧洲思想源流
       </h2>
 
       <p>
-        GREECE · EUROPEAN INTELLECTUAL HERITAGE · INTERNATIONAL ENGAGEMENT
+        ATHENS · SANTORINI · CLASSICAL CIVILIZATION · MODERN GREECE · EUROPEAN INTELLECTUAL HERITAGE
       </p>
 
     </div>
@@ -2750,69 +3054,220 @@ h1{
 
   <div class="section-intro">
 
-    从古典思想传统到当代欧洲学术交流，
-    希腊及其他欧洲国家构成高源欧洲思想史研究与国际学术经历的重要文化背景。
+    希腊构成欧洲哲学、政治观念、公共生活与古典文明传统的重要源头。
+    从雅典科学院、希腊议会与泛雅典体育场，
+    到雅典卫城与爱琴海圣托里尼，
+    古典思想、现代国家与地中海文化景观在此彼此交汇。
+
+    本节以雅典与爱琴海相关影像为线索，
+    呈现高源欧洲思想史研究所面对的古典文明背景，
+    以及现代欧洲文化空间中延续至今的历史记忆。
 
   </div>
 
 
-  <div class="gallery">
+  <div class="greece-gallery">
 
 
-    <article class="photo-card">
+    <!-- =====================================================
+         01 · ACADEMY OF ATHENS · FEATURED
+    ========================================================= -->
 
-      <img
-        src="/images/academic-journey/greece-01.jpg"
-        alt="Gao Yuan in Greece">
+    <article class="greece-card greece-featured">
 
-      <div class="photo-info">
+      <div class="greece-image">
 
-        <div class="photo-location">
-          GREECE
+        <img
+          src="/images/雅典科学院.jpeg"
+          alt="Gao Yuan at the Academy of Athens"
+          loading="lazy">
+
+      </div>
+
+      <div class="greece-content">
+
+        <div class="greece-meta">
+          ATHENS · ACADEMY OF ATHENS
         </div>
 
-        <div class="photo-title">
-          希腊与欧洲古典传统
-        </div>
+        <h3>
+          雅典科学院 · 古典传统与现代知识共同体
+        </h3>
 
-        <div class="photo-caption">
-          欧洲古典思想史及相关国际学术活动。
-        </div>
+        <p>
+          摄于雅典科学院。
+          这座具有鲜明新古典主义特征的建筑，
+          将古典希腊的建筑语言与现代学术制度相连接。
+          在这里，古典文明的知识遗产与现代科学、人文学术共同体形成跨越时代的呼应。
+        </p>
 
       </div>
 
     </article>
 
 
-    <article class="photo-card">
 
-      <img
-        src="/images/academic-journey/greece-02.jpg"
-        alt="Gao Yuan during academic engagement in Greece">
+    <!-- =====================================================
+         02 · HELLENIC PARLIAMENT
+    ========================================================= -->
 
-      <div class="photo-info">
+    <article class="greece-card">
 
-        <div class="photo-location">
-          EUROPE
+      <div class="greece-image greece-image-full">
+
+        <img
+          src="/images/希腊议会大厦.jpeg"
+          alt="Gao Yuan at the Hellenic Parliament in Athens"
+          loading="lazy">
+
+      </div>
+
+      <div class="greece-content">
+
+        <div class="greece-meta">
+          SYNTAGMA SQUARE · HELLENIC PARLIAMENT
         </div>
 
-        <div class="photo-title">
-          欧洲学术交流
-        </div>
+        <h3>
+          希腊议会 · 从古典政治思想到现代国家
+        </h3>
 
-        <div class="photo-caption">
-          可继续扩展其他欧洲国家、论坛和国际会议。
-        </div>
+        <p>
+          摄于雅典宪法广场，背景为希腊议会大厦。
+          现代国家制度与古典政治思想传统在雅典形成鲜明的历史对照，
+          也使这座城市成为理解欧洲政治观念演变与公共制度形成的重要现实空间。
+        </p>
 
       </div>
 
     </article>
 
 
+
+    <!-- =====================================================
+         03 · PANATHENAIC STADIUM
+    ========================================================= -->
+
+    <article class="greece-card">
+
+      <div class="greece-image greece-image-full">
+
+        <img
+          src="/images/第一届现代奥运会.jpeg"
+          alt="Gao Yuan at the Panathenaic Stadium in Athens"
+          loading="lazy">
+
+      </div>
+
+      <div class="greece-content">
+
+        <div class="greece-meta">
+          ATHENS · PANATHENAIC STADIUM
+        </div>
+
+        <h3>
+          泛雅典体育场 · 古典传统与现代奥林匹克精神
+        </h3>
+
+        <p>
+          摄于雅典泛雅典体育场。
+          这一历史性场所连接古代竞技传统与现代奥林匹克复兴，
+          将古典希腊的公共生活、身体文化与现代世界的体育精神
+          置于同一条历史脉络之中。
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         04 · ACROPOLIS
+    ========================================================= -->
+
+    <article class="greece-card">
+
+      <div class="greece-image greece-image-full">
+
+        <img
+          src="/images/雅典卫城.png"
+          alt="Gao Yuan at the Acropolis of Athens"
+          loading="lazy">
+
+      </div>
+
+      <div class="greece-content">
+
+        <div class="greece-meta">
+          ACROPOLIS · ATHENS
+        </div>
+
+        <h3>
+          雅典卫城 · 欧洲古典文明的思想地标
+        </h3>
+
+        <p>
+          摄于雅典卫城。
+          卫城建筑群不仅构成古希腊建筑、宗教与公共文化的重要遗产，
+          也象征着欧洲思想史中关于城邦、公共生活、
+          审美秩序与文明传统的古典源流。
+        </p>
+
+      </div>
+
+    </article>
+
+
+
+    <!-- =====================================================
+         05 · SANTORINI · WIDE
+    ========================================================= -->
+
+    <article class="greece-card greece-wide">
+
+      <div class="greece-image">
+
+        <img
+          src="/images/圣托里尼蓝顶教堂与爱琴海.jpg"
+          alt="Gao Yuan in Santorini overlooking the Aegean Sea"
+          loading="lazy">
+
+      </div>
+
+      <div class="greece-content">
+
+        <div class="greece-meta">
+          SANTORINI · AEGEAN SEA
+        </div>
+
+        <h3>
+          爱琴海 · 圣托里尼与希腊文化景观
+        </h3>
+
+        <p>
+          摄于圣托里尼。
+          蓝顶教堂、白色建筑与爱琴海火山地貌共同构成
+          希腊最具辨识度的地中海文化景观之一。
+          宗教传统、岛屿社会与爱琴海文明记忆，
+          在这一独特的自然与人文空间中彼此交汇。
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <div class="timeline-note">
+    ATHENS · ACADEMY OF ATHENS · SYNTAGMA SQUARE ·
+    PANATHENAIC STADIUM · ACROPOLIS · SANTORINI ·
+    CLASSICAL CIVILIZATION · EUROPEAN INTELLECTUAL HERITAGE
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
