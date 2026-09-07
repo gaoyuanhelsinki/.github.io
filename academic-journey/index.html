@@ -567,7 +567,92 @@ h1{
 
 .journey-section:first-of-type .timeline-note {
   color: rgba(92,111,123,.62);
-}    
+} 
+ /* =========================================================
+   HELSINKI PORTRAIT PHOTOS
+   Show full vertical photographs without cropping
+   ========================================================= */
+
+/* Helsinki section: the two normal cards */
+.journey-section:first-of-type .photo-card:not(.featured) img {
+  display: block;
+
+  width: 100%;
+  height: 620px;
+
+  object-fit: contain;
+  object-position: center center;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f3f2ee 0%,
+      #f7f6f2 100%
+    );
+
+  padding: 0;
+
+  transition:
+    transform .45s ease,
+    filter .45s ease;
+}
+
+
+/* Elegant visual frame for portrait photographs */
+.journey-section:first-of-type .photo-card:not(.featured) {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(35, 67, 88, .08);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 40px rgba(31, 61, 80, .065);
+}
+
+
+/* Keep the photograph elegant on hover */
+.journey-section:first-of-type .photo-card:not(.featured):hover img {
+  transform: scale(1.008);
+}
+
+
+/* Caption area */
+.journey-section:first-of-type .photo-card:not(.featured) .photo-info {
+  padding: 28px 34px 32px;
+}
+
+
+/* Tablet */
+@media (max-width: 1000px) {
+
+  .journey-section:first-of-type .photo-card:not(.featured) img {
+    height: 540px;
+  }
+
+}
+
+
+/* Mobile: natural full image ratio */
+@media (max-width: 720px) {
+
+  .journey-section:first-of-type .photo-card:not(.featured) img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain;
+
+    background: #f5f4f0;
+  }
+
+  .journey-section:first-of-type .photo-card:not(.featured) .photo-info {
+    padding: 22px 22px 26px;
+  }
+
+}     
 </style>
 
 </head>
