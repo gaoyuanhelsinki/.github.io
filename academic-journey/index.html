@@ -1357,7 +1357,281 @@ h1{
     padding: 24px 24px 28px;
   }
 
-}    
+}  
+      /* =========================================================
+   04 · ST. PETERSBURG
+   学术传统 · 历史城市 · 欧洲文化空间
+========================================================= */
+
+.petersburg-section {
+  margin-top: 70px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.petersburg-gallery {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.petersburg-card {
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(31, 63, 84, 0.075);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 16px 42px rgba(29, 60, 80, 0.07);
+}
+
+
+/* =========================================================
+   FEATURED · MENDELEEV
+========================================================= */
+
+.petersburg-featured {
+  grid-column: 1 / -1;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.32fr)
+    minmax(320px, 0.68fr);
+
+  min-height: 470px;
+}
+
+
+/* 主图区域 */
+.petersburg-featured .petersburg-image {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 470px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f1f0ec 0%,
+      #f7f6f2 100%
+    );
+}
+
+
+/* 主图完整显示，不裁切 */
+.petersburg-featured .petersburg-image img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+
+/* 主图说明区 */
+.petersburg-featured .petersburg-content {
+  justify-content: center;
+
+  padding: 42px 42px;
+}
+
+
+/* =========================================================
+   LOWER TWO PHOTOS
+========================================================= */
+
+.petersburg-image-full {
+  width: 100%;
+
+  height: 560px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f2f1ed 0%,
+      #f7f6f3 100%
+    );
+}
+
+
+/* 完整原图 · 不裁切 */
+.petersburg-image-full img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  transform: none !important;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.petersburg-content {
+  flex: 1 1 auto;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 30px 34px 34px;
+
+  background: #ffffff;
+}
+
+
+/* 英文地点 */
+.petersburg-meta {
+  margin-bottom: 14px;
+
+  color: #a57b2d;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 10.5px;
+  font-weight: 700;
+
+  letter-spacing: 0.17em;
+
+  text-transform: uppercase;
+}
+
+
+/* 中文标题 */
+.petersburg-content h3 {
+  margin: 0 0 14px;
+
+  color: #1d435e;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 21px;
+  font-weight: 500;
+
+  line-height: 1.55;
+}
+
+
+/* 说明文字 */
+.petersburg-content p {
+  margin: 0;
+
+  color: #788892;
+
+  font-family:
+    "Noto Serif SC",
+    "Songti SC",
+    Georgia,
+    serif;
+
+  font-size: 13.5px;
+
+  line-height: 1.95;
+}
+
+
+/* 禁止旧hover规则造成裁切 */
+.petersburg-section img:hover {
+  transform: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 820px) {
+
+  .petersburg-gallery {
+    grid-template-columns: 1fr;
+
+    gap: 26px;
+  }
+
+
+  .petersburg-featured {
+    grid-column: auto;
+
+    display: block;
+
+    min-height: 0;
+  }
+
+
+  .petersburg-featured .petersburg-image {
+    min-height: 0;
+
+    height: auto;
+  }
+
+
+  .petersburg-featured .petersburg-image img,
+  .petersburg-image-full img {
+    width: 100%;
+    height: auto;
+
+    object-fit: contain !important;
+  }
+
+
+  .petersburg-image-full {
+    height: auto;
+  }
+
+
+  .petersburg-content,
+  .petersburg-featured .petersburg-content {
+    padding: 24px 24px 28px;
+  }
+
+}
 </style>
 
 </head>
@@ -2094,10 +2368,11 @@ h1{
 
 
 <!-- =========================================================
-     04 · ST PETERSBURG
-     ========================================================= -->
+     04 · ST. PETERSBURG
+     俄罗斯学术传统与欧洲文化空间
+========================================================= -->
 
-<section class="journey-section">
+<section class="journey-section petersburg-section" id="st-petersburg">
 
   <div class="section-head">
 
@@ -2108,11 +2383,11 @@ h1{
     <div class="section-title">
 
       <h2>
-        St Petersburg · 圣彼得堡与北方欧洲学术交流
+        St. Petersburg · 俄罗斯学术传统与欧洲文化空间
       </h2>
 
       <p>
-        RUSSIA · ST PETERSBURG · NORTHERN EUROPE
+        RUSSIAN ACADEMIC TRADITION · PALACE SQUARE · HERMITAGE · EUROPEAN CULTURAL HERITAGE
       </p>
 
     </div>
@@ -2122,69 +2397,145 @@ h1{
 
   <div class="section-intro">
 
-    圣彼得堡连接北欧、波罗的海与俄罗斯欧洲文化空间。
-    本节呈现相关学术访问与文化交流经历。
+    圣彼得堡既是俄罗斯近现代学术传统的重要中心，
+    也是欧洲思想、艺术与城市文化在俄罗斯汇聚的代表性空间。
+
+    从门捷列夫所象征的科学与大学传统，
+    到皇宫广场、总参谋部大楼与冬宫所呈现的历史建筑和文化记忆，
+    这座城市构成理解俄罗斯知识传统、国家历史与欧洲文化互动的重要坐标。
 
   </div>
 
 
-  <div class="gallery">
+  <div class="petersburg-gallery">
 
 
-    <article class="photo-card">
+    <!-- =====================================================
+         01 · MENDELEEV · FEATURED
+    ========================================================= -->
 
-      <img
-        src="/images/academic-journey/st-petersburg-01.jpg"
-        alt="Gao Yuan in St Petersburg Russia">
+    <article class="petersburg-card petersburg-featured">
 
-      <div class="photo-info">
+      <div class="petersburg-image">
 
-        <div class="photo-location">
-          ST PETERSBURG · RUSSIA
+        <img
+          src="/images/俄罗斯科学院体系中的门捷列夫纪念空间.jpeg"
+          alt="Gao Yuan at a Mendeleev memorial academic space in St. Petersburg"
+          loading="lazy">
+
+      </div>
+
+
+      <div class="petersburg-content">
+
+        <div class="petersburg-meta">
+          ST. PETERSBURG · MENDELEEV · ACADEMIC TRADITION
         </div>
 
-        <div class="photo-title">
-          圣彼得堡
-        </div>
+        <h3>
+          门捷列夫纪念空间 · 俄罗斯近现代学术传统
+        </h3>
 
-        <div class="photo-caption">
-          北方欧洲、俄罗斯与欧洲文化交流相关经历。
-        </div>
+        <p>
+          摄于圣彼得堡门捷列夫相关学术纪念空间。
+          门捷列夫所代表的科学传统，
+          与圣彼得堡长期形成的大学、科学院及知识共同体彼此交织，
+          构成俄罗斯近现代学术史中极具象征意义的一条知识谱系。
+        </p>
 
       </div>
 
     </article>
 
 
-    <article class="photo-card">
 
-      <img
-        src="/images/academic-journey/st-petersburg-02.jpg"
-        alt="Gao Yuan during academic visit in St Petersburg">
+    <!-- =====================================================
+         02 · GENERAL STAFF BUILDING
+    ========================================================= -->
 
-      <div class="photo-info">
+    <article class="petersburg-card">
 
-        <div class="photo-location">
-          RUSSIA
+      <div class="petersburg-image petersburg-image-full">
+
+        <img
+          src="/images/圣彼得堡总参谋部大楼凯旋拱门.jpeg"
+          alt="Gao Yuan at the Arch of the General Staff Building in St. Petersburg"
+          loading="lazy">
+
+      </div>
+
+
+      <div class="petersburg-content">
+
+        <div class="petersburg-meta">
+          PALACE SQUARE · GENERAL STAFF BUILDING
         </div>
 
-        <div class="photo-title">
-          圣彼得堡学术与文化访问
-        </div>
+        <h3>
+          皇宫广场 · 总参谋部大楼与帝国城市空间
+        </h3>
 
-        <div class="photo-caption">
-          请根据真实活动填写机构、会议或访问背景。
-        </div>
+        <p>
+          摄于圣彼得堡皇宫广场总参谋部大楼凯旋拱门前。
+          宏大的古典主义建筑、城市轴线与皇宫广场共同形成
+          圣彼得堡最具代表性的历史空间之一，
+          集中呈现俄罗斯帝国时期的城市规划、
+          国家象征与欧洲建筑传统。
+        </p>
 
       </div>
 
     </article>
 
 
+
+    <!-- =====================================================
+         03 · WINTER PALACE · HERMITAGE
+    ========================================================= -->
+
+    <article class="petersburg-card">
+
+      <div class="petersburg-image petersburg-image-full">
+
+        <img
+          src="/images/冬宫  艾尔米塔什博物馆.jpeg"
+          alt="Gao Yuan at the Winter Palace and State Hermitage Museum in St. Petersburg"
+          loading="lazy">
+
+      </div>
+
+
+      <div class="petersburg-content">
+
+        <div class="petersburg-meta">
+          WINTER PALACE · STATE HERMITAGE MUSEUM
+        </div>
+
+        <h3>
+          冬宫 · 艾尔米塔什与俄罗斯文化记忆
+        </h3>
+
+        <p>
+          摄于圣彼得堡皇宫广场，背景为冬宫，
+          亦为俄罗斯国立艾尔米塔什博物馆建筑群的核心部分。
+          帝国历史、欧洲艺术收藏与现代博物馆文化在此交汇，
+          使冬宫成为理解圣彼得堡欧洲文化传统的重要坐标。
+        </p>
+
+      </div>
+
+    </article>
+
+
+  </div>
+
+
+  <div class="timeline-note">
+    ST. PETERSBURG · MENDELEEV · PALACE SQUARE · WINTER PALACE ·
+    HERMITAGE · RUSSIAN ACADEMIC TRADITION · EUROPEAN CULTURAL HERITAGE
   </div>
 
 </section>
-
 
 
 <!-- =========================================================
