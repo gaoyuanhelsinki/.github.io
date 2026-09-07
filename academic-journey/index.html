@@ -749,7 +749,99 @@ h1{
     padding: 22px 22px 26px;
   }
 
-}     
+} 
+   /* =========================================================
+   FULL PORTRAIT PHOTO
+   竖幅学术照片完整显示 · 禁止任何裁切
+   ========================================================= */
+
+.photo-card.portrait-full {
+  display: block !important;
+
+  width: 100% !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  overflow: visible !important;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(35, 67, 88, 0.08);
+  border-radius: 18px;
+
+  box-shadow:
+    0 14px 38px rgba(31, 61, 80, 0.065);
+}
+
+
+/* 图片本身：保持原始比例，绝不裁切 */
+.photo-card.portrait-full img {
+  display: block !important;
+
+  width: 100% !important;
+  height: auto !important;
+
+  min-height: 0 !important;
+  max-height: none !important;
+
+  aspect-ratio: auto !important;
+
+  object-fit: contain !important;
+  object-position: center center !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  border-radius: 18px 18px 0 0;
+}
+
+
+/* 取消旧CSS可能产生的放大裁切效果 */
+.photo-card.portrait-full:hover img {
+  transform: none !important;
+}
+
+
+/* 图片下方文字 */
+.photo-card.portrait-full .photo-info {
+  display: block !important;
+
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+
+  padding: 28px 32px 32px;
+
+  background: #ffffff;
+}
+
+
+/* 两张竖图从顶部对齐 */
+.gallery {
+  align-items: start !important;
+}
+
+
+/* 手机端同样保持完整原图 */
+@media (max-width: 820px) {
+
+  .photo-card.portrait-full {
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .photo-card.portrait-full img {
+    width: 100% !important;
+    height: auto !important;
+
+    max-height: none !important;
+
+    object-fit: contain !important;
+  }
+
+}   
 </style>
 
 </head>
@@ -902,7 +994,7 @@ h1{
          PHOTO 02 · UNIVERSITY OF HELSINKI
          ===================================================== -->
 
-    <article class="photo-card">
+   <article class="photo-card portrait-full">
 
       <img
         src="https://gaoyuanhelsinki.cn/images/HELSINKI%20UNIVERSITY-CONFERMENT-GAO%20YUAN.jpg"
@@ -931,7 +1023,7 @@ h1{
          PHOTO 03 · HELSINKI ACADEMIC CITYSCAPE
          ===================================================== -->
 
-    <article class="photo-card">
+   <article class="photo-card portrait-full">
 
       <img
         src="https://gaoyuanhelsinki.cn/images/Helsinki%20Cathedral-GAO%20YUAN.jpg"
@@ -1039,7 +1131,7 @@ h1{
 
 
 
-    <article class="photo-card">
+   <article class="photo-card portrait-full">
 
       <img
         src="/images/academic-journey/helsinki-hall.jpg"
@@ -1065,7 +1157,7 @@ h1{
 
 
 
-    <article class="photo-card">
+  <article class="photo-card portrait-full">
 
       <img
         src="/images/academic-journey/helsinki-cathedral.jpg"
